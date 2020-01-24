@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Nunito Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+app-solar-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+app-solar-root > div {
+  height: 100%;
+}
+.fix-height {
+  height: calc(100vh - 4rem - 15rem);
+}
+@media all and (max-width: 44em) {
+  .fix-height {
+    height: calc(100vh - 3.5rem - 5rem);
+  }
+}

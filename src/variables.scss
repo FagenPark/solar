@@ -1,0 +1,47 @@
+$sc_primary: #009ed9;
+$sc_secondary: #002e46;
+$sc_link: #0570b1;
+$sc_link_d: #002e46;
+$sc_cta: #29a93a;
+$sc_cta_d: #198f29;
+$sc_error:  #cd0f11; //#e21227;
+$sc_error_d: #b41224;
+$sc_green: #29a93a;
+$sc_green_d: #198f29;
+$sc_white: #fff;
+$sc_black: #000000;
+//backgrounds - mostly for buttons backgrounds
+$bc_main: #eee;
+$bc_cta: #29a93a;
+$bc_cta_d: #198f29;
+$bc_btn: #009ed9;
+$bc_btn_d: #002e46;
+$bc_btn_secondary: #515151;
+$bc_btn_secondary_d: #333;
+$bc_error: #cd0f11; //#e21227;
+$bc_primary_nav_hover: #0e769f;
+
+$fc_primary: #009ed9;
+$fc_base: #002e46;
+$fc_error: #e21227;
+$fc_error_d: #b41224;
+$fc_cta: #002e46; //carefull, only for text cta links
+$fc_link: #0570b1;
+$fc_hover: #002e46;
+$fc_grey: #767676; //lightest accessible grey
+$fc_reverse_link: #fff;
+$fc_reverse_hover: #fff;
+
+
+$sc_black_primary: #000;
+$sc_grey_1: #333;
+$sc_grey_2: #515151;
+$sc_grey_3: #767676;
+$sc_grey_half: #979797;
+$sc_grey_4: #bbb;
+$sc_grey_5: #ddd;
+$sc_grey_6: #eee;
+$sc_grey_7: #ccc;
+$bc_nav_grey: #f6f6f6;
+$sc_nav_border_gray: #ddd;
+$ssc_form_input_border: #7d96a4;  // #8c9197 from original DT specs, probably need to normalize with the rest of greys
