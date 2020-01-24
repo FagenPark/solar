@@ -9,6 +9,9 @@ import { ChoiceHeaderComponent } from './home/choice-header/choice-header.compon
 import { ChoiceFooterComponent } from './home/choice-footer/choice-footer.component';
 import { SolarQueryComponent } from './solar-query/solar-query.component';
 import { LandingPageComponent } from './home/langing-page/landing-page.component';
+import { SolarQueryFormComponent } from './solar-query/solar-query-form/solar-query-form.component';
+import { SolarQueryResultsComponent } from './solar-query/solar-query-results/solar-query-results.component';
+import { SolarQueryInstallerComponent } from './solar-query/solar-query-installer/solar-query-installer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { LandingPageComponent } from './home/langing-page/landing-page.component
     ChoiceHeaderComponent,
     ChoiceFooterComponent,
     SolarQueryComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    SolarQueryFormComponent,
+    SolarQueryResultsComponent,
+    SolarQueryInstallerComponent
   ],
   imports: [
     BrowserModule,
