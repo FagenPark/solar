@@ -1,1 +1,82 @@
-<p>solar-query-form works!</p>
+<div class="query-form">
+  <div class="form-title">
+    <h1>Estimate my solar system</h1>
+    <h2>Find out how much a solar system might cost you and what your savings might look like</h2>
+  </div>
+  <div class="form-body">
+    <form novalidate (ngSubmit)="submit()" [formGroup]="queryForm">
+      <div class="form-group post-code">
+        <label class="form-label"
+               for="postCodeId">Postcode</label>
+        <div class="form-control-wrapper">
+          <input class="form-control"
+                 id="postCodeId"
+                 type="text"
+                 placeholder="Postcode (required)"
+                 formControlName="postCode"
+                 [ngClass]="{'is-invalid': (queryForm.get('postCode').touched ||
+                                            queryForm.get('postCode').dirty) &&
+                                            !queryForm.get('postCode').valid }"/>
+          <div class="invalid-feedback">
+            <span class="error-message" *ngIf="(queryForm.get('postCode').touched
+            || queryForm.get('postCode').dirty)
+            && queryForm.get('postCode').errors?.required">
+              Please enter your postcode.
+            </span>
+            <span class="error-message" *ngIf="(queryForm.get('postCode').touched ||
+                                            queryForm.get('postCode').dirty) && queryForm.get('postCode').errors?.pattern">
+              The postcode must be 4 digits number.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group number-of-people">
+        <label class="form-label"
+               for="numberOfPeople">Number of people</label>
+
+        <div class="form-control-wrapper">
+          <select class="form-control"
+                  id="numberOfPeople"
+                  formControlName="numberOfPeople" [ngClass]="{'is-invalid': (queryForm.get('numberOfPeople').touched ||
+                                            queryForm.get('numberOfPeople').dirty) &&
+                                            !queryForm.get('numberOfPeople').valid }">
+            <option value=""
+                    disabled
+                    selected
+                    hidden>Number of people in house hold</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7 or more</option>
+          </select>
+          <div class="invalid-feedback">
+            <span class="error-message" *ngIf="(queryForm.get('numberOfPeople').touched ||
+                                            queryForm.get('numberOfPeople').dirty) && queryForm.get('numberOfPeople').errors?.required">
+              Please select number of people in the house hold.
+            </span>
+          </div>
+        </div>
+
+      </div>
+      <div class="form-group submit">
+        <div class="submit-wrapper">
+          <button class="submit-btn"
+                  type="submit"
+                  [title]="queryForm.valid ? 'Estimate now' : 'Disabled until the form data is valid'"
+                  [disabled]="!queryForm.valid">
+            Estimate now
+          </button>
+<!--          <button class="btn btn-outline-secondary"-->
+<!--                  type="button"-->
+<!--                  (click)="populateTestData()">-->
+<!--            Test Data-->
+<!--          </button>-->
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -12,6 +12,13 @@ import { LandingPageComponent } from './home/langing-page/landing-page.component
 import { SolarQueryFormComponent } from './solar-query/solar-query-form/solar-query-form.component';
 import { SolarQueryResultsComponent } from './solar-query/solar-query-results/solar-query-results.component';
 import { SolarQueryInstallerComponent } from './solar-query/solar-query-installer/solar-query-installer.component';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from './app.effects';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,17 @@ import { SolarQueryInstallerComponent } from './solar-query/solar-query-installe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      runtimeChecks: {
+        strictStateImmutability: true,
+        strictActionImmutability: true
+      }
+    }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]

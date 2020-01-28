@@ -45,16 +45,14 @@
 
 .header_info-item_solar_quotes_logo {
   display: flex;
-  height: 4rem;
-  background: linear-gradient(#2A406F, #1E6CAF);
 }
 
 .header_info-item_solar_quotes_logo {
   a {
     align-self: center;
-    height: 50px;
-    width: 200px;
-    background: transparent url(src/assets/images/logo-2018.svg) no-repeat 50% 50%;
+    height: 4rem;
+    width: auto;
+    background: transparent url(src/assets/images/solarquotes-logo-header.png) no-repeat 50% 50%;
     background-size: contain;
     line-height: 3.125em;
   }
@@ -64,8 +62,8 @@
   img {
     visibility: hidden;
     vertical-align: baseline;
-    height: 50px;
-    width: 200px;
+    height: 64px;
+    width: 227px;
   }
 }
 
@@ -88,12 +86,10 @@
   .header_info-item_choice_logo {
     height: 3.5rem;
   }
+
   .header_info-item_solar_quotes_logo {
-    height: 3.5rem;
-  }
-  .header_info-item_solar_quotes_logo a {
     a {
-      width: 180px;
+      height: 3.5rem;
     }
   }
 }

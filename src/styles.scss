@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "variables";
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 html, body {
   margin: 0;
@@ -17,10 +18,8 @@ app-solar-root > div {
   height: 100%;
 }
 .fix-height {
-  height: calc(100vh - 4rem - 15rem);
+  min-height: calc(100vh - 4rem - 15rem);
 }
 @media all and (max-width: 44em) {
-  .fix-height {
-    height: calc(100vh - 3.5rem - 5rem);
-  }
+
 }
