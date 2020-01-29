@@ -21,11 +21,11 @@
             <span class="error-message" *ngIf="(queryForm.get('postCode').touched
             || queryForm.get('postCode').dirty)
             && queryForm.get('postCode').errors?.required">
-              Please enter your postcode.
+              Please enter your postcode
             </span>
             <span class="error-message" *ngIf="(queryForm.get('postCode').touched ||
                                             queryForm.get('postCode').dirty) && queryForm.get('postCode').errors?.pattern">
-              The postcode must be 4 digits number.
+              The postcode must be 4 digits number
             </span>
           </div>
         </div>
