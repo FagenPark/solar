@@ -42,8 +42,8 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     NoopAnimationsModule,
+    BrowserAnimationsModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

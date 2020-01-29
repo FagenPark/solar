@@ -22,13 +22,14 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       ])
     ]),
     trigger('expandCollapse', [
-      state('open', style({
-        height: '*'
-      })),
-      state('close', style({
-        height: '0px'
-      })),
-      transition('open <=> close', animate(300))
+      transition(':enter', [
+        style({height: '0'}),
+        animate('0.3s ease-out', style({height: '*'}))
+      ]),
+      transition(':leave', [
+        style({height: '*'}),
+        animate('0.3s ease-in', style({height: '0'}))
+      ])
     ])
   ]
 })
