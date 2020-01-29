@@ -19,6 +19,7 @@ import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ToolTipComponent } from './shared/tool-tip/tool-tip.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     LandingPageComponent,
     SolarQueryFormComponent,
     SolarQueryResultsComponent,
-    SolarQueryInstallerComponent
+    SolarQueryInstallerComponent,
+    ToolTipComponent
   ],
   imports: [
     BrowserModule,

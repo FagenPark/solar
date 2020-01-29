@@ -3,7 +3,9 @@
     <app-solar-query-form></app-solar-query-form>
   </div>
   <div>
-    <app-solar-query-results *ngIf="displayResults$ | async" [postCode]="postCode$ | async"></app-solar-query-results>
+    <app-solar-query-results *ngIf="displayResults$ | async"
+                             [postCode]="postCode$ | async"
+                             [numberOfPeople]="numberOfPeople$ | async"></app-solar-query-results>
   </div>
   <div>
     <app-solar-query-installer *ngIf="displayResults$ | async"></app-solar-query-installer>

@@ -1,0 +1,64 @@
+@import "src/variables";
+.solar-installer-component {
+  text-align: center;
+  padding: 4rem 0;
+  .solar-installer-body {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5rem;
+    .solar-installer-body-item {
+      width: 30%;
+      .item-icon {
+        background-repeat: no-repeat;
+        height: 130px;
+        background-position: center;
+        &.item1 {
+          background-image: url(../../../assets/images/icon_trades.png);
+        }
+        &.item2 {
+          background-image: url(../../../assets/images/icon_handshake.png);
+        }
+        &.item3 {
+          background-image: url(../../../assets/images/icon_clipboard.png);
+        }
+      }
+      .item-text {
+        padding-top: 2rem;
+        color: #002E46;
+        font-family: "Nunito Sans";
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 28px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 812px) {
+  .solar-installer-component {
+    h1 {
+      font-size: 27px;
+      line-height: 30px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 27px;
+    }
+    .solar-installer-body {
+      flex-direction: column;
+      .solar-installer-body-item {
+        width: 100%;
+        .item-icon {
+          height: 130px;
+        }
+        .item-text {
+          padding-top: 2rem;
+          color: #002E46;
+          font-family: "Nunito Sans";
+          font-size: 22px;
+          font-weight: bold;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

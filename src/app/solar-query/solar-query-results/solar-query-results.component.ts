@@ -14,4 +14,29 @@ export class SolarQueryResultsComponent implements OnInit {
   ngOnInit() {
   }
 
+  getEnergyUsage(): number {
+    // TODO check calculation
+    return this.numberOfPeople * 10;
+  }
+
+  getSystemSize(): number {
+    // TODO check calculation
+    return this.numberOfPeople * 1.5;
+  }
+
+  getPayback(): string {
+    return this.numberOfPeople * 1 + '-' + this.numberOfPeople * 1.5;
+  }
+
+  getSavings(): number {
+    return this.numberOfPeople * 150;
+  }
+
+  getMinPrice() {
+    return this.numberOfPeople * 1000;
+  }
+
+  getMaxPrice() {
+    return this.numberOfPeople * 2000;
+  }
 }

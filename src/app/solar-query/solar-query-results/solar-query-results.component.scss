@@ -1,0 +1,81 @@
+@import "src/variables";
+.solar-query-results-component {
+  background-color: $bc_nav_grey;
+  text-align: center;
+  padding: 4rem 0;
+  .results-header {
+    h2 {
+      .tooltip-toggle {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-image: url(../../../assets/images/help.svg);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .results-body {
+    h3 {
+      margin-bottom: 0;
+    }
+    p {
+      margin: 0 auto;
+        color: #002E46;
+        font-family: "Nunito Sans";
+        font-size: 19px;
+        line-height: 28px;
+      max-width: 532px;
+    }
+    .system-types {
+      h4 {
+        line-height: 85px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 812px) {
+  .solar-query-results-component {
+    .results-header {
+      h1 {
+        font-size: 27px;
+        line-height: 30px;
+      }
+      h2 {
+        font-size: 20px;
+        line-height: 27px;
+      }
+    }
+
+    .results-body {
+      .system-size {
+        h3 {
+          margin-top: 2rem;
+        }
+      }
+      .pay-back {
+        h4 {
+          margin-top: 1rem;
+        }
+      }
+
+      p {
+        margin: 0 auto;
+        color: #002E46;
+        font-family: "Nunito Sans";
+        font-size: 19px;
+        line-height: 28px;
+        max-width: 532px;
+      }
+      h4 {
+        height: 42px;
+      }
+      .system-types {
+        h4 {
+          line-height: 42px;
+        }
+      }
+    }
+
+  }
+}

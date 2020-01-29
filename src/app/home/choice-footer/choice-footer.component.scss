@@ -1,15 +1,13 @@
 @import "src/variables";
 footer {
-  background-color: #002E46;
-  color: #fff;
-  height: 15rem;
+  background-color: $sc_secondary;
+  height: $footer_height;
 }
 .footer__info {
   display: flex;
-  max-width: 1200px;
+  max-width: $max_width;
   width: 100%;
   margin: 0 auto;
-
 }
 
 .footer__info-item {
@@ -20,6 +18,8 @@ footer {
   width: 100%;
   h3 {
     font-size: 22px;
+    color: $sc_white;
+    line-height: 45px;
   }
   p, a {
     font-size: 19px;
@@ -34,6 +34,7 @@ footer {
   .footer__info-item__summary {
     h3 {
       font-size: 18px;
+      line-height: 25px;
     }
     p, a {
       font-size: 15px;

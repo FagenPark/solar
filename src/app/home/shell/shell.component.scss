@@ -1,3 +1,5 @@
-.main-content {
-  padding: 0 1rem;
+@media all and (max-width: 44em) {
+  .main-content {
+    padding: 0 1rem;
+  }
 }

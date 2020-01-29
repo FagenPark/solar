@@ -3,30 +3,6 @@
 .query-form {
   text-align: center;
   padding: 2rem;
-
-  .form-title {
-    h1 {
-      margin-top: 0;
-      height: 48px;
-      color: #002E46;
-      font-family: Roboto;
-      font-size: 38px;
-      font-weight: bold;
-      line-height: 44px;
-    }
-
-    h2 {
-      height: 85px;
-      color: #002E46;
-      max-width: 680px;
-      margin: 0 auto;
-      font-family: "Nunito Sans";
-      font-size: 26px;
-      font-weight: normal;
-      line-height: 32px;
-    }
-  }
-
   .form-label {
     visibility: hidden;
   }
@@ -68,27 +44,7 @@
     font-size: 1rem;
   }
 
-  .submit-btn {
-    margin-top: 21px;
-    height: 64px;
-    max-width: 371px;
-    width: 100%;
-    background-color: $bc_btn;
-    color: $sc_white;
-    font-family: "Nunito Sans";
-    font-size: 19px;
-    font-weight: bold;
-    line-height: 26px;
-    text-align: center;
-    cursor: pointer;
-    &:hover {
-      background-color: $bc_btn_d;
-    }
-    &:disabled {
-      background-color: $fc_grey;
-      cursor: not-allowed;
-    }
-  }
+
 
   .invalid-feedback {
     color: $fc_error;

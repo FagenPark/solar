@@ -5,7 +5,6 @@ export interface SolarQueryState {
   postCode: string;
   numberOfPeople: number;
 }
-
 const initialState: SolarQueryState = {
   hasResults: false,
   postCode: '',
