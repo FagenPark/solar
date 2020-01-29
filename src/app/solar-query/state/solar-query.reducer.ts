@@ -4,11 +4,15 @@ export interface SolarQueryState {
   hasResults: boolean;
   postCode: string;
   numberOfPeople: number;
+  isModalOpen: boolean;
+  modalContent: string;
 }
 const initialState: SolarQueryState = {
   hasResults: false,
   postCode: '',
-  numberOfPeople: null
+  numberOfPeople: null,
+  isModalOpen: false,
+  modalContent: ''
 };
 
 
@@ -20,12 +24,21 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
         ...state,
       };
     case SolarQueryActionsTypes.ChangeFormInput:
-      // TODO calc results
       return {
         ...state,
         hasResults: true,
         numberOfPeople: action.payload.numberOfPeople,
         postCode: action.payload.postCode
+      };
+    case SolarQueryActionsTypes.SetModalContent:
+      return {
+        ...state,
+        modalContent: action.payload
+      };
+    case SolarQueryActionsTypes.ToggleModal:
+      return {
+        ...state,
+        isModalOpen: action.payload
       };
     default:
       return state;

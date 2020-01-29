@@ -5,9 +5,14 @@
   <div>
     <app-solar-query-results *ngIf="displayResults$ | async"
                              [postCode]="postCode$ | async"
+                             [@expandCollapse] = 'displayResults$ | async'
                              [numberOfPeople]="numberOfPeople$ | async"></app-solar-query-results>
   </div>
   <div>
     <app-solar-query-installer *ngIf="displayResults$ | async"></app-solar-query-installer>
   </div>
 </div>
+<app-modal *ngIf="isModalOpen$ | async"
+           [@inOutAnimation]
+           [modalContent]="modalContent$ | async"
+           ></app-modal>

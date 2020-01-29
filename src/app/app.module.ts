@@ -20,6 +20,8 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppEffects } from './app.effects';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ToolTipComponent } from './shared/tool-tip/tool-tip.component';
+import { ModalComponent } from './shared/modal/modal.component';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,15 @@ import { ToolTipComponent } from './shared/tool-tip/tool-tip.component';
     SolarQueryFormComponent,
     SolarQueryResultsComponent,
     SolarQueryInstallerComponent,
-    ToolTipComponent
+    ToolTipComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
