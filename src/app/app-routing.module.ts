@@ -11,7 +11,7 @@ const routes: Routes = [
     children: [
       {path: 'landing-page', component: LandingPageComponent},
       {path: 'solar-query', component: SolarQueryComponent},
-      { path: '', redirectTo: 'landing-page', pathMatch: 'full' }
+      { path: '', redirectTo: 'solar-query', pathMatch: 'full' }
     ]
   },
   { path: '**', component: PageNotFoundComponent }
