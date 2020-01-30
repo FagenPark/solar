@@ -27,8 +27,8 @@
 .header_info-item_choice_logo {
   a {
     align-self: center;
-    height: 50px;
-    width: 128px;
+    height: pxtorem(50px);
+    width: pxtorem(128px);
     background: transparent url(src/assets/images/choice-logo-new-white.svg) no-repeat 50% 50%;
     background-size: contain;
     line-height: 3.125em;
@@ -38,7 +38,7 @@
 .header_info-item_choice_logo {
   img {
     visibility: hidden;
-    max-width: 126px;
+    max-width: pxtorem(126px);
     vertical-align: middle;
   }
 }
@@ -62,8 +62,8 @@
   img {
     visibility: hidden;
     vertical-align: baseline;
-    height: 64px;
-    width: 227px;
+    height: 4rem;
+    width: pxtorem(227px);
   }
 }
 
@@ -73,7 +73,7 @@
   }
   .header_info-item_choice_logo {
     a {
-      width: 90px;
+      width: pxtorem(90px);
     }
   }
   .header_info-item_choice_logo {

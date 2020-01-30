@@ -2,7 +2,7 @@
   <div>
     <app-solar-query-form></app-solar-query-form>
   </div>
-  <div *ngIf="displayResults$ | async" [@inOutAnimation]>
+  <div *ngIf="displayResults$ | async" [@inOutAnimation] >
     <div>
       <app-solar-query-results  [numberOfPeople]="numberOfPeople$ | async"></app-solar-query-results>
     </div>

@@ -1,11 +1,12 @@
+@import "src/variables";
 .modal-container {
   position:  fixed;
   box-shadow: 0px 0px 2px 1px black;
   z-index: 100;
-  background: #FFF;
+  background: $sc_white;
   min-height: 0;
-  border: solid 1px #CCC;
-  border-radius: 5px;
+  border: solid 1px $sc_grey_7;
+  border-radius: pxtorem(5px);
   margin: 0 auto;
   float: none;
   padding: 0;
@@ -13,7 +14,7 @@
   right: 5%;
   bottom: 15%;
   top: 15%;
-  max-width: 500px;
+  max-width: pxtorem(500px);
   overflow-y: auto;
 }
 .modal-overlay {
@@ -34,11 +35,6 @@
   border: none;
   margin: 2.5rem;
   text-align: center;
-}
-
-
-h4 {
-
 }
 @media (min-width: 576px) {
   .modal-container {

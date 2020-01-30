@@ -49,4 +49,25 @@ $ssc_form_input_border: #7d96a4;  // #8c9197 from original DT specs, probably ne
 $footer_height: 15rem;
 $header_height: 4rem;
 $header_height_mobile: 3.5rem;
-$max_width: 1200px;
+$max_width: 75rem;
+$basepx: 16px;
+
+@function pxtorem($px, $basepx: $basepx) {
+  @return ($px/$basepx) + 0rem;
+}
+
+@mixin tablet-up-breakpoint() {
+  @media screen and (min-width: 801px) {
+    @content;
+  }
+}
+@mixin phone-up-breakpoint() {
+  @media screen and (min-width: 481px) {
+    @content;
+  }
+}
+@mixin sml-phone-up-breakpoint() {
+  @media screen and (min-width: 376px) {
+    @content;
+  }
+}

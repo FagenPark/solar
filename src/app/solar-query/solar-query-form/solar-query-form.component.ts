@@ -18,7 +18,7 @@ export class SolarQueryFormComponent implements OnInit {
 
   ngOnInit() {
     this.queryForm = this.fb.group({
-      postCode: ['', [Validators.required, Validators.pattern(/^\d{4}$/)]],
+      postCode: ['', [Validators.required, Validators.pattern(/^(?:(?:[2-8]\d|9[0-7]|0?[28]|0?9(?=09))(?:\d{2}))$/)]],
       numberOfPeople: ['', [Validators.required]]
     });
   }

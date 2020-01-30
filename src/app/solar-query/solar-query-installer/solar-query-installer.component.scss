@@ -10,7 +10,7 @@
       width: 30%;
       .item-icon {
         background-repeat: no-repeat;
-        height: 130px;
+        height: pxtorem(130px);
         background-position: center;
         &.item1 {
           background-image: url(../../../assets/images/icon_trades.png);
@@ -24,11 +24,11 @@
       }
       .item-text {
         padding-top: 2rem;
-        color: #002E46;
+        color: $sc_secondary;
         font-family: "Nunito Sans";
-        font-size: 22px;
+        font-size: pxtorem(22px);
         font-weight: bold;
-        line-height: 28px;
+        line-height: pxtorem(28px);
       }
     }
   }
@@ -36,27 +36,27 @@
 @media screen and (max-width: 812px) {
   .solar-installer-component {
     h1 {
-      font-size: 27px;
-      line-height: 30px;
+      font-size: pxtorem(27px);
+      line-height: pxtorem(30px);
     }
     h2 {
-      font-size: 20px;
-      line-height: 27px;
+      font-size: pxtorem(20px);
+      line-height: pxtorem(27px);
     }
     .solar-installer-body {
       flex-direction: column;
       .solar-installer-body-item {
         width: 100%;
         .item-icon {
-          height: 130px;
+          height: pxtorem(130px);
         }
         .item-text {
           padding-top: 2rem;
-          color: #002E46;
+          color: $sc_secondary;
           font-family: "Nunito Sans";
-          font-size: 22px;
+          font-size: pxtorem(22px);
           font-weight: bold;
-          line-height: 28px;
+          line-height: pxtorem(28px);
         }
       }
     }
