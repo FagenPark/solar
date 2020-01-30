@@ -9,21 +9,21 @@
 
   .form-control {
     box-sizing: border-box;
-    height: 46px;
-    max-width: 371px;
+    height: pxtorem(46px);
+    max-width: pxtorem(371px);
     width: 100%;
-    border: 1px solid #979797;
+    border: 1px solid $sc_grey_half;
     padding-left: 1rem;
-    color: #002E46;
+    color: $sc_secondary;
     font-size: 1rem;
 
     &:active, &:focus {
       outline: none;
-      border-bottom: #0570B1 solid 4px;
+      border-bottom: $sc_link solid 4px;
       background-image: url(../../../assets/images/tick.svg);
       background-repeat: no-repeat;
       background-position-x: 95%;
-      background-position-y: 15px;
+      background-position-y: pxtorem(15px);
     }
   }
 
@@ -35,7 +35,7 @@
       background-image: url(../../../assets/images/image-gallery-chevron.png);
       background-repeat: no-repeat;
       background-position-x: 95%;
-      background-position-y: 15px;
+      background-position-y: pxtorem(15px);
     }
   }
 
@@ -48,12 +48,12 @@
 
   .invalid-feedback {
     color: $fc_error;
-    width: 371px;
+    width: pxtorem(371px);
     margin: 0 auto;
 
     .error-message {
       display: flex;
-      margin-left: 5px;
+      margin-left: pxtorem(5px);
     }
   }
 }
@@ -62,13 +62,13 @@
   .query-form {
     .form-title {
       h1 {
-        font-size: 27px;
-        line-height: 30px;
+        font-size: pxtorem(27px);
+        line-height: pxtorem(30px);
       }
 
       h2 {
-        font-size: 20px;
-        line-height: 27px;
+        font-size: pxtorem(20px);
+        line-height: pxtorem(27px);
       }
     }
   }

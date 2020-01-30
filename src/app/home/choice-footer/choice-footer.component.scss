@@ -17,15 +17,15 @@ footer {
   text-align: center;
   width: 100%;
   h3 {
-    font-size: 22px;
+    font-size: pxtorem(22px);
     color: $sc_white;
-    line-height: 45px;
+    line-height: pxtorem(45px);
   }
   p, a {
-    font-size: 19px;
-    max-width: 645px;
+    font-size: pxtorem(19px);
+    max-width: pxtorem(645px);
     margin: 0 auto;
-    line-height: 31px;
+    line-height: pxtorem(31px);
     color: $fc_reverse_link;
   }
 }
@@ -33,12 +33,12 @@ footer {
 @media screen and (max-width: 812px) {
   .footer__info-item__summary {
     h3 {
-      font-size: 18px;
-      line-height: 25px;
+      font-size: pxtorem(18px);
+      line-height: pxtorem(25px);
     }
     p, a {
-      font-size: 15px;
-      line-height: 20px;
+      font-size: pxtorem(15px);
+      line-height: pxtorem(20px);
     }
   }
 }
