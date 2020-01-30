@@ -25,6 +25,13 @@
       background-position-x: 95%;
       background-position-y: pxtorem(15px);
     }
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
   }
 
   .number-of-people {
