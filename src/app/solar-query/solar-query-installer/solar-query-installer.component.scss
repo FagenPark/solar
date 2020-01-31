@@ -2,6 +2,12 @@
 .solar-installer-component {
   text-align: center;
   padding: 4rem 0;
+
+  .solar-installer-title {
+    h1 {
+      color: $sc_white;
+    }
+  }
   .solar-installer-body {
     display: flex;
     justify-content: space-around;
@@ -10,31 +16,33 @@
       width: 30%;
       .item-icon {
         background-repeat: no-repeat;
-        height: pxtorem(130px);
+        height: pxtorem(195px);
         background-position: center;
         &.item1 {
-          background-image: url(../../../assets/images/icon_trades.png);
+          background-image: url(../../../assets/images/valueprop_1-img.png);
         }
         &.item2 {
-          background-image: url(../../../assets/images/icon_handshake.png);
+          background-image: url(../../../assets/images/valueprop_2-img.png);
         }
         &.item3 {
-          background-image: url(../../../assets/images/icon_clipboard.png);
+          background-image: url(../../../assets/images/valueprop_3-img.png);
         }
       }
       .item-text {
         padding-top: 2rem;
-        color: $sc_secondary;
+        color: $sc_white;
         font-family: "Nunito Sans";
         font-size: pxtorem(22px);
         font-weight: bold;
         line-height: pxtorem(28px);
       }
+
     }
   }
 }
 @media screen and (max-width: 812px) {
   .solar-installer-component {
+    padding:  4rem 2rem;
     h1 {
       font-size: pxtorem(27px);
       line-height: pxtorem(30px);

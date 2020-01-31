@@ -1,72 +1,104 @@
 @import "src/variables";
 
 .query-form {
-  text-align: center;
-  padding: 2rem;
-  .form-label {
-    visibility: hidden;
-  }
-
-  .form-control {
-    box-sizing: border-box;
-    height: pxtorem(46px);
-    max-width: pxtorem(371px);
-    width: 100%;
-    border: 1px solid $sc_grey_half;
-    padding-left: 1rem;
-    color: $sc_secondary;
-    font-size: 1rem;
-
-    &:active, &:focus {
-      outline: none;
-      border-bottom: $sc_link solid 4px;
-      background-image: url(../../../assets/images/tick.svg);
-      background-repeat: no-repeat;
-      background-position-x: 95%;
-      background-position-y: pxtorem(15px);
-    }
-    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    &[type="number"] {
-      -moz-appearance: textfield;
+  display: flex;
+  padding:  4rem 2rem 0;
+  .hero-section {
+    width: 50%;
+    .hero-img {
+      height: pxtorem(416px);
+      .hero-img-bg {
+        height: 105%;
+        background-image: url(../../../assets/images/hero_img.png);
+        background-repeat: no-repeat;
+        background-position-x: 75%;
+        background-size: contain;
+      }
     }
   }
+  .form-section {
+    width: 50%;
+    padding-top: 1rem;
+    .form-title {
+      h1, h2 {
+        margin: 0;
+        color: $sc_white;
+      }
+    }
+    .form-label {
+      visibility: hidden;
+    }
 
-  .number-of-people {
     .form-control {
-      -moz-appearance: none; /* Firefox */
-      -webkit-appearance: none; /* Safari and Chrome */
-      appearance: none;
-      background-image: url(../../../assets/images/image-gallery-chevron.png);
-      background-repeat: no-repeat;
-      background-position-x: 95%;
-      background-position-y: pxtorem(15px);
+      box-sizing: border-box;
+      height: pxtorem(46px);
+      max-width: pxtorem(371px);
+      width: 100%;
+      border: 1px solid $sc_grey_half;
+      padding-left: 1rem;
+      color: $sc_secondary;
+      font-size: 1rem;
+
+      &:active, &:focus {
+        outline: none;
+        border-bottom: $sc_link solid 4px;
+        background-image: url(../../../assets/images/tick.svg);
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: pxtorem(15px);
+      }
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      &[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    .number-of-people {
+      .form-control {
+        -moz-appearance: none; /* Firefox */
+        -webkit-appearance: none; /* Safari and Chrome */
+        appearance: none;
+        background-image: url(../../../assets/images/image-gallery-chevron.png);
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: pxtorem(15px);
+      }
+    }
+
+    .form-control::placeholder {
+      color: #002E46;
+      font-size: 1rem;
+    }
+
+    .invalid-feedback {
+      color: #d2f642;
+      width: pxtorem(371px);
+      .error-message {
+        display: flex;
+        margin-left: pxtorem(5px);
+      }
     }
   }
 
-  .form-control::placeholder {
-    color: #002E46;
-    font-size: 1rem;
-  }
-
-
-
-  .invalid-feedback {
-    color: $fc_error;
-    width: pxtorem(371px);
-    margin: 0 auto;
-
-    .error-message {
-      display: flex;
-      margin-left: pxtorem(5px);
-    }
-  }
 }
 
 @media screen and (max-width: 812px) {
   .query-form {
+    flex-direction: column;
+    text-align: center;
+    padding:  4rem 2rem;
+    .hero-section {
+      width: 100%;
+      .hero-img {
+        height: 20rem;
+      }
+    }
+    .form-section {
+      width: 100%;
+    }
     .form-title {
       h1 {
         font-size: pxtorem(27px);

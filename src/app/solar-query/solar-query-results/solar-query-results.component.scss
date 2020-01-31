@@ -3,7 +3,7 @@
 .solar-query-results-component {
   background-color: $bc_nav_grey;
   text-align: center;
-  padding: 4rem 0;
+  padding:  4rem 2rem;
 
   .results-header {
     h2 {
@@ -19,6 +19,14 @@
   }
 
   .results-body {
+    .system-size, .pay-back, .potential-savings, .system-types {
+      background: $sc_white;
+      margin: 0 auto;
+      max-width: pxtorem(700px);
+      h3, h4 {
+        line-height: 5rem;
+      }
+    }
     h3 {
       margin-bottom: 0;
     }
@@ -33,8 +41,13 @@
     }
 
     .system-types {
+      padding-bottom: 2rem;
       h4 {
-        line-height: pxtorem(85px);
+        height: pxtorem(65px);
+        line-height: pxtorem(65px);
+      }
+      p:first-of-type {
+        line-height: 3.75rem;
       }
     }
   }
@@ -44,48 +57,37 @@
   .solar-query-results-component {
     .results-header {
       h1 {
-        font-size: pxtorem(27px);
-        line-height: pxtorem(30px);
+        font-size: pxtorem(22px);
+        line-height: pxtorem(25px);
       }
 
       h2 {
-        font-size: pxtorem(20px);
-        line-height: pxtorem(27px);
+        font-size: pxtorem(18px);
+        line-height: pxtorem(24px);
       }
     }
 
     .results-body {
-      .system-size {
+      .system-size, .pay-back, .potential-savings, .system-types {
         h3 {
-          margin-top: 2rem;
+          line-height: 3rem;
+          font-size: 1.1rem;
         }
-      }
-
-      .pay-back {
         h4 {
-          margin-top: 1rem;
+          line-height: 1.8rem;
+          font-size: 1rem;
         }
       }
-
-      p {
-        margin: 0 auto;
-        color: $sc_secondary;
-        font-family: "Nunito Sans";
-        font-size: pxtorem(19px);
-        line-height: pxtorem(28px);
-        max-width: pxtorem(532px);
-      }
-
-      h4 {
-        height: pxtorem(42px);
-      }
-
       .system-types {
         h4 {
-          line-height: pxtorem(42px);
+          height: pxtorem(45px);
+          line-height: pxtorem(45px);
+        }
+        p:first-of-type, p {
+          line-height: 1.2rem;
+          font-size: 1rem;
         }
       }
     }
-
   }
 }

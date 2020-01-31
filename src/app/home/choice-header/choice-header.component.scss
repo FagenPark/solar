@@ -52,7 +52,7 @@
     align-self: center;
     height: $header_height;
     width: auto;
-    background: transparent url(src/assets/images/solarquotes-logo-header.png) no-repeat 50% 50%;
+    background: transparent url(src/assets/images/sq_logo-trans.png) no-repeat 50% 50%;
     background-size: contain;
     line-height: 3.125em;
   }
@@ -62,7 +62,7 @@
   img {
     visibility: hidden;
     vertical-align: baseline;
-    height: 4rem;
+    height: $header_height_mobile;
     width: pxtorem(227px);
   }
 }
@@ -89,7 +89,8 @@
 
   .header_info-item_solar_quotes_logo {
     a {
-      height: $header_height_mobile;
+      height: 2.4rem;
+      background-position-x: 100%;
     }
   }
 }
