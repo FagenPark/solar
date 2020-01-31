@@ -1,4 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
+import {SolarQueryService} from '../solar-query.service';
+import {Observable} from 'rxjs';
+import {Postcode} from '../postcode';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-solar-query-results',
@@ -9,34 +13,35 @@ export class SolarQueryResultsComponent implements OnInit {
   @Input() postCode: string;
   @Input() numberOfPeople: number;
 
-  constructor() { }
+  constructor(private solarQueryService: SolarQueryService) { }
 
   ngOnInit() {
+    this.solarQueryService.getPostcodes().pipe(tap(data => console.log(data))).subscribe();
+    this.solarQueryService.getPostcodeInformation(2077).subscribe();
   }
 
   getEnergyUsage(): number {
-    // TODO check calculation
-    return this.numberOfPeople * 10;
+    return this.solarQueryService.getEnergyUsage(this.numberOfPeople);
   }
 
   getSystemSize(): number {
-    // TODO check calculation
-    return this.numberOfPeople * 1.5;
+    return this.solarQueryService.getSystemSize(this.numberOfPeople);
   }
 
   getPayback(): string {
-    return this.numberOfPeople * 1 + '-' + this.numberOfPeople * 1.5;
+    return this.solarQueryService.getPayback(this.numberOfPeople);
   }
 
   getSavings(): number {
-    return this.numberOfPeople * 150;
+    return this.solarQueryService.getSavings(this.numberOfPeople);
   }
 
   getMinPrice() {
-    return this.numberOfPeople * 1000;
+    return this.solarQueryService.getMinPrice(this.numberOfPeople);
   }
 
   getMaxPrice() {
-    return this.numberOfPeople * 2000;
+    return this.solarQueryService.getMaxPrice(this.numberOfPeople);
   }
+
 }
