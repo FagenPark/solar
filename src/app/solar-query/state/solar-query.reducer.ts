@@ -7,6 +7,7 @@ export interface SolarQueryState {
   isModalOpen: boolean;
   modalContent: string;
   modalTitle: string;
+  stateName: string;
 }
 const initialState: SolarQueryState = {
   hasResults: false,
@@ -15,6 +16,7 @@ const initialState: SolarQueryState = {
   isModalOpen: false,
   modalContent: '',
   modalTitle: '',
+  stateName: '',
 };
 
 

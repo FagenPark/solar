@@ -6,6 +6,9 @@ export enum SolarQueryActionsTypes {
   SubmitInstallersQuery = '[Solar Query] Submit Installers Query',
   SetModalContent = '[Solar Query] Set Modal Content',
   SetModalTitle = '[Solar Query] Set Modal Title',
+  GetStateFromPostcode = '[Solar Query] Get State From Postcode',
+  GetStateFromPostcodeSuccess = '[Solar Query] Get State From Postcode Success',
+  GetStateFromPostcodeFail = '[Solar Query] Get State From Postcode Fail',
   ToggleModal = '[Solar Query] Toggle Modal'
 }
 
