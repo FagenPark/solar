@@ -1,8 +1,8 @@
 <div class="solar-query-results-component">
   <div class="results-header">
     <h1>Your results</h1>
-    <h2>For {{numberOfPeople}} people living in your house, we approximate your daily energy usage to
-      be {{getEnergyUsage()}}kW.
+    <h2>For <strong>{{numberOfPeople}} people</strong> living in your house,<br> we approximate your daily energy usage to
+      be {{getEnergyUsage()}}kWh.
       <app-tool-tip [modalContent]="'what is energy usage'"></app-tool-tip>
       Based on this we estimate:
     </h2>
@@ -15,22 +15,22 @@
       <h4>{{getSystemSize()}}kW</h4>
     </div>
     <div class="pay-back">
-      <h3>Approximate pay back time
+      <h3>Approximate time the system will pay itself back
         <app-tool-tip [modalContent]="'what is pay back'"></app-tool-tip>
       </h3>
       <h4>{{getPayback()}} years</h4>
     </div>
     <div class="potential-savings">
-      <h3>Potential savings
+      <h3>Potential savings on your electricity costs
         <app-tool-tip [modalContent]="'what is potential savings'"></app-tool-tip>
       </h3>
-      <h4>{{getSavings() | currency:'ASD': '$':'1.0-0'}} per quarter</h4>
+      <h4>{{getSavings() | currency:'ASD': '$':'1.0-0'}} per year</h4>
     </div>
     <div class="system-types">
-      <h3>Solar system types
+      <h3>Cost of entire system and installation
         <app-tool-tip [modalContent]="'what is potential savings'"></app-tool-tip>
       </h3>
-      <p>Price range after rebate (solar parts and installation)</p>
+      <p>Price range after rebate</p>
       <h4>From {{getMinPrice() | currency:'ASD': '$':'1.0-0'}} - {{getMaxPrice() | currency:'ASD': '$':'1.0-0'}}</h4>
       <p>Price is based on standard installation for a single storey home with a tin roof and no tree shading</p>
     </div>

@@ -8,7 +8,7 @@ export interface SolarQueryState {
   modalContent: string;
 }
 const initialState: SolarQueryState = {
-  hasResults: false,
+  hasResults: true,
   postCode: '',
   numberOfPeople: null,
   isModalOpen: false,

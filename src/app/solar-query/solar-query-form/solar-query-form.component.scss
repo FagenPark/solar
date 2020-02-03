@@ -89,11 +89,14 @@
   .query-form {
     flex-direction: column;
     text-align: center;
-    padding:  4rem 2rem;
+    padding:  1rem;
     .hero-section {
       width: 100%;
       .hero-img {
-        height: 20rem;
+        height: 12.5rem;
+        .hero-img-bg {
+          height: 100%;background-position: center;
+        }
       }
     }
     .form-section {
@@ -103,11 +106,13 @@
       h1 {
         font-size: pxtorem(27px);
         line-height: pxtorem(30px);
+        height: 4.5rem;
       }
 
       h2 {
-        font-size: pxtorem(20px);
-        line-height: pxtorem(27px);
+        font-size: pxtorem(24px);
+        line-height: pxtorem(31px);
+        height: pxtorem(110px);
       }
     }
   }

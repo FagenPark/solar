@@ -2,9 +2,28 @@
 footer {
   background-color: $sc_secondary;
   height: $footer_height;
+  padding-top: 5rem;
+  .footer-logos {
+    display: flex;
+    max-width: pxtorem(750px);
+    margin: 0 auto;
+    .footer-logo-item {
+      display: flex;
+      align-items: center;
+      .choice-logo-img {
+        width: pxtorem(154px);
+      }
+      .sq-logo-img {
+        width: pxtorem(250px);
+        margin-left: pxtorem(56px);
+      }
+    }
+
+  }
 }
 .footer__info {
   display: flex;
+  flex-direction: column;
   max-width: $max_width;
   width: 100%;
   margin: 0 auto;
@@ -14,8 +33,9 @@ footer {
   margin: 0 .625rem;
 }
 .footer__info-item__summary {
-  text-align: center;
-  width: 100%;
+text-align: center;
+  max-width: pxtorem(645px);
+  margin: 0 auto;
   h3 {
     font-size: pxtorem(22px);
     color: $sc_white;
@@ -23,22 +43,39 @@ footer {
   }
   p, a {
     font-size: pxtorem(19px);
-    max-width: pxtorem(645px);
-    margin: 0 auto;
     line-height: pxtorem(31px);
     color: $fc_reverse_link;
   }
 }
 
 @media screen and (max-width: 812px) {
+  footer {
+    padding-top: 2rem;
+    height: $footer_height_mobile;
+    .l-constrained {
+      padding: 0 1rem;
+    }
+    .footer-logos {
+      .footer-logo-item {
+        .choice-logo-img {
+          width: pxtorem(108px);
+        }
+        .sq-logo-img {
+          width: pxtorem(175px);
+          margin-left: pxtorem(36px);
+        }
+      }
+    }
+  }
+
   .footer__info-item__summary {
     h3 {
-      font-size: pxtorem(18px);
-      line-height: pxtorem(25px);
+      font-size: pxtorem(22px);
+      line-height: pxtorem(28px);
     }
     p, a {
-      font-size: pxtorem(15px);
-      line-height: pxtorem(20px);
+      font-size: pxtorem(19px);
+      line-height: pxtorem(31px);
     }
   }
 }

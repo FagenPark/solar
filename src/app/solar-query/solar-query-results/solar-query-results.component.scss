@@ -48,12 +48,17 @@
       p:first-of-type {
         line-height: 3.75rem;
       }
+      p:nth-of-type(2) {
+        font-style: italic;
+        line-height: pxtorem(20px);
+      }
     }
   }
 }
 
 @media screen and (max-width: 812px) {
   .solar-query-results-component {
+    padding:  1rem;
     .results-header {
       h1 {
         font-size: pxtorem(22px);
@@ -68,22 +73,33 @@
     .results-body {
       .system-size, .pay-back, .potential-savings, .system-types {
         h3 {
-          line-height: 3rem;
-          font-size: 1.1rem;
+          line-height: 1.5rem;
+          font-size: 1.2rem;
+          padding-top: 1rem;
         }
         h4 {
-          line-height: 1.8rem;
-          font-size: 1rem;
+          line-height: 2rem;
+          font-size: 1.8rem;
+          padding-top: 1.5rem;
+        }
+      }
+      .system-size {
+        h4 {
+          height: 3.3rem;
+          padding-top: 1rem;
         }
       }
       .system-types {
         h4 {
           height: pxtorem(45px);
           line-height: pxtorem(45px);
+          padding-top: 0;
         }
         p:first-of-type, p {
-          line-height: 1.2rem;
           font-size: 1rem;
+        }
+        p:nth-of-type(2) {
+          padding: 1rem;
         }
       }
     }

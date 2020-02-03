@@ -14,6 +14,7 @@
     padding-top: 5rem;
     .solar-installer-body-item {
       width: 30%;
+      max-width: pxtorem(350px);
       .item-icon {
         background-repeat: no-repeat;
         height: pxtorem(195px);
@@ -39,10 +40,18 @@
 
     }
   }
+  .solar-installer-btn {
+    .primary-btn {
+      background-image: url(../../../assets/images/external-link.svg);
+      background-repeat: no-repeat;
+      background-position-x: 80%;
+      background-position-y: pxtorem(20px) ;
+    }
+  }
 }
 @media screen and (max-width: 812px) {
   .solar-installer-component {
-    padding:  4rem 2rem;
+    padding:  1rem;
     h1 {
       font-size: pxtorem(27px);
       line-height: pxtorem(30px);
@@ -55,12 +64,9 @@
       flex-direction: column;
       .solar-installer-body-item {
         width: 100%;
-        .item-icon {
-          height: pxtorem(130px);
-        }
         .item-text {
           padding-top: 2rem;
-          color: $sc_secondary;
+          color: $sc_white;
           font-family: "Nunito Sans";
           font-size: pxtorem(22px);
           font-weight: bold;
