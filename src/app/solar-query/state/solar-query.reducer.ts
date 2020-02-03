@@ -9,7 +9,7 @@ export interface SolarQueryState {
   modalTitle: string;
 }
 const initialState: SolarQueryState = {
-  hasResults: true,
+  hasResults: false,
   postCode: '',
   numberOfPeople: null,
   isModalOpen: false,
