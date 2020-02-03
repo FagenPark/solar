@@ -11,6 +11,7 @@ import * as queryActions from 'src/app/solar-query/state/solar-query.actions';
 })
 export class ToolTipComponent implements OnInit {
   @Input() modalContent: string;
+  @Input() modalTitle: string;
 
   constructor(private store: Store<fromRoot.State>) { }
 
@@ -18,6 +19,7 @@ export class ToolTipComponent implements OnInit {
   }
 
   openModal() {
+    this.store.dispatch(new queryActions.SetModalTitle(this.modalTitle));
     this.store.dispatch(new queryActions.SetModalContent(this.modalContent));
     this.store.dispatch(new queryActions.ToggleModal(true));
   }

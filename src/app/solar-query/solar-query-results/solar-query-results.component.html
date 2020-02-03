@@ -10,7 +10,8 @@
   <div class="results-body">
     <div class="system-size">
       <h3>System size (kW)
-        <app-tool-tip [modalContent]="'what is system size'"></app-tool-tip>
+        <app-tool-tip [modalContent]="'The size of a solar power system is typically described by its solar PV “peak output” (in Watts or kilowatts).\n'+ '\n' +
+'As a guide, a typical home uses 20kWh of energy a day. A 5kW solar system would meet most of the daytime power needs of such a home.'" [modalTitle]="'System size (kW)'"></app-tool-tip>
       </h3>
       <h4>{{getSystemSize()}}kW</h4>
     </div>

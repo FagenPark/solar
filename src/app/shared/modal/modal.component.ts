@@ -11,7 +11,7 @@ import * as queryActions from 'src/app/solar-query/state/solar-query.actions';
 })
 export class ModalComponent implements OnInit {
   @Input() modalContent: string;
-  modalTitle = 'Help Information';
+  @Input() modalTitle: string;
 
   constructor(private store: Store<fromRoot.State>) { }
 

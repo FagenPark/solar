@@ -40,6 +40,7 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
   postCode$: Observable<string>;
   numberOfPeople$: Observable<number>;
   modalContent$: Observable<string>;
+  modalTitle$: Observable<string>;
   isModalOpen$: Observable<boolean>;
 
   constructor(private store: Store<fromRoot.State>) {
@@ -50,8 +51,8 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
       takeWhile(() => this.isComponentActive));
     this.postCode$ = this.store.pipe(select(fromSolarQuery.getPostCode));
     this.numberOfPeople$ = this.store.pipe(select(fromSolarQuery.getNumberOfPeople));
-    this.modalContent$ = this.store.pipe(select(fromSolarQuery.getModalContent),
-      takeWhile(() => this.isComponentActive));
+    this.modalContent$ = this.store.pipe(select(fromSolarQuery.getModalContent));
+    this.modalTitle$ = this.store.pipe(select(fromSolarQuery.getModalTitle));
     this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus),
       takeWhile(() => this.isComponentActive));
   }

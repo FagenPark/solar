@@ -5,6 +5,7 @@ export enum SolarQueryActionsTypes {
   ChangeFormInput = '[Solar Query] Change Form Input',
   SubmitInstallersQuery = '[Solar Query] Submit Installers Query',
   SetModalContent = '[Solar Query] Set Modal Content',
+  SetModalTitle = '[Solar Query] Set Modal Title',
   ToggleModal = '[Solar Query] Toggle Modal'
 }
 
@@ -25,6 +26,11 @@ export class SetModalContent implements Action {
   constructor(public payload: string) {
   }
 }
+export class SetModalTitle implements Action {
+  readonly  type = SolarQueryActionsTypes.SetModalTitle;
+  constructor(public payload: string) {
+  }
+}
 export class ToggleModal implements Action {
   readonly  type = SolarQueryActionsTypes.ToggleModal;
   constructor(public payload: boolean) {
@@ -34,4 +40,5 @@ export class ToggleModal implements Action {
 export type SolarQueryActions = ChangeFormInput
   | SubmitInstallersQuery
   | SetModalContent
+  | SetModalTitle
   | ToggleModal;

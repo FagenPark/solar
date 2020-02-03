@@ -4,18 +4,58 @@
   box-shadow: 0px 0px 2px 1px black;
   z-index: 100;
   background: $sc_white;
-  min-height: 0;
   border: solid 1px $sc_grey_7;
-  border-radius: pxtorem(5px);
   margin: 0 auto;
-  float: none;
-  padding: 0;
+  padding: 5rem 2rem;
   left: 5%;
   right: 5%;
   bottom: 15%;
   top: 15%;
   max-width: pxtorem(500px);
   overflow-y: auto;
+  .modal-close-btn {
+    position: absolute;
+    right: pxtorem(12px);
+    top: pxtorem(12px);
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: pxtorem(30px);
+    height: pxtorem(30px);
+    background-color: $bc_btn;
+    span {
+      position: absolute;
+      left: -52px;
+      top: 7px;
+      font-size: 1rem;
+    }
+    img {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      width: pxtorem(24px);
+      height: pxtorem(24px);
+    }
+  }
+  .modal-title {
+    h2 {
+      height: 58px;
+      color: #012D46;
+      font-family: Roboto;
+      font-size: 38px;
+      font-weight: bold;
+      line-height: 44px;
+    }
+  }
+  .modal-content {
+    p {
+      color: #002E46;
+      font-family: "Nunito Sans";
+      font-size: 19px;
+      letter-spacing: 0.1px;
+      line-height: 31px;
+    }
+  }
 }
 .modal-overlay {
   position: fixed;
@@ -24,18 +64,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   z-index: 99;
   overflow: hidden;
 }
-.modal-title {
-  text-align: center;
-}
-.modal-content {
-  border: none;
-  margin: 2.5rem;
-  text-align: center;
-}
+
 @media (min-width: 576px) {
   .modal-container {
     width: 70%;
