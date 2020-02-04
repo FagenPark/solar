@@ -50,9 +50,8 @@
       color: $sc_secondary;
       font-size: 1rem;
 
-      &:active, &:focus {
+      &.ng-valid {
         outline: none;
-        border-bottom: $sc_link solid 4px;
         background-image: url(../../../assets/images/tick.svg);
         background-repeat: no-repeat;
         background-position-x: 95%;
@@ -85,7 +84,7 @@
     }
 
     .invalid-feedback {
-      color: #d2f642;
+      color: #fff;
       width: pxtorem(371px);
       .error-message {
         display: flex;

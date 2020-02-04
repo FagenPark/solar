@@ -50,11 +50,12 @@ app-solar-root {
     background-color: $bc_btn;
     color: $sc_white;
     font-family: "Nunito Sans";
-    font-size: pxtorem(19px);
+    font-size: pxtorem(22px);
     font-weight: bold;
     line-height: pxtorem(26px);
     text-align: center;
     cursor: pointer;
+    border: none;
     &:hover {
       background-color: $bc_btn_d;
     }
