@@ -9,50 +9,50 @@ import {catchError, map, tap} from 'rxjs/operators';
 })
 export class SolarQueryService {
   private postcodeUrl = 'api/postcodes';
-  private payBackYears = [{ACT: '5-6', NSW: '4-5',
-      QLD: '5-6',
-      SA: '3-4',
-      VIC: '5-6',
-      TAS: '7-8',
-      NT: '2-3',
-      WA: '5-6'
+  private payBackYears = [{ACT: '5 - 6', NSW: '4 - 5',
+      QLD: '5 - 6',
+      SA: '3 - 4',
+      VIC: '5 - 6',
+      TAS: '7 - 8',
+      NT: '2 - 3',
+      WA: '5 - 6'
     },
     {
-      ACT: '5-6',
-      NSW: '4-5',
-      QLD: '5-6',
-      SA: '3-4',
-      VIC: '5-6',
-      TAS: '7-8',
-      NT: '2-3',
-      WA: '5-6'
+      ACT: '5 - 6',
+      NSW: '4 - 5',
+      QLD: '5 - 6',
+      SA: '3 - 4',
+      VIC: '5 - 6',
+      TAS: '7 - 8',
+      NT: '2 - 3',
+      WA: '5 - 6'
     }, {
-      ACT: '5-6',
-      NSW: '4-5',
-      QLD: '5-6',
-      SA: '3-4',
-      VIC: '5-6',
-      TAS: '7-8',
-      NT: '2-3',
-      WA: '5-6'
+      ACT: '5 - 6',
+      NSW: '4 - 5',
+      QLD: '5 - 6',
+      SA: '3 - 4',
+      VIC: '5 - 6',
+      TAS: '7 - 8',
+      NT: '2 - 3',
+      WA: '5 - 6'
     }, {
-      ACT: '5-6',
-      NSW: '4-5',
-      QLD: '5-6',
-      SA: '3-4',
-      VIC: '5-6',
-      TAS: '7-8',
-      NT: '2-3',
-      WA: '5-6'
+      ACT: '5 - 6',
+      NSW: '4 - 5',
+      QLD: '5 - 6',
+      SA: '3 - 4',
+      VIC: '5 - 6',
+      TAS: '7 - 8',
+      NT: '2 - 3',
+      WA: '5 - 6'
     }, {
-      ACT: '5-6',
-      NSW: '4-5',
-      QLD: '4-5',
-      SA: '3-4',
-      VIC: '4-5',
-      TAS: '6-7',
-      NT: '2-3',
-      WA: '4-5'
+      ACT: '5 - 6',
+      NSW: '4 - 5',
+      QLD: '4 - 5',
+      SA: '3 - 4',
+      VIC: '4 - 5',
+      TAS: '6 - 7',
+      NT: '2 - 3',
+      WA: '4 - 5'
     }
   ];
   private annKWHs = [{ACT: '3740', NSW: '4260',
