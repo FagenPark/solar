@@ -6,6 +6,7 @@
   padding:  4rem 2rem;
   .results-header {
     h2 {
+      height: pxtorem(110px);
       .tooltip-toggle {
         display: inline-block;
         width: pxtorem(22px);
@@ -50,7 +51,6 @@
       }
       p:nth-of-type(2) {
         font-style: italic;
-        line-height: pxtorem(20px);
       }
     }
   }
@@ -61,8 +61,8 @@
     padding:  1rem;
     .results-header {
       h1 {
-        font-size: pxtorem(22px);
-        line-height: pxtorem(25px);
+        font-size: pxtorem(30px);
+        line-height: pxtorem(40px);
       }
       h2 {
         font-size: pxtorem(18px);

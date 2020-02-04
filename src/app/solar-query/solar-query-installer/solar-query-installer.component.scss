@@ -3,6 +3,10 @@
   text-align: center;
   padding: 4rem 0;
   background: #275B95;
+  .solar-installer-container {
+    display: flex;
+    flex-direction: column;
+  }
   .solar-installer-title {
     h1 {
       color: $sc_white;
@@ -43,8 +47,11 @@
     .primary-btn {
       background-image: url(../../../assets/images/external-link.svg);
       background-repeat: no-repeat;
-      background-position-x: 80%;
-      background-position-y: pxtorem(20px) ;
+      background-position-x: 85%;
+      background-position-y: pxtorem(24px) ;
+      span {
+        margin-left: pxtorem(-30px);
+      }
     }
   }
 }
@@ -52,8 +59,8 @@
   .solar-installer-component {
     padding:  1rem;
     h1 {
-      font-size: pxtorem(27px);
-      line-height: pxtorem(30px);
+      font-size: pxtorem(30px);
+      line-height: pxtorem(35px);
     }
     h2 {
       font-size: pxtorem(20px);
@@ -61,6 +68,7 @@
     }
     .solar-installer-body {
       flex-direction: column;
+      order: 2;
       .solar-installer-body-item {
         width: 100%;
         .item-text {
@@ -72,6 +80,9 @@
           line-height: pxtorem(28px);
         }
       }
+    }
+    .solar-installer-btn {
+      margin-top: pxtorem(45px);
     }
   }
 }
