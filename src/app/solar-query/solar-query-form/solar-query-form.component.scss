@@ -9,24 +9,22 @@
     .hero-img {
       position: relative;
       height: pxtorem(416px);
-      .hero-img-bg {
+      .hero-img-bg {position: absolute;
         height: 105%;
+        width: 105%;
+        top: 0;
         background-image: url(../../../assets/images/hero_img.png);
         background-repeat: no-repeat;
-        background-position-x: 75%;
+        background-position-x: 70%;
         background-size: contain;
       }
       .bg-round {
-        position: absolute;
         height: 100%;
-        width: 100%;
-        top: 0;
         background-image: url(../../../assets/images/bg_round-trans.png);
         background-repeat: no-repeat;
         background-position-x: 85%;
         background-size: auto;
       }
-    ;
     }
   }
   .form-section {
@@ -108,7 +106,13 @@
       .hero-img {
         height: 12.5rem;
         .hero-img-bg {
-          height: 100%;background-position: center;
+          height: 100%;
+          background-position: center;
+        }
+        .bg-round {
+          height: 110%;
+          background-size: contain;
+          background-position: center;
         }
       }
     }
