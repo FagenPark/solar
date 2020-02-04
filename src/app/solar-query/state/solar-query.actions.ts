@@ -34,6 +34,22 @@ export class SetModalTitle implements Action {
   constructor(public payload: string) {
   }
 }
+export class GetStateFromPostcode implements Action {
+  readonly type = SolarQueryActionsTypes.GetStateFromPostcode;
+  constructor(public payload: number) { }
+}
+
+export class GetStateFromPostcodeSuccess implements Action {
+  readonly type = SolarQueryActionsTypes.GetStateFromPostcodeSuccess;
+
+  constructor(public payload: string) { }
+}
+export class GetStateFromPostcodeFail implements Action {
+  readonly type = SolarQueryActionsTypes.GetStateFromPostcodeFail;
+
+  constructor(public payload: string) { }
+}
+
 export class ToggleModal implements Action {
   readonly  type = SolarQueryActionsTypes.ToggleModal;
   constructor(public payload: boolean) {
@@ -44,4 +60,7 @@ export type SolarQueryActions = ChangeFormInput
   | SubmitInstallersQuery
   | SetModalContent
   | SetModalTitle
+  | GetStateFromPostcode
+  | GetStateFromPostcodeSuccess
+  | GetStateFromPostcodeFail
   | ToggleModal;

@@ -1,7 +1,7 @@
 <div class="solar-query-results-component">
   <div class="results-header">
     <h1>Your results</h1>
-    <h2>For <strong>{{numberOfPeople}} people</strong> living in your house,<br> we approximate your daily energy usage to
+    <h2>For <strong>{{numberOfPeople}} people</strong> living in your house,<br> we approximate your annual energy usage to
       be {{getEnergyUsage()}}kWh.
       <app-tool-tip [modalTitle]="'What is energy usage'" [modalContent]="'what is energy usage'"></app-tool-tip>
       Based on this we estimate:
@@ -25,7 +25,7 @@
       <h3>Potential savings on your electricity costs
         <app-tool-tip [modalTitle]="'What is potential savings?'" [modalContent]="'what is potential savings'"></app-tool-tip>
       </h3>
-      <h4>{{getSavings() | currency:'ASD': '$':'1.0-0'}} per year</h4>
+      <h4>{{getSavings()}} per year</h4>
     </div>
     <div class="system-types">
       <h3>Cost of entire system and installation

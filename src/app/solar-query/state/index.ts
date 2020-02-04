@@ -8,3 +8,4 @@ export const getPostCode = createSelector(getSolarQueryState, state => state.pos
 export const getModalContent = createSelector(getSolarQueryState, state => state.modalContent);
 export const getModalTitle = createSelector(getSolarQueryState, state => state.modalTitle);
 export const getModalStatus = createSelector(getSolarQueryState, state => state.isModalOpen);
+export const getStateName = createSelector(getSolarQueryState, state => state.stateName);

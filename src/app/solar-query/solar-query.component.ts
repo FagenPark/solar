@@ -37,11 +37,12 @@ import {takeWhile} from 'rxjs/operators';
 export class SolarQueryComponent implements OnInit, OnDestroy {
   isComponentActive = true;
   displayResults$: Observable<boolean>;
-  postCode$: Observable<string>;
-  numberOfPeople$: Observable<number>;
+  postCode$: Observable<number>;
+  numberOfPeople$: Observable<string>;
   modalContent$: Observable<string>;
   modalTitle$: Observable<string>;
   isModalOpen$: Observable<boolean>;
+  stateName$: Observable<string>;
 
   constructor(private store: Store<fromRoot.State>) {
   }
@@ -55,6 +56,7 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
     this.modalTitle$ = this.store.pipe(select(fromSolarQuery.getModalTitle));
     this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus),
       takeWhile(() => this.isComponentActive));
+    this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
   }
 
   ngOnDestroy(): void {

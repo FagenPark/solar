@@ -4,7 +4,7 @@
   </div>
   <div *ngIf="displayResults$ | async" [@inOutAnimation] >
     <div>
-      <app-solar-query-results  [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async"></app-solar-query-results>
+      <app-solar-query-results  [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async" [stateName]="stateName$ | async"></app-solar-query-results>
     </div>
     <div>
       <app-solar-query-installer></app-solar-query-installer>

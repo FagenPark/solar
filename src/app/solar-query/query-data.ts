@@ -1,5 +1,5 @@
 export class QueryData {
-  constructor(public postCode: string = '',
-              public numberOfPeople: number = 0) {
+  constructor(public postCode: number = null,
+              public numberOfPeople: string = '') {
   }
 }

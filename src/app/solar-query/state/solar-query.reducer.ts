@@ -2,8 +2,8 @@ import {SolarQueryActions, SolarQueryActionsTypes} from './solar-query.actions';
 
 export interface SolarQueryState {
   hasResults: boolean;
-  postCode: string;
-  numberOfPeople: number;
+  postCode: number | null;
+  numberOfPeople: string;
   isModalOpen: boolean;
   modalContent: string;
   modalTitle: string;
@@ -11,8 +11,8 @@ export interface SolarQueryState {
 }
 const initialState: SolarQueryState = {
   hasResults: false,
-  postCode: '',
-  numberOfPeople: null,
+  postCode: null,
+  numberOfPeople: '',
   isModalOpen: false,
   modalContent: '',
   modalTitle: '',
@@ -48,6 +48,11 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
       return {
         ...state,
         isModalOpen: action.payload
+      };
+    case SolarQueryActionsTypes.GetStateFromPostcodeSuccess:
+      return {
+        ...state,
+        stateName: action.payload
       };
     default:
       return state;

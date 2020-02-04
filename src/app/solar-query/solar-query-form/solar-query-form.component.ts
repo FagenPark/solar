@@ -24,6 +24,7 @@ export class SolarQueryFormComponent implements OnInit {
   }
 
   submit() {
+    this.store.dispatch(new queryActions.GetStateFromPostcode(this.queryForm.value.postCode));
     this.store.dispatch(new queryActions.ChangeFormInput(this.queryForm.value));
 
   }
