@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>new/info-icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon-&amp;-illustrations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-724.000000, -1424.000000)">
+            <g id="icon/info" transform="translate(724.000000, 1424.000000)">
+                <circle id="Oval-2" fill="#009ED9" fill-rule="nonzero" cx="11" cy="11" r="11"></circle>
+                <path d="M9.5,14.48 C9.5,14.3 9.48,14.14 9.48,13.98 C9.5,12.14 10.24,11.3 11.18,10.46 L11.44,10.22 C12.06,9.7 12.76,9.2 12.76,8.18 C12.76,7.08 12.04,6.46 10.86,6.46 C9.34,6.46 8.74,7.34 8.72,8.4 L6,8.4 C6.04,5.86 7.9,4 10.82,4 C14.28,4 15.64,5.86 15.64,7.7 C15.64,9.8 14.36,10.78 13.24,11.76 L12.94,12.06 C12.3,12.64 12,13.14 12,14.04 C11.98,14.18 12,14.38 12,14.48 L9.5,14.48 Z M10.76,18.84 C9.92,18.84 9.24,18.16 9.24,17.3 C9.24,16.48 9.92,15.8 10.76,15.8 C11.6,15.8 12.28,16.48 12.28,17.3 C12.28,18.16 11.6,18.84 10.76,18.84 Z" id="?" fill="#FFFFFF" fill-rule="evenodd"></path>
+            </g>
+        </g>
+    </g>
+</svg>
