@@ -41,4 +41,8 @@ export class SolarQueryResultsComponent implements OnInit {
     return this.solarQueryService.getMaxPrice(this.numberOfPeople);
   }
 
+  getPeopleText() {
+    if (this.numberOfPeople === '1') {return 'person'; } else if (this.numberOfPeople === '5') {return 'people or more'; }
+    return 'people';
+  }
 }

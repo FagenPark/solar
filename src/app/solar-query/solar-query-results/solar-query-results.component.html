@@ -1,11 +1,11 @@
 <div class="solar-query-results-component">
   <div class="results-header">
     <h1>Your results</h1>
-    <h2>For <strong>{{numberOfPeople}} people</strong> living in your house,<br> we approximate your annual energy usage to
-      be {{getEnergyUsage()}}kWh.
+    <h2>For <strong>{{numberOfPeople}} {{getPeopleText()}}</strong> living in your house in <strong>{{stateName}}</strong>,<br> we approximate your annual energy usage to
+      be <strong>{{getEnergyUsage()}} kWh</strong>.
       <app-tool-tip [modalTitle]="'What is energy usage'" [modalContent]="'what is energy usage'"></app-tool-tip>
-      Based on this we estimate:
     </h2>
+    <h2>Based on this we estimate:</h2>
   </div>
   <div class="results-body">
     <div class="system-size">
@@ -16,7 +16,7 @@
       <h4>{{getSystemSize()}}kW</h4>
     </div>
     <div class="pay-back">
-      <h3>Approximate time the system will pay itself back
+      <h3>Approx. time the system will pay itself back
         <app-tool-tip [modalTitle]="'What is pay back?'" [modalContent]="'what is pay back'"></app-tool-tip>
       </h3>
       <h4>{{getPayback()}} years</h4>
@@ -25,7 +25,7 @@
       <h3>Potential savings on your electricity costs
         <app-tool-tip [modalTitle]="'What is potential savings?'" [modalContent]="'what is potential savings'"></app-tool-tip>
       </h3>
-      <h4>{{getSavings()}} per year</h4>
+      <h4>From {{getSavings()}} per year</h4>
     </div>
     <div class="system-types">
       <h3>Cost of entire system and installation
