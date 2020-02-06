@@ -5,3 +5,8 @@ p {
   letter-spacing: 0.1px;
   line-height: 31px;
 }
+@media screen and (max-width: 812px) {
+  p {
+    margin-top: 2rem;
+  }
+}
