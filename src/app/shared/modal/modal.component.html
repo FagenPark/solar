@@ -4,7 +4,7 @@
     <h2>{{modalTitle}}</h2>
   </div>
   <div class="modal-content">
-    <p>{{modalContent}}</p>
+    <ng-content></ng-content>
   </div>
 </div>
 <div (click)="removeModal()" class="modal-overlay"></div>

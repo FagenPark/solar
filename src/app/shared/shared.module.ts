@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import {ModalComponent} from './modal/modal.component';
 import {ToolTipComponent} from './tool-tip/tool-tip.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
+import { ModalContentComponent } from './modal-content/modal-content.component';
 
 @NgModule({
   declarations: [
     ModalComponent,
-    ToolTipComponent
+    ToolTipComponent,
+    ModalContentComponent
   ],
   imports: [
     CommonModule
@@ -19,7 +19,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ToolTipComponent,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalContentComponent
   ]
 })
 export class SharedModule { }
