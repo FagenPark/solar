@@ -59,10 +59,6 @@ app-solar-root {
     &:hover {
       background-color: $bc_btn_d;
     }
-    &:disabled {
-      background-color: $fc_grey;
-      cursor: not-allowed;
-    }
   }
 }
 app-solar-root > div {

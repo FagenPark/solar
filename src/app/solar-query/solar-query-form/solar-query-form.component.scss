@@ -1,9 +1,19 @@
 @import "src/variables";
+.query-form {
+  &.no-results {
+    .hero-section {
+      .hero-img {
+        .bg-round {
+          height: 150%;
+        }
+      }
+    }
+  }
+}
 
 .query-form {
   display: flex;
   padding:  4rem 2rem 0;
-  background: #275B95;
   .hero-section {
     width: 50%;
     .hero-img {
@@ -24,6 +34,10 @@
         background-repeat: no-repeat;
         background-position-x: 85%;
         background-size: auto;
+        -moz-transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
     }
   }
@@ -96,7 +110,7 @@
 }
 
 @media screen and (max-width: 812px) {
-  .query-form {
+  .query-form, .query-form.no-results {
     flex-direction: column;
     text-align: center;
     padding:  1rem;

@@ -1,4 +1,4 @@
-<div class="query-form">
+<div class="query-form" [ngClass]="{'no-results' : !(displayResults$ | async)}">
   <div class="hero-section">
     <div class="hero-img">
       <div class="hero-img-bg"></div>
