@@ -43,6 +43,7 @@
     }
   }
   .solar-installer-btn {
+    padding-top: 2rem;
     .primary-btn {
       background-image: url(../../../assets/images/external-link.svg);
       background-repeat: no-repeat;
@@ -81,7 +82,8 @@
       }
     }
     .solar-installer-btn {
-      margin-top: pxtorem(45px);
+      padding-top: 3rem;
+      //margin-top: pxtorem(45px);
     }
   }
 }
