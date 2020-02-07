@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 
@@ -25,16 +25,17 @@ import {takeWhile} from 'rxjs/operators';
     trigger('expandCollapse', [
       transition(':enter', [
         style({height: '0'}),
-        animate('0.3s ease-out', style({height: '*'}))
+        animate('0.7s ease-out', style({height: '*'}))
       ]),
       transition(':leave', [
         style({height: '*'}),
-        animate('0.3s ease-in', style({height: '0'}))
+        animate('0.7s ease-in', style({height: '0'}))
       ])
     ])
   ]
 })
 export class SolarQueryComponent implements OnInit, OnDestroy {
+  isLoading = true;
   isComponentActive = true;
   displayResults$: Observable<boolean>;
   postCode$: Observable<number>;
@@ -57,6 +58,9 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
     this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus),
       takeWhile(() => this.isComponentActive));
     this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 0);
   }
 
   ngOnDestroy(): void {

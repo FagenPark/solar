@@ -72,3 +72,9 @@ $basepx: 16px;
     @content;
   }
 }
+@mixin transition($type, $duration, $easing, $delay: 0s) {
+  -moz-transition: $type $duration $delay $easing;
+  -webkit-transition: $type $duration $delay $easing;
+  -ms-transition: $type $duration $delay $easing;
+  transition: $type $duration $delay $easing;
+}

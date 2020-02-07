@@ -1,8 +1,8 @@
 <div>
-  <div>
+  <div class="query-form-container" [ngClass]="{'form-loading' : isLoading}">
     <app-solar-query-form></app-solar-query-form>
   </div>
-  <div *ngIf="displayResults$ | async" >
+  <div *ngIf="displayResults$ | async" [@expandCollapse]>
     <div>
       <app-solar-query-results  [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async" [stateName]="stateName$ | async"></app-solar-query-results>
     </div>
