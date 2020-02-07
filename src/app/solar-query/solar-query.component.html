@@ -13,5 +13,4 @@
 </div>
 <app-modal *ngIf="isModalOpen$ | async"
            [@inOutAnimation]
-           [modalTitle]="modalTitle$ | async"
            ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>

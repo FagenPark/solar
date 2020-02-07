@@ -5,7 +5,6 @@ export enum SolarQueryActionsTypes {
   ChangeFormInput = '[Solar Query] Change Form Input',
   SubmitInstallersQuery = '[Solar Query] Submit Installers Query',
   SetModalContentId = '[Solar Query] Set Modal Content',
-  SetModalTitle = '[Solar Query] Set Modal Title',
   GetStateFromPostcode = '[Solar Query] Get State From Postcode',
   GetStateFromPostcodeSuccess = '[Solar Query] Get State From Postcode Success',
   GetStateFromPostcodeFail = '[Solar Query] Get State From Postcode Fail',
@@ -26,11 +25,6 @@ export class SubmitInstallersQuery implements Action {
 
 export class SetModalContentId implements Action {
   readonly  type = SolarQueryActionsTypes.SetModalContentId;
-  constructor(public payload: string) {
-  }
-}
-export class SetModalTitle implements Action {
-  readonly  type = SolarQueryActionsTypes.SetModalTitle;
   constructor(public payload: string) {
   }
 }
@@ -59,7 +53,6 @@ export class ToggleModal implements Action {
 export type SolarQueryActions = ChangeFormInput
   | SubmitInstallersQuery
   | SetModalContentId
-  | SetModalTitle
   | GetStateFromPostcode
   | GetStateFromPostcodeSuccess
   | GetStateFromPostcodeFail

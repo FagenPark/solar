@@ -6,7 +6,6 @@ export interface SolarQueryState {
   numberOfPeople: string;
   isModalOpen: boolean;
   modalContentId: string;
-  modalTitle: string;
   stateName: string;
 }
 const initialState: SolarQueryState = {
@@ -15,7 +14,6 @@ const initialState: SolarQueryState = {
   numberOfPeople: '',
   isModalOpen: false,
   modalContentId: '',
-  modalTitle: '',
   stateName: '',
 };
 
@@ -38,11 +36,6 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
       return {
         ...state,
         modalContentId: action.payload
-      };
-    case SolarQueryActionsTypes.SetModalTitle:
-      return {
-        ...state,
-        modalTitle: action.payload
       };
     case SolarQueryActionsTypes.ToggleModal:
       return {

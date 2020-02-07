@@ -10,7 +10,6 @@ import * as queryActions from 'src/app/solar-query/state/solar-query.actions';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-  @Input() modalTitle: string;
 
   constructor(private store: Store<fromRoot.State>) { }
 

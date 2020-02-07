@@ -6,6 +6,5 @@ export const getHasResults = createSelector(getSolarQueryState, state => state.h
 export const getNumberOfPeople = createSelector(getSolarQueryState, state => state.numberOfPeople);
 export const getPostCode = createSelector(getSolarQueryState, state => state.postCode);
 export const getModalContentId = createSelector(getSolarQueryState, state => state.modalContentId);
-export const getModalTitle = createSelector(getSolarQueryState, state => state.modalTitle);
 export const getModalStatus = createSelector(getSolarQueryState, state => state.isModalOpen);
 export const getStateName = createSelector(getSolarQueryState, state => state.stateName);
