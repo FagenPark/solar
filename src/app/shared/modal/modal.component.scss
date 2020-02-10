@@ -13,9 +13,18 @@
   top: 20%;
   max-width: pxtorem(500px);
   overflow-y: auto;
+  .modal-content {
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: calc(100% - 4rem);
+    height: calc(100% - 3.5rem);
+    overflow: auto;
+    padding: 0 2rem 0.5rem 2rem;
+  }
   .modal-close-btn {
     position: absolute;
-    right: pxtorem(12px);
+    right: pxtorem(19px);
     top: pxtorem(12px);
     border: none;
     background: none;
@@ -24,11 +33,14 @@
     height: pxtorem(30px);
     color: #002e46;
     background-color: $bc_btn;
+    z-index: 1;
     span {
       position: absolute;
       left: -52px;
-      top: 7px;
       font-size: 1rem;
+      height: 100%;
+      top: 0;
+      line-height: 2rem;
     }
     img {
       position: absolute;
