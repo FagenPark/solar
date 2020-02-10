@@ -80,6 +80,8 @@
 }
 @media (min-width: 768px) {
   .modal-container {
+    top: 12%;
+    bottom: 12%;
     width: 50%;
   }
 }
@@ -91,5 +93,11 @@
 @media (min-width: 1200px) {
   .modal-container {
     width: 30%;
+  }
+}
+@media screen and (max-width: 812px) {
+  .modal-container {
+    top: 12%;
+    bottom: 12%;
   }
 }
