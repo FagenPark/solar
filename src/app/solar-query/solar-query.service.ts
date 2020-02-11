@@ -9,14 +9,15 @@ import {catchError, map, tap} from 'rxjs/operators';
 })
 export class SolarQueryService {
   private postcodeUrl = 'api/postcodes';
-  private payBackYears = [{ACT: '5 - 6', NSW: '4 - 5',
-      QLD: '5 - 6',
-      SA: '3 - 4',
-      VIC: '5 - 6',
-      TAS: '7 - 8',
-      NT: '2 - 3',
-      WA: '5 - 6'
-    },
+  private payBackYears = [{
+    ACT: '5 - 6', NSW: '4 - 5',
+    QLD: '5 - 6',
+    SA: '3 - 4',
+    VIC: '5 - 6',
+    TAS: '7 - 8',
+    NT: '2 - 3',
+    WA: '5 - 6'
+  },
     {
       ACT: '5 - 6',
       NSW: '4 - 5',
@@ -55,7 +56,8 @@ export class SolarQueryService {
       WA: '4 - 5'
     }
   ];
-  private annKWHs = [{ACT: '3,500 - 4,200', NSW: '3,300 - 4,000',
+  private annKWHs = [{
+    ACT: '3,500 - 4,200', NSW: '3,300 - 4,000',
     QLD: '3,200 - 4,500',
     SA: '3,000 - 4,200',
     VIC: '3,000 - 4,400',
@@ -101,7 +103,8 @@ export class SolarQueryService {
       WA: '6,800 - 7,600'
     }
   ];
-  private annSavings = [{ACT: '$700 - $800', NSW: '$900 - $1,000',
+  private annSavings = [{
+    ACT: '$700 - $800', NSW: '$900 - $1,000',
     QLD: '$850 - $950',
     SA: '$1,250 - $1,350',
     VIC: '$800 - $900',
@@ -147,6 +150,7 @@ export class SolarQueryService {
       WA: '$1,450 - $1,650'
     }
   ];
+  private sqBaseUrl = 'https://www.solarquotes.com.au/quote/';
 
   constructor(private http: HttpClient) {
   }

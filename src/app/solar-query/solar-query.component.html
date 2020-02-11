@@ -7,7 +7,7 @@
       <app-solar-query-results  [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async" [stateName]="stateName$ | async"></app-solar-query-results>
     </div>
     <div>
-      <app-solar-query-installer></app-solar-query-installer>
+      <app-solar-query-installer [postCode]="postCode$ | async"></app-solar-query-installer>
     </div>
   </div>
 </div>

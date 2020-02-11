@@ -15,7 +15,7 @@ import {SharedModule} from '../shared/shared.module';
     SolarQueryInstallerComponent
   ],
   imports: [
-    SharedModule,
+    SharedModule
   ]
 })
 export class SolarQueryModule { }
