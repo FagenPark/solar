@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolTipComponent } from './tool-tip.component';
+import {provideMockStore} from '@ngrx/store/testing';
 
 describe('ToolTipComponent', () => {
   let component: ToolTipComponent;
@@ -8,6 +9,7 @@ describe('ToolTipComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers: [provideMockStore()],
       declarations: [ ToolTipComponent ]
     })
     .compileComponents();
