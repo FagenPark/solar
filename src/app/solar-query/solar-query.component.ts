@@ -43,12 +43,15 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
   modalContentId$: Observable<string>;
   isModalOpen$: Observable<boolean>;
   stateName$: Observable<string>;
+  errorMessage$: Observable<string>;
 
   constructor(private store: Store<fromRoot.State>) {
   }
 
   ngOnInit() {
     this.displayResults$ = this.store.pipe(select(fromSolarQuery.getHasResults),
+      takeWhile(() => this.isComponentActive));
+    this.errorMessage$ = this.store.pipe(select(fromSolarQuery.getErrormessage),
       takeWhile(() => this.isComponentActive));
     this.postCode$ = this.store.pipe(select(fromSolarQuery.getPostCode));
     this.numberOfPeople$ = this.store.pipe(select(fromSolarQuery.getNumberOfPeople));

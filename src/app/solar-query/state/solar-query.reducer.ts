@@ -7,6 +7,7 @@ export interface SolarQueryState {
   isModalOpen: boolean;
   modalContentId: string;
   stateName: string;
+  errorMessage: string;
 }
 const initialState: SolarQueryState = {
   hasResults: false,
@@ -15,6 +16,7 @@ const initialState: SolarQueryState = {
   isModalOpen: false,
   modalContentId: '',
   stateName: '',
+  errorMessage: '',
 };
 
 
@@ -28,7 +30,6 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
     case SolarQueryActionsTypes.ChangeFormInput:
       return {
         ...state,
-        hasResults: true,
         numberOfPeople: action.payload.numberOfPeople,
         postCode: action.payload.postCode
       };
@@ -45,7 +46,13 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
     case SolarQueryActionsTypes.GetStateFromPostcodeSuccess:
       return {
         ...state,
+        hasResults: true,
         stateName: action.payload
+      };
+    case SolarQueryActionsTypes.GetStateFromPostcodeFail:
+      return {
+        ...state,
+        errorMessage: action.payload
       };
     default:
       return state;
