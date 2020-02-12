@@ -164,7 +164,6 @@ export class SolarQueryService {
     const url = `${this.postcodeUrl}/${postcode.toString()[0]}`;
     return this.http.get<Postcode>(url, {headers})
       .pipe(
-        tap(data => console.log('info: ' + JSON.stringify(data))),
         map(data => data.state),
         catchError(this.handleError)
       );
