@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {SolarQueryService} from '../solar-query.service';
 
 @Component({
   selector: 'app-solar-query-installer',
@@ -8,12 +9,13 @@ import {Component, Input, OnInit} from '@angular/core';
 export class SolarQueryInstallerComponent implements OnInit {
   @Input() postCode: number;
 
-  constructor() { }
+  constructor(private solarQueryService: SolarQueryService) {
+  }
 
   ngOnInit() {
   }
 
-  findSolarInstaller(postcode: number) {
-
+  findSolarInstaller() {
+    return this.solarQueryService.getSolarQuotesBaseUrl() + '?postcode=' + this.postCode + '&referrer=choice';
   }
 }

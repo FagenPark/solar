@@ -4,12 +4,14 @@ import {ModalComponent} from './modal/modal.component';
 import {ToolTipComponent} from './tool-tip/tool-tip.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModalContentComponent } from './modal-content/modal-content.component';
+import {AnchorLinkDirective} from './anchor-link.directive';
 
 @NgModule({
   declarations: [
     ModalComponent,
     ToolTipComponent,
-    ModalContentComponent
+    ModalContentComponent,
+    AnchorLinkDirective
   ],
   imports: [
     CommonModule
@@ -20,7 +22,8 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    ModalContentComponent
+    ModalContentComponent,
+    AnchorLinkDirective
   ]
 })
 export class SharedModule { }

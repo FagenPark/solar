@@ -48,7 +48,11 @@
       background-image: url(../../../assets/images/external-link.svg);
       background-repeat: no-repeat;
       background-position-x: 85%;
-      background-position-y: pxtorem(24px) ;
+      background-position-y: pxtorem(24px);
+      a {
+        text-decoration: none;
+        color: $sc_white;
+      }
       span {
         margin-left: pxtorem(-30px);
       }

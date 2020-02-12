@@ -19,6 +19,7 @@ import {SolarQueryModule} from './solar-query/solar-query.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {PostcodeData} from './solar-query/postcode-data';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {PostcodeData} from './solar-query/postcode-data';
     NoopAnimationsModule,
     BrowserAnimationsModule,
     SolarQueryModule,
+    SharedModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

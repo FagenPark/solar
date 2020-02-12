@@ -155,12 +155,8 @@ export class SolarQueryService {
   constructor(private http: HttpClient) {
   }
 
-  getPostcodes(): Observable<Postcode[]> {
-    return this.http.get<Postcode[]>(this.postcodeUrl)
-      .pipe(
-        tap(data => console.log(JSON.stringify(data))),
-        catchError(this.handleError)
-      );
+  getSolarQuotesBaseUrl(): string {
+    return  this.sqBaseUrl;
   }
 
   getPostcodeInformation(postcode: number): Observable<string> {
