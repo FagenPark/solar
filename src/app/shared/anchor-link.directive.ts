@@ -21,8 +21,7 @@ export class AnchorLinkDirective implements OnChanges {
   }
 
   private isLinkExternal() {
-    console.log(location.hostname);
-    return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname);
+    return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname) && this.href !== '/';
   }
 
 }
