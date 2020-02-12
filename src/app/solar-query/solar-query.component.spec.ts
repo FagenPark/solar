@@ -21,6 +21,7 @@ describe('SolarQueryComponent', () => {
     isModalOpen: false,
     modalContentId: '',
     stateName: '',
+    errorMessage: '',
   };
 
   beforeEach(async(() => {

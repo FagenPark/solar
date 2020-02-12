@@ -1,0 +1,12 @@
+@import "src/variables";
+.landing-page-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .lp-items {
+    h2 {
+    color: $sc_white;
+      height: 100%;
+    }
+  }
+}
