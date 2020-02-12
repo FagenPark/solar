@@ -15,12 +15,13 @@ export class AnchorLinkDirective implements OnChanges {
   ngOnChanges() {
     this.hrefAttr = this.href;
     if (this.isLinkExternal()) {
-      this.relAttr = 'noopener';
+      // this.relAttr = 'noopener';
       this.targetAttr = '_blank';
     }
   }
 
   private isLinkExternal() {
+    console.log(location.hostname);
     return isPlatformBrowser(this.platformId) && !this.href.includes(location.hostname);
   }
 

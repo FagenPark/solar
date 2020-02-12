@@ -11,11 +11,10 @@ const routes: Routes = [
     children: [
       {path: 'landing-page', component: LandingPageComponent},
       {path: 'solar-query', component: SolarQueryComponent},
-      { path: '', redirectTo: 'solar-query', pathMatch: 'full' }
+      { path: '', redirectTo: 'solar-query', pathMatch: 'full' },
+      { path: '**', component: PageNotFoundComponent }
     ]
-  },
-  { path: '**', component: PageNotFoundComponent }
-  ];
+  }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
