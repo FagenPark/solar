@@ -17,6 +17,7 @@ export class ModalComponent implements OnInit {
   }
 
   removeModal() {
+    console.log('dada');
     this.store.dispatch(new queryActions.ToggleModal(false));
   }
 

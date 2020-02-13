@@ -1,11 +1,10 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from '../state';
 import {select, Store} from '@ngrx/store';
 import * as queryActions from '../state/solar-query.actions';
 import {Observable} from 'rxjs';
-import {takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'app-solar-query-form',
