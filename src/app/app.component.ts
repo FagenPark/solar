@@ -12,6 +12,7 @@ import * as fromRoot from './state/app.state';
 })
 export class AppComponent implements OnInit, OnDestroy {
   isComponentActive = true;
+  title = 'solar';
 
   constructor(private store: Store<fromRoot.State>, private router: Router) {
   }
