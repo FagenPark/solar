@@ -8,7 +8,8 @@ export enum SolarQueryActionsTypes {
   GetStateFromPostcode = '[Solar Query] Get State From Postcode',
   GetStateFromPostcodeSuccess = '[Solar Query] Get State From Postcode Success',
   GetStateFromPostcodeFail = '[Solar Query] Get State From Postcode Fail',
-  ToggleModal = '[Solar Query] Toggle Modal'
+  ToggleModal = '[Solar Query] Toggle Modal',
+  ToggleQuerying = '[Solar Query] Toggle Querying',
 }
 
 // Action Creators
@@ -49,6 +50,11 @@ export class ToggleModal implements Action {
   constructor(public payload: boolean) {
   }
 }
+export class ToggleQuerying implements Action {
+  readonly  type = SolarQueryActionsTypes.ToggleQuerying;
+  constructor(public payload: boolean) {
+  }
+}
 
 export type SolarQueryActions = ChangeFormInput
   | SubmitInstallersQuery
@@ -56,4 +62,5 @@ export type SolarQueryActions = ChangeFormInput
   | GetStateFromPostcode
   | GetStateFromPostcodeSuccess
   | GetStateFromPostcodeFail
-  | ToggleModal;
+  | ToggleModal
+  | ToggleQuerying;

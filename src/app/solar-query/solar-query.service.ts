@@ -5,7 +5,6 @@ import {Postcode} from './postcode';
 import {catchError, map, tap} from 'rxjs/operators';
 import {Store} from '@ngrx/store';
 import * as fromRoot from 'src/app/state/app.state';
-import * as appActions from 'src/app/state/app.actions';
 
 @Injectable({
   providedIn: 'root'
@@ -168,7 +167,6 @@ export class SolarQueryService {
     return this.http.get<Postcode>(url, {headers})
       .pipe(
         map(data => data.state),
-        tap(() => this.store.dispatch(new appActions.ToggleLoading(false))),
         catchError(this.handleError)
       );
   }

@@ -40,7 +40,7 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy {
     if (!this.isFormChanged) {
       return;
     }
-    this.store.dispatch(new appActions.ToggleLoading(true));
+    this.store.dispatch(new queryActions.ToggleQuerying(true));
     this.store.dispatch(new queryActions.GetStateFromPostcode(this.queryForm.value.postCode));
     this.store.dispatch(new queryActions.ChangeFormInput(this.queryForm.value));
     this.isFormChanged = false;

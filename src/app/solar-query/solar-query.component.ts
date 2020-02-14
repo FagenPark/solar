@@ -35,6 +35,7 @@ import {animate, style, transition, trigger} from '@angular/animations';
 })
 export class SolarQueryComponent implements OnInit {
   isLoading = true;
+  isGuerying$: Observable<boolean>;
   displayResults$: Observable<boolean>;
   postCode$: Observable<number>;
   numberOfPeople$: Observable<string>;
@@ -54,6 +55,7 @@ export class SolarQueryComponent implements OnInit {
     this.modalContentId$ = this.store.pipe(select(fromSolarQuery.getModalContentId));
     this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus));
     this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
+    this.isGuerying$ = this.store.pipe(select(fromSolarQuery.getQueryingStatus));
     setTimeout(() => {
       this.isLoading = false;
     }, 0);

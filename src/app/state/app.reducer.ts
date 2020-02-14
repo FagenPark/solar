@@ -1,10 +1,10 @@
 import {AppActions, AppActionsTypes} from './app.actions';
 
 export interface AppState {
-  isLoading: boolean;
+  placeHolder: boolean;
 }
 const initialState: AppState = {
-  isLoading: false,
+  placeHolder: false,
 };
 
 export function reducer(state: AppState = initialState, action: AppActions): AppState {
@@ -12,7 +12,7 @@ export function reducer(state: AppState = initialState, action: AppActions): App
     case AppActionsTypes.ToggleLoading:
       return {
         ...state,
-        isLoading: action.payload
+        placeHolder: action.payload
       };
     default:
       return state;

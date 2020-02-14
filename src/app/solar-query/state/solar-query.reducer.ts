@@ -8,6 +8,7 @@ export interface SolarQueryState {
   modalContentId: string;
   stateName: string;
   errorMessage: string;
+  isQuerying: boolean;
 }
 const initialState: SolarQueryState = {
   hasResults: false,
@@ -17,6 +18,7 @@ const initialState: SolarQueryState = {
   modalContentId: '',
   stateName: '',
   errorMessage: '',
+  isQuerying: false,
 };
 
 
@@ -48,12 +50,19 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
         ...state,
         hasResults: true,
         errorMessage: '',
+        isQuerying: false,
         stateName: action.payload
       };
     case SolarQueryActionsTypes.GetStateFromPostcodeFail:
       return {
         ...state,
-        errorMessage: action.payload
+        errorMessage: action.payload,
+        isQuerying: false,
+      };
+    case SolarQueryActionsTypes.ToggleQuerying:
+      return {
+        ...state,
+        isQuerying: action.payload
       };
     default:
       return state;
