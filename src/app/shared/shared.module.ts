@@ -5,13 +5,15 @@ import {ToolTipComponent} from './tool-tip/tool-tip.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import {AnchorLinkDirective} from './anchor-link.directive';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
     ModalComponent,
     ToolTipComponent,
     ModalContentComponent,
-    AnchorLinkDirective
+    AnchorLinkDirective,
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule
@@ -21,6 +23,7 @@ import {AnchorLinkDirective} from './anchor-link.directive';
     ToolTipComponent,
     CommonModule,
     FormsModule,
+    LoadingSpinnerComponent,
     ReactiveFormsModule,
     ModalContentComponent,
     AnchorLinkDirective

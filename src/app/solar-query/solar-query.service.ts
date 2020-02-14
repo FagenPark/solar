@@ -3,12 +3,15 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {Postcode} from './postcode';
 import {catchError, map, tap} from 'rxjs/operators';
+import {Store} from '@ngrx/store';
+import * as fromRoot from 'src/app/state/app.state';
+import * as appActions from 'src/app/state/app.actions';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SolarQueryService {
-  private postcodeUrl = 'api/postcodes';
+  private postcodeUrl = 'api/postcode';
   private payBackYears = [{
     ACT: '5 - 6', NSW: '4 - 5',
     QLD: '5 - 6',
@@ -152,7 +155,7 @@ export class SolarQueryService {
   ];
   private sqBaseUrl = 'https://www.solarquotes.com.au/quote/';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private store: Store<fromRoot.State>) {
   }
 
   getSolarQuotesBaseUrl(): string {
@@ -165,6 +168,7 @@ export class SolarQueryService {
     return this.http.get<Postcode>(url, {headers})
       .pipe(
         map(data => data.state),
+        tap(() => this.store.dispatch(new appActions.ToggleLoading(false))),
         catchError(this.handleError)
       );
   }

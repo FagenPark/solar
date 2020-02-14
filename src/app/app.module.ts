@@ -33,7 +33,7 @@ import {SharedModule} from './shared/shared.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(PostcodeData),
+    HttpClientInMemoryWebApiModule.forRoot(PostcodeData, {delay: 1000}),
     AppRoutingModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,

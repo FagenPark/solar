@@ -4,6 +4,7 @@ import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from '../state';
 import {select, Store} from '@ngrx/store';
 import * as queryActions from '../state/solar-query.actions';
+import * as appActions from 'src/app/state/app.actions';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -28,6 +29,7 @@ export class SolarQueryFormComponent implements OnInit {
   }
 
   submit() {
+    this.store.dispatch(new appActions.ToggleLoading(true));
     this.store.dispatch(new queryActions.GetStateFromPostcode(this.queryForm.value.postCode));
     this.store.dispatch(new queryActions.ChangeFormInput(this.queryForm.value));
   }

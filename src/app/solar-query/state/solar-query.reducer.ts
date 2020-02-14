@@ -47,6 +47,7 @@ export function reducer(state: SolarQueryState = initialState, action: SolarQuer
       return {
         ...state,
         hasResults: true,
+        errorMessage: '',
         stateName: action.payload
       };
     case SolarQueryActionsTypes.GetStateFromPostcodeFail:

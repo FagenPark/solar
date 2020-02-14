@@ -1,11 +1,10 @@
-import {AfterViewChecked, AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from './state/';
-import {animate, state, style, transition, trigger} from '@angular/animations';
-import {takeWhile} from 'rxjs/operators';
+import {animate, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-solar-query',
@@ -34,9 +33,8 @@ import {takeWhile} from 'rxjs/operators';
     ])
   ]
 })
-export class SolarQueryComponent implements OnInit, OnDestroy {
+export class SolarQueryComponent implements OnInit {
   isLoading = true;
-  isComponentActive = true;
   displayResults$: Observable<boolean>;
   postCode$: Observable<number>;
   numberOfPeople$: Observable<string>;
@@ -49,22 +47,15 @@ export class SolarQueryComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.displayResults$ = this.store.pipe(select(fromSolarQuery.getHasResults),
-      takeWhile(() => this.isComponentActive));
-    this.errorMessage$ = this.store.pipe(select(fromSolarQuery.getErrormessage),
-      takeWhile(() => this.isComponentActive));
+    this.displayResults$ = this.store.pipe(select(fromSolarQuery.getHasResults));
+    this.errorMessage$ = this.store.pipe(select(fromSolarQuery.getErrormessage));
     this.postCode$ = this.store.pipe(select(fromSolarQuery.getPostCode));
     this.numberOfPeople$ = this.store.pipe(select(fromSolarQuery.getNumberOfPeople));
     this.modalContentId$ = this.store.pipe(select(fromSolarQuery.getModalContentId));
-    this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus),
-      takeWhile(() => this.isComponentActive));
+    this.isModalOpen$ = this.store.pipe(select(fromSolarQuery.getModalStatus));
     this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
     setTimeout(() => {
       this.isLoading = false;
     }, 0);
-  }
-
-  ngOnDestroy(): void {
-    this.isComponentActive = false;
   }
 }
