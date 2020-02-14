@@ -82,13 +82,13 @@ app-solar-root > div {
 
 #loader {
   bottom: 0;
-  height: 175px;
+  height: 350px;
   left: 0;
   margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  width: 175px;
+  width: 350px;
 }
 
 #loader .dot {
@@ -120,7 +120,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+1)::before {
   animation: 0.8s linear 0.1s normal none infinite running load;
-  background: $sc_green none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+2) {
@@ -129,7 +129,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+2)::before {
   animation: 0.8s linear 0.2s normal none infinite running load;
-  background: $sc_secondary none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+3) {
@@ -138,7 +138,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+3)::before {
   animation: 0.8s linear 0.3s normal none infinite running load;
-  background: $sc_primary none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+4) {
@@ -147,7 +147,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+4)::before {
   animation: 0.8s linear 0.4s normal none infinite running load;
-  background: $fc_grey none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+5) {
@@ -156,7 +156,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+5)::before {
   animation: 0.8s linear 0.5s normal none infinite running load;
-  background: #42d5ff none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+6) {
@@ -165,7 +165,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+6)::before {
   animation: 0.8s linear 0.6s normal none infinite running load;
-  background: #ffb95f none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+7) {
@@ -174,7 +174,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+7)::before {
   animation: 0.8s linear 0.7s normal none infinite running load;
-  background: #ff3c6f none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .dot:nth-child(7n+8) {
@@ -183,7 +183,7 @@ app-solar-root > div {
 
 #loader .dot:nth-child(7n+8)::before {
   animation: 0.8s linear 0.8s normal none infinite running load;
-  background: $sc_error none repeat scroll 0 0;
+  background: #80FFFF none repeat scroll 0 0;
 }
 
 #loader .loading {
@@ -213,4 +213,10 @@ app-solar-root > div {
 
 .spinner-message {
   text-align: center;
+}
+@media screen and (max-width: 812px) {
+  #loader {
+    height: 175px;
+    width: 175px;
+  }
 }
