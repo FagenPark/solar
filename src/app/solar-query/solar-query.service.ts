@@ -11,7 +11,7 @@ import * as appActions from 'src/app/state/app.actions';
   providedIn: 'root'
 })
 export class SolarQueryService {
-  private postcodeUrl = 'api/postcode';
+  private postcodeUrl = 'api/postcodes';
   private payBackYears = [{
     ACT: '5 - 6', NSW: '4 - 5',
     QLD: '5 - 6',
