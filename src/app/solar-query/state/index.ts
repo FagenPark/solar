@@ -9,4 +9,4 @@ export const getModalContentId = createSelector(getSolarQueryState, state => sta
 export const getModalStatus = createSelector(getSolarQueryState, state => state.isModalOpen);
 export const getStateName = createSelector(getSolarQueryState, state => state.stateName);
 export const getErrormessage = createSelector(getSolarQueryState, state => state.errorMessage);
-export const getQueryingStatus = createSelector(getSolarQueryState, state => state.isQuerying)
+export const getQueryingStatus = createSelector(getSolarQueryState, state => state.isQuerying);

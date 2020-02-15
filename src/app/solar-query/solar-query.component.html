@@ -15,4 +15,4 @@
 <app-modal *ngIf="isModalOpen$ | async"
            [@inOutAnimation]
            ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>
-<app-loading-spinner *ngIf="isGuerying$ | async"></app-loading-spinner>
+<app-loading-spinner ></app-loading-spinner>
