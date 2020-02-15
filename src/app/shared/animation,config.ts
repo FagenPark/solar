@@ -36,3 +36,15 @@ export const expandCollapseAnimation = {
       animate('1s ease-in', style({height: '0'}))
     ])
   ]};
+export const zoomInOutAnimation = {
+  name: 'zoomInOutAnimation',
+  definitions: [
+    transition(':enter', [
+      style({transform: 'scale(0)'}),
+      animate('0.3s ease-out', style({transform: 'scale(1)'}))
+    ]),
+    transition(':leave', [
+      style({transform: 'scale(1)'}),
+      animate('0.3s ease-in', style({transform: 'scale(0)'}))
+    ])
+  ]};
