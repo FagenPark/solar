@@ -1,7 +1,12 @@
-<div id="modal-container" class="modal-container">
-  <button class="modal-close-btn" (click)="removeModal()"><span>Close</span><img src="./assets/images/close.svg" class="choice-logo-img" alt="CHOICE logo"></button>
-  <div class="modal-content">
-    <ng-content></ng-content>
+<div *ngIf="isModalOpen$ | async"
+     [@inOutAnimation]>
+  <div id="modal-container" class="modal-container">
+    <button class="modal-close-btn" (click)="removeModal()"><span>Close</span><img src="./assets/images/close.svg"
+                                                                                   class="choice-logo-img"
+                                                                                   alt="CHOICE logo"></button>
+    <div class="modal-content">
+      <ng-content></ng-content>
+    </div>
   </div>
+  <div (click)="removeModal()" class="modal-overlay"></div>
 </div>
-<div (click)="removeModal()" class="modal-overlay"></div>

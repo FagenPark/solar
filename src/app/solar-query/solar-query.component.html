@@ -12,7 +12,5 @@
   </div>
   <div class="error-message" *ngIf="errorMessage$ | async as error">{{error}}</div>
 </div>
-<app-modal *ngIf="isModalOpen$ | async"
-           [@inOutAnimation]
-           ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>
+<app-modal ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>
 <app-loading-spinner ></app-loading-spinner>
