@@ -5,16 +5,13 @@ import * as fromRoot from 'src/app/state/app.state';
 import * as queryActions from 'src/app/solar-query/state/solar-query.actions';
 import {Observable} from 'rxjs';
 import * as fromSolarQuery from '../../solar-query/state';
-import {trigger} from '@angular/animations';
 import {inOutAnimation} from '../animation,config';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
-  animations: [
-    trigger(inOutAnimation.name, inOutAnimation.definitions)
-  ],
+  animations: [inOutAnimation],
 })
 export class ModalComponent implements OnInit {
 

@@ -4,7 +4,6 @@ import {select, Store} from '@ngrx/store';
 
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from './state/';
-import {trigger} from '@angular/animations';
 import {expandCollapseAnimation} from '../shared/animation,config';
 
 @Component({
@@ -12,7 +11,7 @@ import {expandCollapseAnimation} from '../shared/animation,config';
   templateUrl: './solar-query.component.html',
   styleUrls: ['./solar-query.component.scss'],
   animations: [
-    trigger(expandCollapseAnimation.name, expandCollapseAnimation.definitions)
+    expandCollapseAnimation
   ]
 })
 export class SolarQueryComponent implements OnInit {
