@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { AppEffects } from './app.effects';
 import {HttpClientModule} from '@angular/common/http';
+import {provideMockStore} from '@ngrx/store/testing';
 
 describe('AppEffects', () => {
   let actions$: Observable<any>;
@@ -14,7 +15,8 @@ describe('AppEffects', () => {
       imports: [HttpClientModule],
       providers: [
         AppEffects,
-        provideMockActions(() => actions$)
+        provideMockActions(() => actions$),
+        provideMockStore()
       ]
     });
 
