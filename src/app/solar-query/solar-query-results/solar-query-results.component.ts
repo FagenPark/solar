@@ -17,7 +17,8 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
   @ViewChild('resultHeader', {static: false}) resultHeader: ElementRef;
   isComponentActive = true;
 
-  constructor(private solarQueryService: SolarQueryService, private store: Store<fromRoot.State>) {
+  constructor(private solarQueryService: SolarQueryService,
+              private store: Store<fromRoot.State>) {
   }
 
   ngOnDestroy(): void {
