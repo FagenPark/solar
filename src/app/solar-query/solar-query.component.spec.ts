@@ -10,6 +10,7 @@ import * as fromRoot from 'src/app/state/app.state';
 
 import * as fromSolarQuery from './state/';
 import {MemoizedSelector, Store} from '@ngrx/store';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('SolarQueryComponent', () => {
   let component: SolarQueryComponent;
@@ -22,10 +23,12 @@ describe('SolarQueryComponent', () => {
   let mockNumberOfPeople: MemoizedSelector<fromRoot.State, string>;
   let mockModalContentId: MemoizedSelector<fromRoot.State, string>;
   let mockStateName: MemoizedSelector<fromRoot.State, string>;
+  let mockIsQuerying: MemoizedSelector<fromRoot.State, boolean>;
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule],
+      imports: [SharedModule, BrowserAnimationsModule],
       providers: [provideMockStore()],
       declarations: [ SolarQueryComponent, SolarQueryFormComponent, SolarQueryInstallerComponent, SolarQueryResultsComponent ]
     })
@@ -43,6 +46,7 @@ describe('SolarQueryComponent', () => {
     mockNumberOfPeople = mockStore.overrideSelector(fromSolarQuery.getNumberOfPeople, '4');
     mockModalContentId = mockStore.overrideSelector(fromSolarQuery.getModalContentId, 're3');
     mockStateName = mockStore.overrideSelector(fromSolarQuery.getStateName, 'NSW');
+    mockIsQuerying = mockStore.overrideSelector(fromSolarQuery.getQueryingStatus, false);
     fixture.detectChanges();
   });
 
