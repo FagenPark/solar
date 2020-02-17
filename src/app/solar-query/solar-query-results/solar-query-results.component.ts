@@ -1,20 +1,36 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {SolarQueryService} from '../solar-query.service';
+import {select, Store} from '@ngrx/store';
+import * as fromRoot from '../../state/app.state';
+import * as fromSolarQuery from '../state';
+import {filter, takeWhile, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-solar-query-results',
   templateUrl: './solar-query-results.component.html',
   styleUrls: ['./solar-query-results.component.scss']
 })
-export class SolarQueryResultsComponent implements OnInit {
+export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
   @Input() postCode: number;
   @Input() numberOfPeople: string;
   @Input() stateName: string;
+  @ViewChild('resultHeader', {static: false}) resultHeader: ElementRef;
+  isComponentActive = true;
 
-  constructor(private solarQueryService: SolarQueryService) { }
+  constructor(private solarQueryService: SolarQueryService, private store: Store<fromRoot.State>) {
+  }
 
-  ngOnInit() {
+  ngOnDestroy(): void {
+    this.isComponentActive = false;
+  }
 
+  ngAfterViewInit(): void {
+    this.store.pipe(select(fromSolarQuery.getQueryingStatus),
+      takeWhile(() => this.isComponentActive),
+      filter(data => data === false),
+      tap(data => {
+        this.resultHeader.nativeElement.scrollIntoView({behavior: 'smooth'});
+      })).subscribe();
   }
 
   getEnergyUsage(): number {
@@ -42,7 +58,11 @@ export class SolarQueryResultsComponent implements OnInit {
   }
 
   getPeopleText() {
-    if (this.numberOfPeople === '1') {return 'person'; } else if (this.numberOfPeople === '5') {return 'people or more'; }
+    if (this.numberOfPeople === '1') {
+      return 'person';
+    } else if (this.numberOfPeople === '5') {
+      return 'people or more';
+    }
     return 'people';
   }
 }
