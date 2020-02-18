@@ -34,7 +34,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(PostcodeData, {delay: 1111000}),
+    HttpClientInMemoryWebApiModule.forRoot(PostcodeData, {delay: 1200}),
     AppRoutingModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,

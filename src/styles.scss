@@ -192,7 +192,7 @@ app-solar-root > div {
   background-repeat: no-repeat;
   bottom: -40px;
   height: 20px;
-  left: 0;
+  left: -50px;
   position: absolute;
   right: 0;
   width: 180px;
@@ -214,10 +214,4 @@ app-solar-root > div {
 
 .spinner-message {
   text-align: center;
-}
-@media screen and (max-width: 812px) {
-  #loader {
-    //height: 175px;
-    //width: 175px;
-  }
 }
