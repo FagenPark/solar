@@ -5,6 +5,10 @@
   text-align: center;
   padding:  4rem 2rem;
   .results-header {
+    .anchor {
+      position: absolute;
+      top: pxtorem(490px);
+    }
     h2 {
       height: pxtorem(110px);
       .tooltip-toggle {
@@ -67,6 +71,9 @@
   .solar-query-results-component {
     padding:  1rem;
     .results-header {
+      .anchor {
+        top: pxtorem(680px);
+      }
       h1 {
         font-size: pxtorem(30px);
         line-height: pxtorem(40px);
