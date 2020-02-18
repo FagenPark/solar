@@ -34,7 +34,7 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
       })).subscribe();
   }
 
-  getEnergyUsage(): number {
+  getEnergyUsage(): string {
     return this.solarQueryService.getEnergyUsage(this.numberOfPeople, this.stateName);
   }
 
