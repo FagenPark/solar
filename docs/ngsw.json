@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1581812293140,
+  "timestamp": 1581990091266,
   "index": "/solar/index.html",
   "assetGroups": [
     {
@@ -10,14 +10,14 @@
       "urls": [
         "/solar/favicon.ico",
         "/solar/index.html",
-        "/solar/main-es2015.3167de0482663717e229.js",
-        "/solar/main-es5.3167de0482663717e229.js",
+        "/solar/main-es2015.3b92b446ec068e124539.js",
+        "/solar/main-es5.3b92b446ec068e124539.js",
         "/solar/manifest.webmanifest",
         "/solar/polyfills-es2015.2987770fde9daa1d8a2e.js",
         "/solar/polyfills-es5.6696c533341b95a3d617.js",
         "/solar/runtime-es2015.edb2fcf2778e7bf1d426.js",
         "/solar/runtime-es5.edb2fcf2778e7bf1d426.js",
-        "/solar/styles.9c9fc4895b0d9b13fa32.css"
+        "/solar/styles.190207fcd149aa1a3932.css"
       ],
       "patterns": []
     },
@@ -46,9 +46,9 @@
         "/solar/assets/images/sq_logo-footer.png",
         "/solar/assets/images/sq_logo-navy@2x.png",
         "/solar/assets/images/tick.svg",
-        "/solar/assets/images/valueprop_1-img.png",
-        "/solar/assets/images/valueprop_2-img.png",
-        "/solar/assets/images/valueprop_3-img.png",
+        "/solar/assets/images/valueprop1.png",
+        "/solar/assets/images/valueprop2.png",
+        "/solar/assets/images/valueprop3.png",
         "/solar/bg_round-trans.e126bb799b33864c17e2.png",
         "/solar/choice-logo-new-white.5bfd1840d180114809ce.svg",
         "/solar/external-link.a512ba8dd3c5d5bc8d40.svg",
@@ -57,9 +57,9 @@
         "/solar/image-gallery-chevron.c6d45123e2cfad01f603.png",
         "/solar/sq_logo-blue@2x.624e3cdf392bbfd19e85.png",
         "/solar/tick.71b1f294aa75bfcfa1dc.svg",
-        "/solar/valueprop_1-img.e5a505ec143b31f7fd91.png",
-        "/solar/valueprop_2-img.a4a8bc37740b124d01b2.png",
-        "/solar/valueprop_3-img.7f87044a5ed3303e1ad9.png"
+        "/solar/valueprop1.f9a7da133145d4ce60d0.png",
+        "/solar/valueprop2.dc079495db4559d2eb62.png",
+        "/solar/valueprop3.7a61f1d3bc2d50ec2b80.png"
       ],
       "patterns": []
     }
@@ -86,9 +86,9 @@
     "/solar/assets/images/sq_logo-footer.png": "590b0d679f222cffe98784e374f6511e2eb35499",
     "/solar/assets/images/sq_logo-navy@2x.png": "dc80dfb53acaf597e697481c3f0995ea1fe1ac2e",
     "/solar/assets/images/tick.svg": "277fe1d857d3dfce58c1f193358fcb1ff8839094",
-    "/solar/assets/images/valueprop_1-img.png": "5dc5fa691d876b8eb525267f3d27c46ab2681c09",
-    "/solar/assets/images/valueprop_2-img.png": "5d4e9781eaf6fa41f6fc19fea416ff3ab62f75d9",
-    "/solar/assets/images/valueprop_3-img.png": "a9ae741ef048cdffed4f4ffb8434911c57f8bfa3",
+    "/solar/assets/images/valueprop1.png": "7874fb2a9e9cee3968eadb92c6711838d76b66f5",
+    "/solar/assets/images/valueprop2.png": "a084f063f7e2e55a368765c8064647bb888727b5",
+    "/solar/assets/images/valueprop3.png": "47b5756e567195dd39ffa21c6f71fa01e18c25c6",
     "/solar/bg_round-trans.e126bb799b33864c17e2.png": "aaa82d2462bbd0872b709db9a2a8cb51340b3749",
     "/solar/choice-logo-new-white.5bfd1840d180114809ce.svg": "80d655b9c6b1a44f075bf9ce8abdefc5bf38f4ec",
     "/solar/external-link.a512ba8dd3c5d5bc8d40.svg": "d17a06e8f968e984d9305a45be6b2063b20bb3a1",
@@ -96,20 +96,20 @@
     "/solar/help.dbf2b46b2fd234d9183c.svg": "7a34d9db76a4b739cbc63485e9b693436e2980c6",
     "/solar/hero_img.032b7b7f49d66b7191f3.png": "0c2be01a56cb4ef4c5fa11f74c102cd2bb1705d8",
     "/solar/image-gallery-chevron.c6d45123e2cfad01f603.png": "4fcc4559a19e1e27122c2572e0a761fe88d246ff",
-    "/solar/index.html": "923f11d3846b495ab0c3c0e47ed00a9ca4cf231f",
-    "/solar/main-es2015.3167de0482663717e229.js": "335ccd20ef0d36b83b1fe886c7b23a7e75ae7c8a",
-    "/solar/main-es5.3167de0482663717e229.js": "fe038b0eea4b83f83293337fdd4e975b2292e578",
+    "/solar/index.html": "7660b56da2e6e0fd69b3ff5fd2b3b77b0c745f6b",
+    "/solar/main-es2015.3b92b446ec068e124539.js": "8fb0718db374eb74a5e41d3b565729e5be0684b0",
+    "/solar/main-es5.3b92b446ec068e124539.js": "345c075b4b7120e5b6862be40f690e9add92aa7e",
     "/solar/manifest.webmanifest": "f9efb480038364e6302ad241f3f04c86f6067251",
     "/solar/polyfills-es2015.2987770fde9daa1d8a2e.js": "cf5cbfa9134716054fb479ab21362146cdf1f2ff",
     "/solar/polyfills-es5.6696c533341b95a3d617.js": "6bff0c03e05bb347d213ad1b3674045eb892d189",
     "/solar/runtime-es2015.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/solar/runtime-es5.edb2fcf2778e7bf1d426.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
     "/solar/sq_logo-blue@2x.624e3cdf392bbfd19e85.png": "3edba91c5e6940831b5cc350d5fc087ffcfd329b",
-    "/solar/styles.9c9fc4895b0d9b13fa32.css": "f268584147d82d595387d744498f3e4824f362c4",
+    "/solar/styles.190207fcd149aa1a3932.css": "cf2a93a02dba66faeeea9548414f01417f3e8cad",
     "/solar/tick.71b1f294aa75bfcfa1dc.svg": "277fe1d857d3dfce58c1f193358fcb1ff8839094",
-    "/solar/valueprop_1-img.e5a505ec143b31f7fd91.png": "5dc5fa691d876b8eb525267f3d27c46ab2681c09",
-    "/solar/valueprop_2-img.a4a8bc37740b124d01b2.png": "5d4e9781eaf6fa41f6fc19fea416ff3ab62f75d9",
-    "/solar/valueprop_3-img.7f87044a5ed3303e1ad9.png": "a9ae741ef048cdffed4f4ffb8434911c57f8bfa3"
+    "/solar/valueprop1.f9a7da133145d4ce60d0.png": "7874fb2a9e9cee3968eadb92c6711838d76b66f5",
+    "/solar/valueprop2.dc079495db4559d2eb62.png": "a084f063f7e2e55a368765c8064647bb888727b5",
+    "/solar/valueprop3.7a61f1d3bc2d50ec2b80.png": "47b5756e567195dd39ffa21c6f71fa01e18c25c6"
   },
   "navigationUrls": [
     {
