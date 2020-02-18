@@ -14,7 +14,7 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
   @Input() postCode: number;
   @Input() numberOfPeople: string;
   @Input() stateName: string;
-  @ViewChild('resultHeader', {static: false}) resultHeader: ElementRef;
+  @ViewChild('resultAnchor', {static: false}) resultAnchor: ElementRef;
   isComponentActive = true;
 
   constructor(private solarQueryService: SolarQueryService,
@@ -30,7 +30,7 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
       takeWhile(() => this.isComponentActive),
       filter(data => data === false),
       tap(data => {
-        this.resultHeader.nativeElement.scrollIntoView({behavior: 'smooth'});
+        this.resultAnchor.nativeElement.scrollIntoView({behavior: 'smooth'});
       })).subscribe();
   }
 
