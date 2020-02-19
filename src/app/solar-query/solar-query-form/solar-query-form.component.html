@@ -11,7 +11,7 @@
       <h2>Find out how much a solar system might cost you and what your savings might look like</h2>
     </div>
     <div class="form-body">
-      <form novalidate (ngSubmit)="submit()" [formGroup]="queryForm">
+      <form novalidate (ngSubmit)="submit()" [formGroup]="queryForm" autocomplete="off">
         <div class="form-group post-code">
           <label class="form-label"
                  for="postCodeId">Postcode</label>

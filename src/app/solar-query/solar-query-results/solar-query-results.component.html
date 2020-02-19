@@ -2,7 +2,7 @@
   <div class="results-header" >
     <div class="anchor" #resultAnchor></div>
     <h1>Your results</h1>
-    <h2>For <strong>{{numberOfPeople}} {{getPeopleText()}}</strong> living in your house in <strong>{{stateName}}</strong>,<br> your annual energy usage is
+    <h2>For <strong>{{numberOfPeople}} {{getPeopleText()}}</strong> living in your home in <strong>{{stateName}}</strong>,<br> your annual energy usage is
       about <strong>{{getEnergyUsage()}} kWh</strong>.
       <app-tool-tip [modalContentId]="'re1'"></app-tool-tip>
     </h2>
@@ -16,7 +16,7 @@
       <h4>{{getSystemSize()}}kW</h4>
     </div>
     <div class="pay-back">
-      <h3>Approx. time the system will pay itself back
+      <h3>Approx. time the system will take to pay itself back
         <app-tool-tip [modalContentId]="'re3'"></app-tool-tip>
       </h3>
       <h4>{{getPayback()}} years</h4>
