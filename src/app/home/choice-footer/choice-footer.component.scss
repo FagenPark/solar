@@ -3,6 +3,9 @@ footer {
   background-color: $sc_secondary;
   height: $footer_height;
   padding-top: 5rem;
+  .footer {
+    background-color: $sc_secondary;
+  }
   .footer-logos {
     display: flex;
     max-width: pxtorem(750px);
