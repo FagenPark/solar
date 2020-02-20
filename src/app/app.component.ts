@@ -4,6 +4,7 @@ import {filter, takeWhile} from 'rxjs/operators';
 import * as queryActions from './solar-query/state/solar-query.actions';
 import {Store} from '@ngrx/store';
 import * as fromRoot from './state/app.state';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-solar-root',
@@ -11,13 +12,14 @@ import * as fromRoot from './state/app.state';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  routerEventSubscription: Subscription;
   isComponentActive = true;
   title = 'solar';
 
   constructor(private store: Store<fromRoot.State>, private router: Router) {
   }
   ngOnInit(): void {
-    this.router.events
+    this.routerEventSubscription = this.router.events
       .pipe(
         takeWhile(() => this.isComponentActive),
         filter(
@@ -42,6 +44,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.isComponentActive = false;
+    this.routerEventSubscription.unsubscribe();
   }
 
 }
