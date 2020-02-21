@@ -19,7 +19,6 @@ import {SolarQueryModule} from './solar-query/solar-query.module';
 import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {PostcodeData} from './solar-query/postcode-data';
-import {SharedModule} from './shared/shared.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
