@@ -39,7 +39,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     NoopAnimationsModule,
     BrowserAnimationsModule,
     SolarQueryModule,
-    SharedModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {
