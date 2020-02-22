@@ -4,9 +4,7 @@ import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from '../state';
 import {select, Store} from '@ngrx/store';
 import * as queryActions from '../state/solar-query.actions';
-import * as appActions from 'src/app/state/app.actions';
 import {Observable} from 'rxjs';
-import {log} from 'util';
 import {takeWhile, tap} from 'rxjs/operators';
 
 @Component({

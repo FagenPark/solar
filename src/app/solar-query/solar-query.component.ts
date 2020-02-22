@@ -15,7 +15,6 @@ import {expandCollapseAnimation} from '../shared/animation,config';
   ]
 })
 export class SolarQueryComponent implements OnInit {
-  isLoading = true;
   displayResults$: Observable<boolean>;
   postCode$: Observable<number>;
   numberOfPeople$: Observable<string>;
@@ -33,8 +32,5 @@ export class SolarQueryComponent implements OnInit {
     this.numberOfPeople$ = this.store.pipe(select(fromSolarQuery.getNumberOfPeople));
     this.modalContentId$ = this.store.pipe(select(fromSolarQuery.getModalContentId));
     this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 0);
   }
 }

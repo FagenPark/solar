@@ -9,8 +9,8 @@ import {LandingPageComponent} from './home/langing-page/landing-page.component';
 const routes: Routes = [
   {path: '', component: ShellComponent,
     children: [
-      {path: 'landing-page', component: LandingPageComponent},
-      {path: 'solar-query', component: SolarQueryComponent},
+      {path: 'landing-page', component: LandingPageComponent, data: { animation: 'isRight'}},
+      {path: 'solar-query', component: SolarQueryComponent, data: { animation: 'isLeft'}},
       { path: '', redirectTo: 'solar-query', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ]

@@ -3,9 +3,6 @@
 
  @include transition(opacity, 0.3s, ease-in-out);
 
-  &.form-loading {
-    opacity: 0;
-  }
 }
 .error-message {
   color: $sc_white;

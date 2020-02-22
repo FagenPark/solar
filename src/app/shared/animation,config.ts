@@ -1,4 +1,4 @@
-import {animate, style, transition, trigger} from '@angular/animations';
+import {animate, style, transition, trigger, query, group, animateChild, keyframes} from '@angular/animations';
 
 export const inOutAnimation = trigger('inOutAnimation', [
   transition(':enter', [
@@ -39,5 +39,32 @@ export const zoomInOutAnimation = trigger('zoomInOutAnimation', [
   transition(':leave', [
     style({transform: 'scale(1)'}),
     animate('0.3s ease-in', style({transform: 'scale(0)'}))
+  ])
+]);
+
+// route animations: basic
+export const fader = trigger('routeAnimations', [
+  transition('* <=> *', [
+    query(':enter, :leave', [
+      style({
+        position: 'absolute',
+        left: 0,
+        width: '100%',
+        opacity: 0,
+        transform: 'scale(0) translateY(100%)'
+      })
+    ], {optional: true}),
+    query(':enter', [
+      animate('300ms ease', style({
+        opacity: 1,
+        transform: 'scale(1) translateY(0)'
+      }))
+    ], {optional: true}),
+    query(':leave', [
+      animate('300ms ease', style({
+        opacity: 1,
+        transform: 'scale(0) translateY(100%)'
+      }))
+    ], {optional: true})
   ])
 ]);

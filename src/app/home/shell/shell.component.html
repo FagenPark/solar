@@ -2,8 +2,8 @@
   <app-solar-header></app-solar-header>
 </div>
 
-<div class='container main-content fix-height'>
-  <router-outlet></router-outlet>
+<div class='container main-content fix-height' [@routeAnimations]="prepareRoute(shellOutlet)">
+  <router-outlet #shellOutlet="outlet"></router-outlet>
 </div>
 <div class="footer-container">
   <app-solar-footer></app-solar-footer>

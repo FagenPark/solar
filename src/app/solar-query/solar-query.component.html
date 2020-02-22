@@ -1,5 +1,5 @@
 <div>
-  <div class="query-form-container" [ngClass]="{'form-loading' : isLoading}">
+  <div class="query-form-container">
     <app-solar-query-form></app-solar-query-form>
   </div>
   <div *ngIf="displayResults$ | async" [@expandCollapse]>
