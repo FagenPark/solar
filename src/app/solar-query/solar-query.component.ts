@@ -4,7 +4,7 @@ import {select, Store} from '@ngrx/store';
 
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from './state/';
-import {expandCollapseAnimation} from '../shared/animation,config';
+import {expandCollapseAnimation} from '../shared/animation-config';
 
 @Component({
   selector: 'app-solar-query',

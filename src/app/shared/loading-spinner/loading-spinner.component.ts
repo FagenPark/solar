@@ -3,7 +3,7 @@ import {select, Store} from '@ngrx/store';
 import * as fromSolarQuery from '../../solar-query/state';
 import {Observable} from 'rxjs';
 import * as fromRoot from '../../state/app.state';
-import {upDownAnimation} from '../animation,config';
+import {upDownAnimation} from '../animation-config';
 
 @Component({
   selector: 'app-loading-spinner',
