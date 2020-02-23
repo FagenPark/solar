@@ -1,5 +1,5 @@
-import {animate, style, transition, trigger, query, group, animateChild, keyframes} from '@angular/animations';
-
+import {animate, style, transition, trigger, query} from '@angular/animations';
+const optional = {optional: true};
 export const inOutAnimation = trigger('inOutAnimation', [
   transition(':enter', [
     style({opacity: 0}),
@@ -53,18 +53,18 @@ export const fader = trigger('routeAnimations', [
         opacity: 0,
         transform: 'scale(0) translateY(100%)'
       })
-    ], {optional: true}),
+    ], optional),
     query(':enter', [
       animate('300ms ease', style({
         opacity: 1,
         transform: 'scale(1) translateY(0)'
       }))
-    ], {optional: true}),
+    ], optional),
     query(':leave', [
       animate('300ms ease', style({
         opacity: 1,
         transform: 'scale(0) translateY(100%)'
       }))
-    ], {optional: true})
+    ], optional)
   ])
 ]);
