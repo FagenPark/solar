@@ -10,8 +10,8 @@ const routes: Routes = [
   {path: '', component: ShellComponent,
     children: [
       {path: 'landing-page', component: LandingPageComponent, data: { animation: 'isRight'}},
-      {path: 'solar-query', component: SolarQueryComponent, data: { animation: 'isLeft'}},
-      { path: '', redirectTo: 'solar-query', pathMatch: 'full' },
+      {path: 'solar-estimator', component: SolarQueryComponent, data: { animation: 'isLeft'}},
+      { path: '', redirectTo: 'solar-estimator', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ]
   }];
