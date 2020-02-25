@@ -42,7 +42,7 @@ app-solar-root {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  .primary-btn {
+  .pt-primary-btn {
     margin-top: pxtorem(21px);
     height: pxtorem(64px);
     max-width: pxtorem(371px);
@@ -64,10 +64,10 @@ app-solar-root {
 app-solar-root > div {
   height: 100%;
 }
-.fix-height {
+.pt-fix-height {
   min-height: calc(100vh - #{$header_height} - #{$footer_height});
 }
-.vis-hidden {
+.pt-vis-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

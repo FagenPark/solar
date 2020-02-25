@@ -1,8 +1,8 @@
 @import "src/variables";
 .query-form {
   &.no-results {
-    .hero-section {
-      .hero-img {
+    .pt-hero-section {
+      .pt-hero-img {
         .bg-round {
           height: 150%;
         }
@@ -14,12 +14,12 @@
 .query-form {
   display: flex;
   padding:  4rem 2rem 0;
-  .hero-section {
+  .pt-hero-section {
     width: 50%;
-    .hero-img {
+    .pt-hero-img {
       position: relative;
       height: pxtorem(416px);
-      .hero-img-bg {position: absolute;
+      .pt-hero-img-bg {position: absolute;
         height: 105%;
         width: 105%;
         top: 0;
@@ -41,20 +41,20 @@
       }
     }
   }
-  .form-section {
+  .pt-form-section {
     width: 50%;
     padding-top: 1rem;
-    .form-title {
+    .pt-form-title {
       h1, h2 {
         margin: 0;
         color: $sc_white;
       }
     }
-    .form-label {
+    .pt-form-label {
       visibility: hidden;
     }
 
-    .form-control {
+    .pt-form-control {
       box-sizing: border-box;
       height: pxtorem(46px);
       max-width: pxtorem(371px);
@@ -81,7 +81,7 @@
     }
 
     .number-of-people {
-      .form-control {
+      .pt-form-control {
         background-color: $sc_white;
         -moz-appearance: none; /* Firefox */
         -webkit-appearance: none; /* Safari and Chrome */
@@ -93,15 +93,15 @@
       }
     }
 
-    .form-control::placeholder {
+    .pt-form-control::placeholder {
       color: #002E46;
       font-size: 1rem;
     }
 
-    .invalid-feedback {
+    .pt-invalid-feedback {
       color: #fff;
       width: pxtorem(371px);
-      .error-message {
+      .pt-error-message {
         display: flex;
         margin-left: pxtorem(5px);
       }
@@ -115,11 +115,11 @@
     flex-direction: column;
     text-align: center;
     padding:  1rem;
-    .hero-section {
+    .pt-hero-section {
       width: 100%;
-      .hero-img {
+      .pt-hero-img {
         height: 12.5rem;
-        .hero-img-bg {
+        .pt-hero-img-bg {
           height: 100%;
           background-position: center;
         }
@@ -130,10 +130,10 @@
         }
       }
     }
-    .form-section {
+    .pt-form-section {
       width: 100%;
     }
-    .form-title {
+    .pt-form-title {
       h1 {
         font-size: pxtorem(30px);
         line-height: pxtorem(33px);

@@ -6,14 +6,14 @@ footer {
   .footer {
     background-color: $sc_secondary;
   }
-  .footer-logos {
+  .pt-footer-logos {
     display: flex;
     max-width: pxtorem(750px);
     margin: 0 auto;
-    .footer-logo-item {
+    .pt-footer-logo-item {
       display: flex;
       align-items: center;
-      .choice-logo-img {
+      .pt-choice-logo-img {
         width: pxtorem(154px);
       }
       .sq-logo-img {
@@ -24,7 +24,7 @@ footer {
 
   }
 }
-.footer__info {
+.pt-footer__info {
   display: flex;
   flex-direction: column;
   max-width: $max_width;
@@ -32,10 +32,10 @@ footer {
   margin: 0 auto;
 }
 
-.footer__info-item {
+.pt-footer__info-item {
   margin: 0 .625rem;
 }
-.footer__info-item__summary {
+.pt-footer__info-item__summary {
 text-align: center;
   max-width: pxtorem(645px);
   margin: 0 auto;
@@ -55,12 +55,12 @@ text-align: center;
   footer {
     padding-top: 2rem;
     height: $footer_height_mobile;
-    .l-constrained {
+    .pt-l-constrained {
       padding: 0 1rem;
     }
-    .footer-logos {
-      .footer-logo-item {
-        .choice-logo-img {
+    .pt-footer-logos {
+      .pt-footer-logo-item {
+        .pt-choice-logo-img {
           width: pxtorem(108px);
         }
         .sq-logo-img {
@@ -71,7 +71,7 @@ text-align: center;
     }
   }
 
-  .footer__info-item__summary {
+  .pt-footer__info-item__summary {
     h3 {
       font-size: pxtorem(22px);
       line-height: pxtorem(28px);

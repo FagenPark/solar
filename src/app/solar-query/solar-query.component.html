@@ -10,7 +10,7 @@
       <app-solar-query-installer [postCode]="postCode$ | async"></app-solar-query-installer>
     </div>
   </div>
-  <div class="error-message" *ngIf="errorMessage$ | async as error">{{error}}</div>
+  <div class="pt-error-message" *ngIf="errorMessage$ | async as error">{{error}}</div>
 </div>
 <app-modal ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>
 <app-loading-spinner ></app-loading-spinner>

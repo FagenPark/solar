@@ -1,6 +1,6 @@
 @import "src/variables";
 
-.sg-header {
+.pt-sg-header {
   background: $sc_primary;
   color: $sc_white;
   z-index: 2;
@@ -10,7 +10,7 @@
   font-weight: bold;
 }
 
-.header_constrained {
+.pt-header_constrained {
   max-width: $max_width;
   width: 100%;
   margin: 0 auto;
@@ -18,12 +18,12 @@
   justify-content: space-between;
 }
 
-.header_info-item_choice_logo {
+.pt-header_info-item_choice_logo {
   height: $header_height;
   display: flex;
 }
 
-.header_info-item_choice_logo {
+.pt-header_info-item_choice_logo {
   a {
     align-self: center;
     height: pxtorem(50px);
@@ -34,7 +34,7 @@
   }
 }
 
-.header_info-item_choice_logo {
+.pt-header_info-item_choice_logo {
   img {
     visibility: hidden;
     max-width: pxtorem(126px);
@@ -65,22 +65,22 @@
 }
 
 @media screen and (max-width: 812px) {
-  .header_constrained {
+  .pt-header_constrained {
     justify-content: space-around;
   }
-  .header_info-item_choice_logo {
+  .pt-header_info-item_choice_logo {
     a {
       width: pxtorem(90px);
     }
   }
-  .header_info-item_choice_logo {
+  .pt-header_info-item_choice_logo {
     padding: 2px 0 0 15px;
     max-width: 6.875em;
   }
-  .sg-header {
+  .pt-sg-header {
     height: $header_height_mobile;
   }
-  .header_info-item_choice_logo {
+  .pt-header_info-item_choice_logo {
     height: $header_height_mobile;
   }
 
