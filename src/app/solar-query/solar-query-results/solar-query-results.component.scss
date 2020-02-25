@@ -5,13 +5,13 @@
   text-align: center;
   padding:  4rem 2rem;
   .results-header {
-    .anchor {
+    .pt-anchor {
       position: absolute;
-      top: pxtorem(565px);
+      top: pxtorem(515px);
     }
     h2 {
       height: pxtorem(110px);
-      .tooltip-toggle {
+      .pt-tooltip-toggle {
         display: inline-block;
         width: pxtorem(22px);
         height: pxtorem(22px);
@@ -71,8 +71,8 @@
   .solar-query-results-component {
     padding:  1rem;
     .results-header {
-      .anchor {
-        top: pxtorem(709px);
+      .pt-anchor {
+        top: pxtorem(655px);
       }
       h1 {
         font-size: pxtorem(30px);

@@ -1,5 +1,5 @@
 @import "src/variables";
-.modal-container {
+.pt-modal-container {
   position:  fixed;
   box-shadow: 0px 0px 2px 1px black;
   z-index: 100;
@@ -13,7 +13,7 @@
   top: 20%;
   max-width: pxtorem(500px);
   overflow-y: auto;
-  .modal-content {
+  .pt-modal-content {
     position: absolute;
     top: 3rem;
     left: 0;
@@ -22,7 +22,7 @@
     overflow: auto;
     padding: 0 2rem 0.5rem 2rem;
   }
-  .modal-close-btn {
+  .pt-modal-close-btn {
     position: absolute;
     right: pxtorem(19px);
     top: pxtorem(12px);
@@ -61,7 +61,7 @@
     }
   }
 }
-.modal-overlay {
+.pt-modal-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -74,29 +74,29 @@
 }
 
 @media (min-width: 576px) {
-  .modal-container {
+  .pt-modal-container {
     width: 70%;
   }
 }
 @media (min-width: 768px) {
-  .modal-container {
+  .pt-modal-container {
     top: 12%;
     bottom: 12%;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .modal-container {
+  .pt-modal-container {
     width: 40%;
   }
 }
 @media (min-width: 1200px) {
-  .modal-container {
+  .pt-modal-container {
     width: 30%;
   }
 }
 @media screen and (max-width: 812px) {
-  .modal-container {
+  .pt-modal-container {
     top: 12%;
     bottom: 12%;
   }

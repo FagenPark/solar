@@ -37,11 +37,13 @@ html, body {
     font-weight: 700;
     line-height: pxtorem(28px);
   }
+
 }
 app-solar-root {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   .pt-primary-btn {
     margin-top: pxtorem(21px);
     height: pxtorem(64px);
