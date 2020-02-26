@@ -44,6 +44,7 @@
   .pt-form-section {
     width: 50%;
     padding-top: 1rem;
+
     .pt-form-title {
       h1, h2 {
         margin: 0;
@@ -108,6 +109,9 @@
     }
   }
 
+}
+.ld-btn {
+  position: fixed;
 }
 
 @media screen and (max-width: 812px) {
