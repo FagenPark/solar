@@ -6,7 +6,6 @@ import {select, Store} from '@ngrx/store';
 import * as queryActions from '../state/solar-query.actions';
 import {Observable} from 'rxjs';
 import {takeWhile, tap} from 'rxjs/operators';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-solar-query-form',
@@ -21,8 +20,7 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy {
   queryForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private store: Store<fromRoot.State>,
-              private router: Router) { }
+              private store: Store<fromRoot.State>) { }
 
   ngOnInit() {
     this.queryForm = this.fb.group({
@@ -48,9 +46,5 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.isComponentActive = false;
-  }
-
-  gotoLandingPage() {
-    this.router.navigate(['/landing-page']);
   }
 }
