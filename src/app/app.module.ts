@@ -20,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {PostcodeData} from './solar-query/postcode-data';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     NoopAnimationsModule,
     BrowserAnimationsModule,
     SolarQueryModule,
+    SharedModule,
     StoreModule.forRoot(reducers, {
       metaReducers,
       runtimeChecks: {

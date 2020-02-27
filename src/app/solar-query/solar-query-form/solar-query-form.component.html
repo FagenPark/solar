@@ -71,6 +71,7 @@
           <div class="pt-submit-wrapper">
             <button id="estimate-now" class="pt-submit-btn pt-primary-btn"
                     type="submit"
+                    [appGaClick] = "true"
                     [title]="queryForm.valid ? 'Estimate now' : 'Disabled until the form data is valid'"
                     [disabled]="!queryForm.valid">
               Estimate now

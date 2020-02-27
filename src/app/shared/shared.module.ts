@@ -6,6 +6,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import {AnchorLinkDirective} from './anchor-link.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { GaClickDirective } from './ga-click.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     ToolTipComponent,
     ModalContentComponent,
     AnchorLinkDirective,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    GaClickDirective
   ],
   imports: [
     CommonModule
@@ -26,7 +28,8 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     LoadingSpinnerComponent,
     ReactiveFormsModule,
     ModalContentComponent,
-    AnchorLinkDirective
+    AnchorLinkDirective,
+    GaClickDirective
   ]
 })
 export class SharedModule { }
