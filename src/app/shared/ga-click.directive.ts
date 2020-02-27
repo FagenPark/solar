@@ -8,8 +8,8 @@ export class GaClickDirective implements OnInit, OnChanges {
   @HostBinding('attr.data-tracking-action') act: string;
   @HostBinding('attr.data-tracking-label') lbl: string;
   @Input('appGaClick') isTrackingClick: boolean;
-  @Input('title') elTitle: string;
-  constructor(private el: ElementRef) { }
+  @Input('title') title: string;
+  constructor() { }
   @HostListener('click') onClick() {
     if (this.isTrackingClick) {
       console.log('hostBinding--', this.ctg, this.act, this.lbl);
@@ -22,7 +22,7 @@ export class GaClickDirective implements OnInit, OnChanges {
           choiceTrackingEventDetails: {
             category: this.ctg,
             action: this.act,
-            label: this.el.nativeElement.title
+            label: this.lbl
           }
         }) ;
       }
@@ -31,9 +31,9 @@ export class GaClickDirective implements OnInit, OnChanges {
   ngOnInit(): void {
     this.ctg = 'Button';
     this.act = 'click';
-    this.lbl = this.elTitle;
+    this.lbl = this.title;
   }
   ngOnChanges(changes: SimpleChanges): void {
-    this.lbl = this.elTitle;
+    this.lbl = this.title;
   }
 }
