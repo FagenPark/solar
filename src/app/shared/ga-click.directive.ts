@@ -7,11 +7,10 @@ export class GaClickDirective implements OnInit {
   @HostBinding('attr.data-tracking-category') ctg: string;
   @HostBinding('attr.data-tracking-action') act: string;
   @HostBinding('attr.data-tracking-label') lbl: string;
-  @Input('appGaClick') isTrackingClick: boolean;
-  @Input('ga-label') title: string;
+  @Input() appGaClick: string;
   constructor() { }
   @HostListener('click') onClick() {
-    if (this.isTrackingClick) {
+    if (this.appGaClick) {
       // @ts-ignore
       if (window.dataLayer !== undefined) {
         // @ts-ignore
@@ -32,6 +31,6 @@ export class GaClickDirective implements OnInit {
   private setGAAttrs() {
     this.ctg = 'Button';
     this.act = 'click';
-    this.lbl = this.title;
+    this.lbl = this.appGaClick;
   }
 }
