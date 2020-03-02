@@ -15,6 +15,7 @@ export class GaClickDirective implements OnInit {
       if (window.dataLayer !== undefined) {
         // @ts-ignore
         window.dataLayer.push({
+          event: 'choiceTrackingEvent',
           choiceTrackingEventDetails: {
             category: this.ctg,
             action: this.act,
