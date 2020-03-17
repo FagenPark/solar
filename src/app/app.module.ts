@@ -48,8 +48,7 @@ import {SharedModule} from './shared/shared.module';
       }
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-    EffectsModule.forRoot([AppEffects]),
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    EffectsModule.forRoot([AppEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
