@@ -5,6 +5,7 @@ import * as queryActions from './solar-query/state/solar-query.actions';
 import {Store} from '@ngrx/store';
 import * as fromRoot from './state/app.state';
 import {Subscription} from 'rxjs';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-solar-root',
@@ -16,7 +17,9 @@ export class AppComponent implements OnInit, OnDestroy {
   isComponentActive = true;
   title = 'solar';
 
-  constructor(private store: Store<fromRoot.State>, private router: Router) {
+  constructor(private store: Store<fromRoot.State>,
+              private router: Router,
+              private siteTitle: Title) {
   }
   ngOnInit(): void {
     this.routerEventSubscription = this.router.events
@@ -40,6 +43,7 @@ export class AppComponent implements OnInit, OnDestroy {
         // Else navigation has ended, so remove a loading indicator
         this.store.dispatch(new queryActions.ToggleQuerying(false));
       });
+    this.siteTitle.setTitle('Choice solar estimator');
   }
 
   ngOnDestroy(): void {
