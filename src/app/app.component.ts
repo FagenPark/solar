@@ -5,7 +5,7 @@ import * as queryActions from './solar-query/state/solar-query.actions';
 import {Store} from '@ngrx/store';
 import * as fromRoot from './state/app.state';
 import {Subscription} from 'rxjs';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-solar-root',
@@ -19,7 +19,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private store: Store<fromRoot.State>,
               private router: Router,
-              private siteTitle: Title) {
+              private siteTitle: Title,
+              private meta: Meta) {
   }
   ngOnInit(): void {
     this.routerEventSubscription = this.router.events
@@ -44,6 +45,11 @@ export class AppComponent implements OnInit, OnDestroy {
         this.store.dispatch(new queryActions.ToggleQuerying(false));
       });
     this.siteTitle.setTitle('Choice solar estimator');
+    this.meta.updateTag({name: 'title', content: 'CHOICE - Solar Estimator'});
+    this.meta.updateTag({name: 'description', content: '\n' +
+        'Estimate my solar system\n' +
+        'Find out how much a solar system might cost you and what your savings might look like'});
+    this.meta.updateTag({name: 'image', content: 'https://choice-solar.azureedge.net/assets/images/solar-estimator-media.png'});
   }
 
   ngOnDestroy(): void {
