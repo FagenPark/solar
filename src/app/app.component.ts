@@ -1,11 +1,13 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router} from '@angular/router';
-import {filter, takeWhile} from 'rxjs/operators';
-import * as queryActions from './solar-query/state/solar-query.actions';
-import {Store} from '@ngrx/store';
-import * as fromRoot from './state/app.state';
 import {Subscription} from 'rxjs';
 import {Meta, Title} from '@angular/platform-browser';
+import {Store} from '@ngrx/store';
+import {filter, takeWhile} from 'rxjs/operators';
+
+import * as queryActions from './solar-query/state/solar-query.actions';
+import * as fromRoot from './state/app.state';
+import * as appConstants from './app.constants';
 
 @Component({
   selector: 'app-solar-root',
@@ -13,6 +15,9 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  private cTitle = appConstants.siteTitle;
+  private siteDescription = appConstants.siteDescription;
+  private ogImg = appConstants.ogImageUrl;
   routerEventSubscription: Subscription;
   isComponentActive = true;
   title = 'solar';
@@ -23,6 +28,11 @@ export class AppComponent implements OnInit, OnDestroy {
               private meta: Meta) {
   }
   ngOnInit(): void {
+    this.setLoadingAsPerNavStatus();
+    this.updateMeta();
+  }
+
+  private setLoadingAsPerNavStatus() {
     this.routerEventSubscription = this.router.events
       .pipe(
         takeWhile(() => this.isComponentActive),
@@ -44,12 +54,17 @@ export class AppComponent implements OnInit, OnDestroy {
         // Else navigation has ended, so remove a loading indicator
         this.store.dispatch(new queryActions.ToggleQuerying(false));
       });
-    this.siteTitle.setTitle('Choice solar estimator');
-    this.meta.updateTag({name: 'title', content: 'CHOICE - Solar Estimator'});
-    this.meta.updateTag({name: 'description', content: '\n' +
-        'Estimate my solar system\n' +
-        'Find out how much a solar system might cost you and what your savings might look like'});
-    this.meta.updateTag({name: 'image', content: 'https://choice-solar.azureedge.net/assets/images/solar-estimator-media.png'});
+  }
+
+  private updateMeta() {
+    this.siteTitle.setTitle(this.cTitle);
+    this.meta.updateTag({property: 'og:title', content: this.cTitle});
+    this.meta.updateTag({property: 'og:description', content: this.siteDescription});
+    this.meta.updateTag({property: 'og:image', content: this.ogImg});
+    this.meta.updateTag({property: 'og:url', content: appConstants.siteUrl});
+    this.meta.updateTag({name: 'twitter:title', content: this.cTitle});
+    this.meta.updateTag({name: 'twitter:description', content: this.siteDescription});
+    this.meta.updateTag({name: 'twitter:image', content: this.ogImg});
   }
 
   ngOnDestroy(): void {
