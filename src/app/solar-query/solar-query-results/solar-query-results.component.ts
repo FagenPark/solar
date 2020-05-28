@@ -14,7 +14,7 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
   @Input() postCode: number;
   @Input() numberOfPeople: string;
   @Input() stateName: string;
-  @ViewChild('resultAnchor', {static: false}) resultAnchor: ElementRef;
+  @ViewChild('resultAnchor') resultAnchor: ElementRef;
   isComponentActive = true;
 
   constructor(private solarQueryService: SolarQueryService,
