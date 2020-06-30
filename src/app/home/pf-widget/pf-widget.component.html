@@ -1,0 +1,127 @@
+<style>
+  .pf-widget-se {
+    display: flex;
+    padding:  2rem;
+    background: #275b95;
+    justify-content: space-evenly;
+    height: 200px;
+  }
+  .pf-widget-se-footer {
+    display: flex;
+    background: #002E46;
+    justify-content: flex-end;
+    height: 30px;
+    color: white;
+    padding: 5px;
+  }
+  .pf-widget-se h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 0 100px;
+  }
+  .pf-widget-se .pt-hero-section {
+    width: 25%;
+  }
+  .pf-widget-se .pt-form-section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .pf-widget-se .pt-hero-section .pt-hero-img {
+    position: relative;
+    height: 140px;
+  }
+  .pf-widget-se .pt-hero-section .pt-hero-img .pt-hero-img-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-image: url(https://choice-solar.azureedge.net/assets/images/hero_img.png);
+    background-repeat: no-repeat;
+    background-position-x: 70%;
+    background-size: contain;
+  }
+  .pf-widget-se .pt-submit-wrapper {
+    text-align: center;
+  }
+  .pf-widget-se .pt-submit-btn {
+    text-decoration: none;
+    padding: .25rem;
+    width: 310px;
+    height: 59px;
+    max-width: 23.1875rem;
+    background-color: #009ed9;
+    color: #fff;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+  @media screen and (max-width: 812px) {
+    .pf-widget-se {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+      height: 400px;
+    }
+    .pf-widget-se-footer {
+      justify-content: center;
+    }
+    .pf-widget-se .pt-hero-section {
+      width: 100%;
+    }
+    .pf-widget-se h2 {
+      padding: 0 60px;
+    }
+    .pf-widget-se .pt-submit-btn {
+      width: 265px;
+      height: 50px;
+      line-height: 45px;
+    }
+    .pf-widget-se .pt-form-section {
+      width: 100%;
+    }
+    .pf-widget-se .pt-hero-section .pt-hero-img {
+      height: 9.5rem;
+    }
+    .pf-widget-se .pt-hero-section .pt-hero-img .pt-hero-img-bg {
+      height: 100%;
+      background-position: center;
+    }
+  }
+</style>
+
+<div class="pf-widget-se">
+
+  <div class="pt-hero-section">
+    <div class="pt-hero-img">
+      <div class="pt-hero-img-bg"></div>
+    </div>
+  </div>
+  <div class="pt-form-section">
+    <div class="pt-form-title">
+      <h2>Find out how much a solar system might cost you and what you’ll save</h2>
+    </div>
+    <div class="pt-form-body">
+      <div class="pt-form-group pt-submit">
+        <div class="pt-submit-wrapper">
+          <a href="https://www.choice.com.au/solar-estimator" target="_blank" class="pt-submit-btn pt-primary-btn button cta_button cta_button__primary" type="submit" data-tracking-category="Button" data-tracking-action="click" data-tracking-label="Estimate my solar system">Estimate my solar system</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pf-widget-se-footer">
+  <div class="pby">Powered by&nbsp;&nbsp;</div>
+  <img class="sq-logo" src="https://choice-solar.azureedge.net/assets/images/cta_sq_logo.png">
+</div>

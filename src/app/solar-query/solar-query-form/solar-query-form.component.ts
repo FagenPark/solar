@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from '../state';
@@ -12,7 +12,7 @@ import {takeWhile, tap} from 'rxjs/operators';
   templateUrl: './solar-query-form.component.html',
   styleUrls: ['./solar-query-form.component.scss']
 })
-export class SolarQueryFormComponent implements OnInit, OnDestroy {
+export class SolarQueryFormComponent implements OnInit, OnDestroy, AfterViewInit {
   isComponentActive = true;
   isFormChanged = false;
   displayResults$: Observable<boolean>;
@@ -20,17 +20,18 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy {
   queryForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private store: Store<fromRoot.State>) { }
+              private store: Store<fromRoot.State>,
+              private ngZone: NgZone) { }
 
   ngOnInit() {
     this.queryForm = this.fb.group({
       postCode: ['', [Validators.required, Validators.pattern(/^(?:(?:[2-8]\d|9[0-7]|0?[28]|0?9(?=09))(?:\d{2}))$/)]],
-      numberOfPeople: ['', [Validators.required]]
+      numberOfPeople: ['', [Validators.required, Validators.pattern(/[1-5]/)]]
     });
     this.queryForm.valueChanges.pipe(
       takeWhile(() => this.isComponentActive),
       tap(data => this.isFormChanged = true)
-    ).subscribe();
+    ).subscribe( );
     this.displayResults$ = this.store.pipe(select(fromSolarQuery.getHasResults));
   }
 
@@ -46,5 +47,11 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.isComponentActive = false;
+  }
+
+  ngAfterViewInit(): void {
+    if (this.queryForm.valid) {
+      setTimeout(() => this.submit(), 0);
+    }
   }
 }

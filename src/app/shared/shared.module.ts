@@ -7,6 +7,7 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
 import {AnchorLinkDirective} from './anchor-link.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { GaClickDirective } from './ga-click.directive';
+import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { GaClickDirective } from './ga-click.directive';
     ModalContentComponent,
     AnchorLinkDirective,
     LoadingSpinnerComponent,
-    GaClickDirective
+    GaClickDirective,
+    IniInputQueryParamDirective
   ],
   imports: [
     CommonModule
@@ -29,7 +31,8 @@ import { GaClickDirective } from './ga-click.directive';
     ReactiveFormsModule,
     ModalContentComponent,
     AnchorLinkDirective,
-    GaClickDirective
+    GaClickDirective,
+    IniInputQueryParamDirective
   ]
 })
 export class SharedModule { }

@@ -21,6 +21,7 @@
                    type="number"
                    placeholder="Postcode (required)"
                    formControlName="postCode"
+                   appIniInputQueryParam="postCode"
                    [ngClass]="{'is-invalid': (queryForm.get('postCode').touched ||
                                             queryForm.get('postCode').dirty) &&
                                             !queryForm.get('postCode').valid }"/>
@@ -44,7 +45,7 @@
           <div class="pt-form-control-wrapper">
             <select class="pt-form-control"
                     id="numberOfPeople"
-                    formControlName="numberOfPeople" [ngClass]="{'is-invalid': (queryForm.get('numberOfPeople').touched ||
+                    formControlName="numberOfPeople" appIniInputQueryParam="numberOfPeople" [ngClass]="{'is-invalid': (queryForm.get('numberOfPeople').touched ||
                                             queryForm.get('numberOfPeople').dirty) &&
                                             !queryForm.get('numberOfPeople').valid }">
               <option value=""
