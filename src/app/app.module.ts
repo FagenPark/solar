@@ -20,7 +20,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {PostcodeData} from './solar-query/postcode-data';
 import {SharedModule} from './shared/shared.module';
-import { PfWidgetComponent } from './home/pf-widget/pf-widget.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +28,7 @@ import { PfWidgetComponent } from './home/pf-widget/pf-widget.component';
     PageNotFoundComponent,
     ChoiceHeaderComponent,
     ChoiceFooterComponent,
-    LandingPageComponent,
-    PfWidgetComponent
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

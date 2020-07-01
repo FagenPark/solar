@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, NgZone, OnDestroy, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from '../state';
@@ -20,13 +20,12 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy, AfterViewInit
   queryForm: FormGroup;
 
   constructor(private fb: FormBuilder,
-              private store: Store<fromRoot.State>,
-              private ngZone: NgZone) { }
+              private store: Store<fromRoot.State>) { }
 
   ngOnInit() {
     this.queryForm = this.fb.group({
       postCode: ['', [Validators.required, Validators.pattern(/^(?:(?:[2-8]\d|9[0-7]|0?[28]|0?9(?=09))(?:\d{2}))$/)]],
-      numberOfPeople: ['', [Validators.required, Validators.pattern(/[1-5]/)]]
+      numberOfPeople: ['', [Validators.required, Validators.pattern(/\b([1-5])\b/)]]
     });
     this.queryForm.valueChanges.pipe(
       takeWhile(() => this.isComponentActive),
@@ -50,8 +49,8 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy, AfterViewInit
   }
 
   ngAfterViewInit(): void {
-    if (this.queryForm.valid) {
-      setTimeout(() => this.submit(), 0);
-    }
+      if (this.queryForm.valid) {
+        setTimeout(() => this.submit(), 0);
+      }
   }
 }

@@ -61,7 +61,7 @@
             </select>
             <div class="pt-invalid-feedback">
             <span class="pt-error-message" *ngIf="(queryForm.get('numberOfPeople').touched ||
-                                            queryForm.get('numberOfPeople').dirty) && queryForm.get('numberOfPeople').errors?.required">
+                                            queryForm.get('numberOfPeople').dirty) && (queryForm.get('numberOfPeople').errors?.required || queryForm.get('numberOfPeople').errors?.pattern)">
               Please select number of people in the house hold
             </span>
             </div>

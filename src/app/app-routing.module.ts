@@ -4,7 +4,6 @@ import {ShellComponent} from './home/shell/shell.component';
 import {PageNotFoundComponent} from './home/page-not-found/page-not-found.component';
 import {SolarQueryComponent} from './solar-query/solar-query.component';
 import {LandingPageComponent} from './home/langing-page/landing-page.component';
-import {PfWidgetComponent} from './home/pf-widget/pf-widget.component';
 
 
 const routes: Routes = [
@@ -12,7 +11,6 @@ const routes: Routes = [
     children: [
       {path: 'landing-page', component: LandingPageComponent, data: { animation: 'isRight'}},
       {path: 'solar-estimator', component: SolarQueryComponent, data: { animation: 'isLeft'}},
-      {path: 'pfw', component: PfWidgetComponent, data: { animation: 'isLeft'}},
       { path: '', redirectTo: 'solar-estimator', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ]

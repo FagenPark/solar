@@ -11,9 +11,9 @@ export class IniInputQueryParamDirective implements OnInit {
 
   ngOnInit(): void {
     const queryParams = new URLSearchParams(location.search);
-
     if (queryParams.has(this.paramKey)) {
       this.ngControl.control.patchValue(queryParams.get(this.paramKey));
+      setTimeout(() => this.ngControl.control.markAllAsTouched(), 0); // force validation
     }
   }
 }
