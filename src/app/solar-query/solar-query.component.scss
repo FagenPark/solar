@@ -1,8 +1,9 @@
 @import "src/variables";
 .query-form-container {
-
  @include transition(opacity, 0.3s, ease-in-out);
-
+}
+.se-body-container {
+  background-color: $bc_nav_grey;
 }
 .pt-error-message {
   color: $sc_white;

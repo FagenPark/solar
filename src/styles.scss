@@ -11,7 +11,6 @@ html, body {
   font-size: $basepx;
   h1 {
     margin-top: 0;
-    height: pxtorem(48px);
     color: $sc_secondary;
     font-family: Roboto;
     font-size: pxtorem(38px);
@@ -20,7 +19,6 @@ html, body {
   }
 
   h2, h4 {
-    height: pxtorem(85px);
     color: $sc_secondary;
     max-width: pxtorem(680px);
     margin: 0 auto;
@@ -30,7 +28,6 @@ html, body {
     line-height: pxtorem(32px);
   }
   h3 {
-    height: pxtorem(45px);
     color: $sc_secondary;
     font-family: "Nunito Sans";
     font-size: pxtorem(22px);
@@ -50,7 +47,7 @@ app-solar-root {
     max-width: pxtorem(371px);
     width: 100%;
     background-color: $bc_btn;
-    color: $sc_white;
+    color: $sc_black;
     font-family: "Nunito Sans";
     font-size: pxtorem(22px);
     font-weight: bold;
@@ -58,8 +55,9 @@ app-solar-root {
     text-align: center;
     cursor: pointer;
     border: none;
-    &:hover {
+    &:hover, &:focus {
       background-color: $bc_btn_d;
+      color: $sc_white;
     }
   }
 }

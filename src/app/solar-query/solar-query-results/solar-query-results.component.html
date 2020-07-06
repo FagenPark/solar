@@ -34,6 +34,9 @@
       <h4>From {{getMinPrice() | currency:'ASD': '$':'1.0-0'}} - {{getMaxPrice() | currency:'ASD': '$':'1.0-0'}}</h4>
       <p>Price is based on standard installation for a single storey home with no tree shading</p>
     </div>
-
+    <div class="solar-installer-btn">
+      <h2>Ready for 3 quotes from local solar installers?</h2>
+      <button id="find-installer" appGaClick = "Find a solar installer" class="pt-primary-btn" ><a [href]="findSolarInstaller()"><span>Find a solar installer</span></a></button>
+    </div>
   </div>
 </div>

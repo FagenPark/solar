@@ -16,6 +16,7 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy, AfterViewInit
   isComponentActive = true;
   isFormChanged = false;
   displayResults$: Observable<boolean>;
+  isQuerying$: Observable<boolean>;
 
   queryForm: FormGroup;
 
@@ -32,6 +33,7 @@ export class SolarQueryFormComponent implements OnInit, OnDestroy, AfterViewInit
       tap(data => this.isFormChanged = true)
     ).subscribe( );
     this.displayResults$ = this.store.pipe(select(fromSolarQuery.getHasResults));
+    this.isQuerying$ = this.store.pipe(select(fromSolarQuery.getQueryingStatus));
   }
 
   submit() {

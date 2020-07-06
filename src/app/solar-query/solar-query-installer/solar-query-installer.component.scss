@@ -8,7 +8,7 @@
   }
   .solar-installer-title {
     h1 {
-      color: $sc_white;
+      color: $sc_secondary;
     }
   }
   .solar-installer-body {
@@ -33,32 +33,11 @@
       }
       .item-text {
         padding-top: 2rem;
-        color: $sc_white;
+        color: $sc_secondary;
         font-family: "Nunito Sans";
         font-size: pxtorem(22px);
         font-weight: bold;
         line-height: pxtorem(28px);
-      }
-
-    }
-  }
-  .solar-installer-btn {
-    padding-top: 2rem;
-    .pt-primary-btn {
-      background-image: url(https://choice-solar.azureedge.net/assets/images/external-link.svg);
-      background-repeat: no-repeat;
-      background-position-x: 85%;
-      background-position-y: pxtorem(24px);
-      a {
-        text-decoration: none;
-        color: $sc_white;
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-      }
-      span {
-        margin-left: pxtorem(-30px);
       }
     }
   }
@@ -82,17 +61,13 @@
         .item-text {
           padding-top: 0.5rem;
           padding-bottom: 3rem;
-          color: $sc_white;
+          color: $sc_secondary;
           font-family: "Nunito Sans";
           font-size: pxtorem(22px);
           font-weight: bold;
           line-height: pxtorem(28px);
         }
       }
-    }
-    .solar-installer-btn {
-      padding-top: 3rem;
-      //margin-top: pxtorem(45px);
     }
   }
 }

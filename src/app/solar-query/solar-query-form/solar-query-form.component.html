@@ -1,86 +1,93 @@
-<div class="query-form" [ngClass]="{'no-results' : !(displayResults$ | async)}">
+<div class="query-form">
   <div class="pt-hero-section">
-    <div class="pt-hero-img">
-      <div class="pt-hero-img-bg"></div>
-      <div class="bg-round"></div>
+    <div class="pt-hero-content">
+      <h1>Estimate your solar and find a trusted installer</h1>
+      <h4>We’ve made getting started with solar easy</h4>
+      <ol>
+        <li>Estimate the cost and savings of a solar system</li>
+        <li>Get quotes from trusted, qualified, local installers with SolarQuotes</li>
+      </ol>
     </div>
   </div>
   <div class="pt-form-section">
-    <div class="pt-form-title">
-      <h1>Estimate my solar system</h1>
-      <h2>Find out how much a solar system might cost you and what your savings might look like</h2>
-    </div>
-    <div class="pt-form-body">
-      <form novalidate (ngSubmit)="submit()" [formGroup]="queryForm" autocomplete="off">
-        <div class="pt-form-group post-code">
-          <label class="pt-form-label"
-                 for="postCodeId">Postcode</label>
-          <div class="pt-form-control-wrapper">
-            <input class="pt-form-control"
-                   id="postCodeId"
-                   type="number"
-                   placeholder="Postcode (required)"
-                   formControlName="postCode"
-                   appIniInputQueryParam="postCode"
-                   [ngClass]="{'is-invalid': (queryForm.get('postCode').touched ||
+    <div class="pt-form-container">
+      <div class="pt-form-logo">
+      </div>
+      <div class="pt-form-title">
+        <h3>Get a quick estimate to help decide if a solar system is for you</h3>
+      </div>
+      <div class="pt-form-body">
+        <form novalidate (ngSubmit)="submit()" [formGroup]="queryForm" autocomplete="off">
+          <div class="pt-form-group post-code">
+            <label class="pt-form-label"
+                   for="postCodeId">Postcode</label>
+            <div class="pt-form-control-wrapper">
+              <input class="pt-form-control"
+                     id="postCodeId"
+                     type="number"
+                     placeholder="Postcode (required)"
+                     formControlName="postCode"
+                     appIniInputQueryParam="postCode"
+                     [ngClass]="{'is-invalid': (queryForm.get('postCode').touched ||
                                             queryForm.get('postCode').dirty) &&
                                             !queryForm.get('postCode').valid }"/>
-            <div class="pt-invalid-feedback">
+              <div class="pt-invalid-feedback">
             <span class="pt-error-message" *ngIf="(queryForm.get('postCode').touched
             || queryForm.get('postCode').dirty)
             && queryForm.get('postCode').errors?.required">
               Please enter your postcode
             </span>
-              <span class="pt-error-message" *ngIf="(queryForm.get('postCode').touched ||
+                <span class="pt-error-message" *ngIf="(queryForm.get('postCode').touched ||
                                             queryForm.get('postCode').dirty) && queryForm.get('postCode').errors?.pattern">
               Please input a valid Australian postcode
             </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pt-form-group number-of-people">
-          <label class="pt-form-label"
-                 for="numberOfPeople">Number of people</label>
+          <div class="pt-form-group number-of-people">
+            <label class="pt-form-label"
+                   for="numberOfPeople">Number of people</label>
 
-          <div class="pt-form-control-wrapper">
-            <select class="pt-form-control"
-                    id="numberOfPeople"
-                    formControlName="numberOfPeople" appIniInputQueryParam="numberOfPeople" [ngClass]="{'is-invalid': (queryForm.get('numberOfPeople').touched ||
+            <div class="pt-form-control-wrapper">
+              <select class="pt-form-control"
+                      id="numberOfPeople"
+                      formControlName="numberOfPeople" appIniInputQueryParam="numberOfPeople" [ngClass]="{'is-invalid': (queryForm.get('numberOfPeople').touched ||
                                             queryForm.get('numberOfPeople').dirty) &&
                                             !queryForm.get('numberOfPeople').valid }">
-              <option value=""
-                      disabled
-                      selected
-                      hidden>Number of people in household
-              </option>
-              <option value=1>1 person</option>
-              <option value=2>2 people</option>
-              <option value=3>3 people</option>
-              <option value=4>4 people</option>
-              <option value=5>5 people or more</option>
-            </select>
-            <div class="pt-invalid-feedback">
+                <option value=""
+                        disabled
+                        selected
+                        hidden>Number of people in household
+                </option>
+                <option value=1>1 person</option>
+                <option value=2>2 people</option>
+                <option value=3>3 people</option>
+                <option value=4>4 people</option>
+                <option value=5>5 people or more</option>
+              </select>
+              <div class="pt-invalid-feedback">
             <span class="pt-error-message" *ngIf="(queryForm.get('numberOfPeople').touched ||
                                             queryForm.get('numberOfPeople').dirty) && (queryForm.get('numberOfPeople').errors?.required || queryForm.get('numberOfPeople').errors?.pattern)">
               Please select number of people in the house hold
             </span>
+              </div>
+            </div>
+
+          </div>
+          <div class="pt-form-group pt-submit">
+            <div class="pt-submit-wrapper">
+              <button id="estimate-now" class="pt-submit-btn pt-primary-btn"
+                      type="submit"
+                      appGaClick="Estimate now"
+                      [title]="queryForm.valid ? 'Estimate now' : 'Disabled until the form data is valid'"
+                      [disabled]="!queryForm.valid">
+                Estimate now <app-inline-spinner class="btn-spinner" *ngIf="isQuerying$ | async"></app-inline-spinner>
+              </button>
+
             </div>
           </div>
-
-        </div>
-        <div class="pt-form-group pt-submit">
-          <div class="pt-submit-wrapper">
-            <button id="estimate-now" class="pt-submit-btn pt-primary-btn"
-                    type="submit"
-                    appGaClick = "Estimate now"
-                    [title]="queryForm.valid ? 'Estimate now' : 'Disabled until the form data is valid'"
-                    [disabled]="!queryForm.valid">
-              Estimate now
-            </button>
-
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </div>

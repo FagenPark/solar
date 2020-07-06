@@ -8,6 +8,8 @@ import {AnchorLinkDirective} from './anchor-link.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { GaClickDirective } from './ga-click.directive';
 import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
+import { PtAccordionComponent } from './pt-accordion/pt-accordion.component';
+import { InlineSpinnerComponent } from './inline-spinner/inline-spinner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
     AnchorLinkDirective,
     LoadingSpinnerComponent,
     GaClickDirective,
-    IniInputQueryParamDirective
+    IniInputQueryParamDirective,
+    PtAccordionComponent,
+    InlineSpinnerComponent
   ],
   imports: [
     CommonModule
@@ -32,7 +36,9 @@ import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
     ModalContentComponent,
     AnchorLinkDirective,
     GaClickDirective,
-    IniInputQueryParamDirective
+    IniInputQueryParamDirective,
+    PtAccordionComponent,
+    InlineSpinnerComponent
   ]
 })
 export class SharedModule { }

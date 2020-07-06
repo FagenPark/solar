@@ -1,151 +1,246 @@
 @import "src/variables";
-.query-form {
-  &.no-results {
-    .pt-hero-section {
-      .pt-hero-img {
-        .bg-round {
-          height: 150%;
-        }
-      }
-    }
-  }
-}
 
 .query-form {
   display: flex;
-  padding:  4rem 2rem 0;
-  .pt-hero-section {
-    width: 50%;
-    .pt-hero-img {
-      position: relative;
-      height: pxtorem(416px);
-      .pt-hero-img-bg {position: absolute;
-        height: 105%;
-        width: 105%;
-        top: 0;
-        background-image: url(https://choice-solar.azureedge.net/assets/images/hero_img.png);
-        background-repeat: no-repeat;
-        background-position-x: 70%;
-        background-size: contain;
-      }
-      .bg-round {
-        height: 100%;
-        background-image: url(https://choice-solar.azureedge.net/assets/images/bg_round-trans.png);
-        background-repeat: no-repeat;
-        background-position-x: 85%;
-        background-size: auto;
-        -moz-transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-    }
-  }
-  .pt-form-section {
-    width: 50%;
-    padding-top: 1rem;
+  padding: 8rem 6rem 3rem;
+  box-sizing: border-box;
+  background: linear-gradient(79.41deg, #275B95 42.99%, #0083B6 85.55%);
 
-    .pt-form-title {
-      h1, h2 {
-        margin: 0;
+  .pt-hero-section {
+    margin: auto;
+
+    .pt-hero-content {
+      position: relative;
+      max-width: 590px;
+      color: $sc_white;
+
+      h1 {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 59px;
         color: $sc_white;
       }
-    }
-    .pt-form-label {
-      visibility: hidden;
-    }
 
-    .pt-form-control {
-      box-sizing: border-box;
-      height: pxtorem(46px);
-      max-width: pxtorem(371px);
-      width: 100%;
-      border: 1px solid $sc_grey_half;
-      padding-left: 1rem;
-      color: $sc_secondary;
-      font-size: 1rem;
-
-      &.ng-valid {
-        outline: none;
-        background-image: url(https://choice-solar.azureedge.net/assets/images/tick.svg);
-        background-repeat: no-repeat;
-        background-position-x: 95%;
-        background-position-y: pxtorem(15px);
+      h4 {
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 32px;
+        color: $sc_white;
       }
-      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-      &[type="number"] {
-        -moz-appearance: textfield;
-      }
-    }
 
-    .number-of-people {
-      .pt-form-control {
-        background-color: $sc_white;
-        -moz-appearance: none; /* Firefox */
-        -webkit-appearance: none; /* Safari and Chrome */
-        appearance: none;
-        background-image: url(https://choice-solar.azureedge.net/assets/images/image-gallery-chevron.png);
-        background-repeat: no-repeat;
-        background-position-x: 95%;
-        background-position-y: pxtorem(15px);
+      ol {
+        list-style: none;
+        counter-reset: hero-ol-counter;
       }
-    }
 
-    .pt-form-control::placeholder {
-      color: #002E46;
-      font-size: 1rem;
-    }
+      ol li {
+        counter-increment: hero-ol-counter;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 30px;
+        margin: 0 0 1.2rem 0;
+        position: relative;
+      }
 
-    .pt-invalid-feedback {
-      color: #fff;
-      width: pxtorem(371px);
-      .pt-error-message {
-        display: flex;
-        margin-left: pxtorem(5px);
+      ol li::before {
+        content: counter(hero-ol-counter);
+        color: $sc_white;
+        font-size: 23px;
+        line-height: var(--size);
+        font-weight: bold;
+        position: absolute;
+        --size: 28px;
+        left: calc(-1 * var(--size) - 10px);
+        width: var(--size);
+        height: var(--size);
+        background: #009EDB;
+        border-radius: 50%;
+        text-align: center;
       }
     }
   }
 
+  .pt-form-section {
+    margin: auto;
+
+    .pt-form-container {
+      position: relative;
+      box-sizing: border-box;
+      background: $bc_nav_grey;
+      max-width: 520px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      padding: 60px 30px 30px;
+      width: 100%;
+
+      .pt-submit-btn {
+        position: relative;
+        .btn-spinner {
+          position: absolute;
+          right: 1rem;
+          top: -6px;
+          transform: scale(0.5);
+        }
+      }
+
+      .pt-form-logo {
+        top: -73px;
+        left: 50%;
+        box-sizing: border-box;
+        transform: translateX(-50%);
+        position: absolute;
+        width: 145px;
+        height: 145px;
+        border: 10px solid $bc_nav_grey;
+        border-radius: 50%;
+        background-size: cover;
+        background: url(https://choice-solar.azureedge.net/assets/images/form_logo.png) no-repeat 50% 50%;
+      }
+
+      .pt-form-title {
+        h3 {
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 38px;
+          color: #002E46
+        }
+      }
+
+      .pt-form-label {
+        visibility: hidden;
+      }
+
+      .pt-form-control {
+        box-sizing: border-box;
+        height: pxtorem(46px);
+        width: 100%;
+        border: 1px solid $sc_grey_half;
+        padding-left: 1rem;
+        color: $sc_secondary;
+        font-size: 1rem;
+
+        &.ng-valid {
+          outline: none;
+          background-image: url(https://choice-solar.azureedge.net/assets/images/tick.svg);
+          background-repeat: no-repeat;
+          background-position-x: 95%;
+          background-position-y: pxtorem(15px);
+        }
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &[type="number"] {
+          -moz-appearance: textfield;
+        }
+      }
+
+      .number-of-people {
+        .pt-form-control {
+          background-color: $sc_white;
+          -moz-appearance: none; /* Firefox */
+          -webkit-appearance: none; /* Safari and Chrome */
+          appearance: none;
+          background-image: url(https://choice-solar.azureedge.net/assets/images/image-gallery-chevron.png);
+          background-repeat: no-repeat;
+          background-position-x: 95%;
+          background-position-y: pxtorem(15px);
+        }
+      }
+
+      .pt-form-control::placeholder {
+        color: #002E46;
+        font-size: 1rem;
+      }
+
+      .pt-invalid-feedback {
+        color: $bc_error;
+        width: pxtorem(371px);
+
+        .pt-error-message {
+          display: flex;
+          margin-left: pxtorem(5px);
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 812px) {
-  .query-form, .query-form.no-results {
+  .query-form {
     flex-direction: column;
-    text-align: center;
-    padding:  1rem;
+    padding: 1rem;
+    background: linear-gradient(169.41deg, #275B95 42.99%, #0083B6 85.55%);
+
     .pt-hero-section {
-      width: 100%;
-      .pt-hero-img {
-        height: 12.5rem;
-        .pt-hero-img-bg {
-          height: 100%;
-          background-position: center;
+
+      .pt-hero-content {
+        h1 {
+          font-size: 30px;
+          line-height: 35px;
         }
-        .bg-round {
-          height: 110%;
-          background-size: contain;
-          background-position: center;
+
+        h4 {
+          font-size: 22px;
+          line-height: 30px;
+        }
+
+        ol li {
+          font-size: 19px;
+          line-height: 26px;
+          margin: 0 0 1rem 0;
+        }
+
+        ol li::before {
+          font-size: 19px;
+          --size: 24px;
         }
       }
     }
+
     .pt-form-section {
-      width: 100%;
+
+      .pt-form-container {
+        padding: 60px 8px 25px;
+
+        .pt-form-logo {
+          top: -55px;
+          width: 109px;
+          height: 109px;
+          border: 6px solid $bc_nav_grey;
+          background: url(https://choice-solar.azureedge.net/assets/images/form_logo_mobile.png) no-repeat 50% 50%;
+        }
+
+        .pt-form-title {
+          h3 {
+            font-size: 22px;
+            line-height: 30px;
+          }
+        }
+      }
+
     }
+
     .pt-form-title {
-      h1 {
+      h3 {
         font-size: pxtorem(30px);
         line-height: pxtorem(33px);
         height: 4.5rem;
       }
+    }
+  }
+}
 
-      h2 {
-        font-size: pxtorem(24px);
-        line-height: pxtorem(31px);
-        height: pxtorem(110px);
-      }
+@media screen and (max-width: 476px) {
+  .query-form {
+    .pt-hero-section {
+      margin: 25px 0;
+    }
+    .pt-form-section {
+      margin: 25px 0;
     }
   }
 }
