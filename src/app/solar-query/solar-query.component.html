@@ -4,15 +4,11 @@
   </div>
   <div class="se-body-container">
     <div *ngIf="displayResults$ | async" [@expandCollapse] >
-      <div>
         <app-solar-query-results [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async"
                                  [stateName]="stateName$ | async"></app-solar-query-results>
-      </div>
-      <div>
-
-      </div>
     </div>
-      <app-solar-query-installer [postCode]="postCode$ | async"></app-solar-query-installer>
+      <app-solar-query-installer></app-solar-query-installer>
+    <app-solar-query-qanda></app-solar-query-qanda>
   </div>
   <div class="pt-error-message" *ngIf="errorMessage$ | async as error">{{error}}</div>
 </div>

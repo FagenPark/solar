@@ -1,1 +1,10 @@
-<p>pt-accordion works!</p>
+<section role="region" class="pt-expandable-section">
+  <div class="pt-expandable-section-header" (click)="toggleAccordion()">
+    <h3 class="pt-expandable-section-title">{{sectionHeader}}</h3>
+    <button class="pt-expandable-section-button" type="button"  [ngClass]="isCollapsed ? 'collapsed' : 'expanded'">
+    </button>
+  </div>
+  <div class="pt-expandable-section-content" #sectionBody>
+    <ng-content></ng-content>
+  </div>
+</section>

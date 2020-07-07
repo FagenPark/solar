@@ -1,0 +1,39 @@
+@import "src/variables";
+.pt-expandable-section {
+  border-bottom: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+  .pt-expandable-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    h3 {
+      flex-basis: 90%;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: normal;
+    }
+    .pt-expandable-section-button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: #009ED9 url(https://choice-solar.azureedge.net/assets/images/chev-down-white.png) no-repeat center;
+      @include transition(transform, 300ms, ease-in-out, 0s);
+      &.expanded {
+        transform: rotate(180deg);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .pt-expandable-section-content {
+    max-height: 10px;
+    overflow: hidden;
+    padding-right: 40px;
+    @include transition(max-height, 300ms, ease-in-out, 0s);
+  }
+}
