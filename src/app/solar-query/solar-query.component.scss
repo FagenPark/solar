@@ -1,6 +1,7 @@
 @import "src/variables";
 .query-form-container {
  @include transition(opacity, 0.3s, ease-in-out);
+  background: linear-gradient(79.41deg, #275B95 42.99%, #0083B6 85.55%);
 }
 app-user-testimonial {
   color: $sc_secondary;

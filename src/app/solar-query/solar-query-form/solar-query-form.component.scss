@@ -2,9 +2,10 @@
 
 .query-form {
   display: flex;
-  padding: 8rem 6rem 3rem;
+  padding: 8rem 0 3rem;
   box-sizing: border-box;
-  background: linear-gradient(79.41deg, #275B95 42.99%, #0083B6 85.55%);
+  max-width: 1200px;
+  margin: 0 auto;
 
   .pt-hero-section {
     margin: auto;
@@ -71,7 +72,7 @@
       position: relative;
       box-sizing: border-box;
       background: $bc_nav_grey;
-      max-width: 520px;
+      max-width: 490px;
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       text-align: center;
