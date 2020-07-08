@@ -173,6 +173,23 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .query-form {
+    padding: 6rem 3rem 2rem;
+    .pt-hero-section {
+      .pt-hero-content {
+        ol li {
+          line-height: 27px;
+        }
+      }
+
+    }
+    .pt-form-section {
+
+    }
+  }
+}
+
 @media screen and (max-width: 812px) {
   .query-form {
     flex-direction: column;
@@ -180,7 +197,7 @@
     background: linear-gradient(169.41deg, #275B95 42.99%, #0083B6 85.55%);
 
     .pt-hero-section {
-
+      margin: 25px 125px;
       .pt-hero-content {
         h1 {
           font-size: 30px;
@@ -206,7 +223,7 @@
     }
 
     .pt-form-section {
-
+      margin: 25px 125px;
       .pt-form-container {
         padding: 60px 8px 25px;
 

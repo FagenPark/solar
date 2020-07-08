@@ -1,11 +1,11 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-pt-accordion',
   templateUrl: './pt-accordion.component.html',
   styleUrls: ['./pt-accordion.component.scss']
 })
-export class PtAccordionComponent implements OnInit, AfterViewInit {
+export class PtAccordionComponent {
   isCollapsed = true;
   contentHeight: number;
 
@@ -14,20 +14,14 @@ export class PtAccordionComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-    this.contentHeight = this.accordionBody.nativeElement.scrollHeight;
-  }
-
   toggleAccordion() {
+    const contentHeight = this.accordionBody.nativeElement.scrollHeight;
     this.isCollapsed = !this.isCollapsed;
     this.accordionBody.nativeElement.classList.toggle('active');
     if (this.accordionBody.nativeElement.style.maxHeight) {
       this.accordionBody.nativeElement.style.maxHeight = null;
     } else {
-      this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px';
+      this.accordionBody.nativeElement.style.maxHeight = contentHeight + 'px';
     }
   }
 }

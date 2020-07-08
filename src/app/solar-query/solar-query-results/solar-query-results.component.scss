@@ -96,7 +96,7 @@
     padding:  1rem;
     .results-header {
       .pt-anchor {
-        top: pxtorem(725px);
+        top: pxtorem(830px);
       }
       h1 {
         font-size: pxtorem(30px);
@@ -115,7 +115,7 @@
     .results-body {
       .system-size, .pay-back, .potential-savings, .system-types, .solar-installer-btn {
         padding: 1rem;
-        max-width: 307px;
+        width: 80%;
         h2 {
           font-size: 22px;
           line-height: 28px;
@@ -154,6 +154,12 @@
     .results-header {
       .pt-anchor {
         top: pxtorem(880px);
+      }
+    }
+    .results-body {
+      .system-size, .pay-back, .potential-savings, .system-types, .solar-installer-btn {
+        padding: 1rem;
+        width: 90%;
       }
     }
   }

@@ -63,11 +63,12 @@
     vertical-align: baseline;
   }
 }
-
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 1200px) {
   .pt-header_constrained {
     justify-content: space-around;
   }
+}
+@media screen and (max-width: 812px) {
   .pt-header_info-item_choice_logo {
     a {
       width: pxtorem(90px);
