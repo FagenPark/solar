@@ -26,6 +26,7 @@
         font-size: 26px;
         line-height: 32px;
         color: $sc_white;
+        margin-bottom: 40px;
       }
 
       ol {
@@ -36,10 +37,13 @@
       ol li {
         counter-increment: hero-ol-counter;
         font-weight: normal;
-        font-size: 22px;
-        line-height: 30px;
+        font-size: 23px;
+        line-height: 46px;
         margin: 0 0 1.2rem 0;
         position: relative;
+        &:nth-of-type(2) {
+          line-height: 27px;
+        }
       }
 
       ol li::before {
@@ -49,7 +53,7 @@
         line-height: var(--size);
         font-weight: bold;
         position: absolute;
-        --size: 28px;
+        --size: 46px;
         left: calc(-1 * var(--size) - 10px);
         width: var(--size);
         height: var(--size);
@@ -195,8 +199,8 @@
         }
 
         ol li::before {
-          font-size: 19px;
-          --size: 24px;
+          font-size: 16px;
+          --size: 33px;
         }
       }
     }
