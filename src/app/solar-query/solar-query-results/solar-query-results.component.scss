@@ -6,7 +6,7 @@
   .results-header {
     .pt-anchor {
       position: absolute;
-      top: pxtorem(515px);
+      top: pxtorem(620px);
     }
     h2 {
       height: pxtorem(110px);
@@ -96,7 +96,7 @@
     padding:  1rem;
     .results-header {
       .pt-anchor {
-        top: pxtorem(655px);
+        top: pxtorem(700px);
       }
       h1 {
         font-size: pxtorem(30px);
@@ -145,6 +145,15 @@
         p:nth-of-type(2) {
           padding: 1rem;
         }
+      }
+    }
+  }
+}
+@media screen and (max-width: 476px) {
+  .solar-query-results-component {
+    .results-header {
+      .pt-anchor {
+        top: pxtorem(855px);
       }
     }
   }

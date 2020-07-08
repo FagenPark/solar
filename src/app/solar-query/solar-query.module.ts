@@ -5,6 +5,7 @@ import {SolarQueryResultsComponent} from './solar-query-results/solar-query-resu
 import {SolarQueryInstallerComponent} from './solar-query-installer/solar-query-installer.component';
 import {SharedModule} from '../shared/shared.module';
 import { SolarQueryQandaComponent } from './solar-query-qanda/solar-query-qanda.component';
+import { UserTestimonialComponent } from './user-testimonial/user-testimonial.component';
 
 
 
@@ -14,7 +15,8 @@ import { SolarQueryQandaComponent } from './solar-query-qanda/solar-query-qanda.
     SolarQueryFormComponent,
     SolarQueryResultsComponent,
     SolarQueryInstallerComponent,
-    SolarQueryQandaComponent
+    SolarQueryQandaComponent,
+    UserTestimonialComponent
   ],
   imports: [
     SharedModule

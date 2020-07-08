@@ -2,10 +2,33 @@
 .query-form-container {
  @include transition(opacity, 0.3s, ease-in-out);
 }
+app-user-testimonial {
+  color: $sc_secondary;
+  p {
+    font-size: 30px;
+    line-height: 41px;
+  }
+  .user-print {
+    font-size: 19px;
+    line-height: 31px;
+  }
+  span {
+    font-weight: bold;
+  }
+}
 .se-body-container {
   background-color: $bc_nav_grey;
 }
 .pt-error-message {
   color: $sc_white;
   text-align: center;
+}
+
+@media screen and(max-width: 812px){
+  app-user-testimonial {
+    p {
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
 }

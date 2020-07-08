@@ -1,0 +1,40 @@
+@import "src/variables";
+.solar-ut-component {
+  display: flex;
+  background: $sc_white;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  box-sizing: border-box;
+  .solar-ut-image {
+    flex-basis: 500px;
+    .round-image {
+      max-width: 100%;
+    }
+  }
+  .solar-user-words {
+    flex-basis: 500px;
+
+  }
+}
+@media screen and(max-width: 812px){
+  .solar-ut-component {
+    flex-direction: column;
+    padding: 3.2rem;
+    .solar-ut-image {
+      flex-basis: 210px;
+      .round-image {
+        width: 210px;
+      }
+
+    }
+    .solar-user-words {
+      flex-basis: 175px;
+    }
+  }
+}
+@media screen and(max-width: 476px){
+  .solar-ut-component {
+    padding: 3.2rem 1.2rem;
+  }
+}

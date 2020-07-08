@@ -3,13 +3,22 @@
     <app-solar-query-form></app-solar-query-form>
   </div>
   <div class="se-body-container">
-    <div *ngIf="displayResults$ | async" [@expandCollapse] >
-        <app-solar-query-results [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async"
-                                 [stateName]="stateName$ | async"></app-solar-query-results>
+    <div *ngIf="displayResults$ | async" [@expandCollapse]>
+      <app-solar-query-results [numberOfPeople]="numberOfPeople$ | async" [postCode]="postCode$ | async"
+                               [stateName]="stateName$ | async"></app-solar-query-results>
     </div>
-      <app-solar-query-installer></app-solar-query-installer>
+    <app-solar-query-installer></app-solar-query-installer>
+    <app-user-testimonial userImageUrl="https://choice-solar.azureedge.net/assets/images/john_smith.png">
+      <p>“<span>SolarQuotes</span> is a super helpful site - we used them. They filter out the crap operators and choose
+        a good local company.”</p>
+      <div class="user-print">
+        <span>John Smith</span>, Marrickville, NSW
+      </div>
+    </app-user-testimonial>
     <app-solar-query-qanda></app-solar-query-qanda>
   </div>
   <div class="pt-error-message" *ngIf="errorMessage$ | async as error">{{error}}</div>
 </div>
-<app-modal ><app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content></app-modal>
+<app-modal>
+  <app-modal-content [modalContentId]="modalContentId$ | async"></app-modal-content>
+</app-modal>

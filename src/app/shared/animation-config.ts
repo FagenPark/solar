@@ -23,12 +23,12 @@ export const upDownAnimation = trigger('upDownAnimation', [
 ]);
 export const expandCollapseAnimation = trigger('expandCollapse', [
   transition(':enter', [
-    style({height: '0'}),
-    animate('1s ease-out', style({height: '*'}))
+    style({height: '0', overflow: 'hidden'}),
+    animate('0.3s ease-out', style({height: '*'}))
   ]),
   transition(':leave', [
-    style({height: '*'}),
-    animate('1s ease-in', style({height: '0'}))
+    style({height: '*', overflow: 'hidden'}),
+    animate('0.3s ease-in', style({height: '0'}))
   ])
 ]);
 export const zoomInOutAnimation = trigger('zoomInOutAnimation', [
