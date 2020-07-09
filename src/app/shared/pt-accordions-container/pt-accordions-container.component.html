@@ -1,0 +1,7 @@
+<div class="pt-accordions-container-component">
+  <div *ngFor="let accordion of accordions; index as i">
+    <app-pt-section [sectionId]="i" [sectionContent]="accordion" [isActive]="accordion.isActive" [flipCounter]="flipCounter" [activeSectionId]="activeSectionId" (updateAccordion)="OnAccordionUpdate($event)">
+      <div [innerHTML]="accordion.sectionBody"></div>
+    </app-pt-section>
+  </div>
+</div>
