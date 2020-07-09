@@ -10,6 +10,8 @@ import { GaClickDirective } from './ga-click.directive';
 import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
 import { PtAccordionComponent } from './pt-accordion/pt-accordion.component';
 import { InlineSpinnerComponent } from './inline-spinner/inline-spinner.component';
+import { PtAccordionsContainerComponent } from './pt-accordions-container/pt-accordions-container.component';
+import { PtSectionComponent } from './pt-section/pt-section.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { InlineSpinnerComponent } from './inline-spinner/inline-spinner.componen
     GaClickDirective,
     IniInputQueryParamDirective,
     PtAccordionComponent,
-    InlineSpinnerComponent
+    InlineSpinnerComponent,
+    PtAccordionsContainerComponent,
+    PtSectionComponent
   ],
   imports: [
     CommonModule
@@ -38,6 +42,8 @@ import { InlineSpinnerComponent } from './inline-spinner/inline-spinner.componen
     GaClickDirective,
     IniInputQueryParamDirective,
     PtAccordionComponent,
+    PtAccordionsContainerComponent,
+    PtSectionComponent,
     InlineSpinnerComponent
   ]
 })
