@@ -9,6 +9,8 @@
   justify-content: space-between;
 
   .pt-hero-section {
+    width: 60%;
+
     .pt-hero-content {
       position: relative;
       max-width: 590px;
@@ -32,6 +34,7 @@
       ol {
         list-style: none;
         counter-reset: hero-ol-counter;
+        margin-left: 15px;
       }
 
       ol li {
@@ -41,6 +44,7 @@
         line-height: 46px;
         margin: 0 0 1.2rem 0;
         position: relative;
+
         &:nth-of-type(2) {
           line-height: 27px;
         }
@@ -65,11 +69,12 @@
   }
 
   .pt-form-section {
+    width: 40%;
+
     .pt-form-container {
       position: relative;
       box-sizing: border-box;
       background: $bc_nav_grey;
-      max-width: 490px;
       box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       text-align: center;
@@ -78,6 +83,7 @@
 
       .pt-submit-btn {
         position: relative;
+
         .btn-spinner {
           position: absolute;
           right: 1rem;
@@ -97,7 +103,7 @@
         border: 10px solid $bc_nav_grey;
         border-radius: 50%;
         background-size: cover;
-        background: url(https://choice-solar.azureedge.net/assets/images/form_logo.png) no-repeat 50% 50%;
+        background: #C5E5F0 url(https://choice-solar.azureedge.net/assets/images/form_logo.png) no-repeat 50% 50%;
       }
 
       .pt-form-title {
@@ -120,7 +126,8 @@
         border: 1px solid $sc_grey_half;
         padding-left: 1rem;
         color: $sc_secondary;
-        font-size: 1rem;
+        font-size: pxtorem(19px);
+        font-family: "Nunito Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 
         &.ng-valid {
           outline: none;
@@ -138,6 +145,14 @@
         &[type="number"] {
           -moz-appearance: textfield;
         }
+        &::placeholder {
+          color: #002E46;
+          font-size: pxtorem(19px);
+        }
+        &:focus {
+          outline: none;
+          border-color: #0570B1;
+        }
       }
 
       .number-of-people {
@@ -153,11 +168,6 @@
         }
       }
 
-      .pt-form-control::placeholder {
-        color: #002E46;
-        font-size: 1rem;
-      }
-
       .pt-invalid-feedback {
         color: $bc_error;
         width: pxtorem(371px);
@@ -171,7 +181,13 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
+  .query-form {
+    padding: 8rem 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
   .query-form {
     padding: 6rem 3rem 2rem;
     .pt-hero-section {
@@ -180,10 +196,6 @@
           line-height: 27px;
         }
       }
-
-    }
-    .pt-form-section {
-
     }
   }
 }
@@ -195,7 +207,9 @@
     background: linear-gradient(169.41deg, #275B95 42.99%, #0083B6 85.55%);
 
     .pt-hero-section {
-      margin: 25px 125px;
+      margin: 25px auto;
+      width: 80%;
+
       .pt-hero-content {
         h1 {
           font-size: 30px;
@@ -205,6 +219,10 @@
         h4 {
           font-size: 22px;
           line-height: 30px;
+        }
+
+        ol {
+          margin-left: 0;
         }
 
         ol li {
@@ -221,7 +239,9 @@
     }
 
     .pt-form-section {
-      margin: 25px 125px;
+      margin: 25px auto;
+      width: 80%;
+
       .pt-form-container {
         padding: 60px 8px 25px;
 
@@ -230,7 +250,7 @@
           width: 109px;
           height: 109px;
           border: 6px solid $bc_nav_grey;
-          background: url(https://choice-solar.azureedge.net/assets/images/form_logo_mobile.png) no-repeat 50% 50%;
+          background: #C5E5F0 url(https://choice-solar.azureedge.net/assets/images/form_logo_mobile.png) no-repeat 50% 50%;
         }
 
         .pt-form-title {
@@ -240,15 +260,6 @@
           }
         }
       }
-
-    }
-
-    .pt-form-title {
-      h3 {
-        font-size: pxtorem(30px);
-        line-height: pxtorem(33px);
-        height: 4.5rem;
-      }
     }
   }
 }
@@ -256,10 +267,19 @@
 @media screen and (max-width: 476px) {
   .query-form {
     .pt-hero-section {
-      margin: 25px 0;
+      width: 100%;
     }
+
     .pt-form-section {
-      margin: 25px 0;
+      width: 100%;
+      .pt-form-container {
+        .pt-form-control {
+          font-size: pxtorem(16px);
+          &::placeholder {
+            font-size: pxtorem(16px);
+          }
+        }
+      }
     }
   }
 }
