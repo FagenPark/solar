@@ -4,10 +4,6 @@
   text-align: center;
   padding:  4rem 2rem;
   .results-header {
-    .pt-anchor {
-      position: absolute;
-      top: pxtorem(620px);
-    }
     h2 {
       height: pxtorem(110px);
       .pt-tooltip-toggle {
@@ -72,7 +68,7 @@
     p {
       margin: 0 auto;
       color: $sc_secondary;
-      font-family: "Nunito Sans";
+      font-family: "Nunito Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
       font-size: pxtorem(19px);
       line-height: pxtorem(28px);
       max-width: pxtorem(532px);
@@ -96,9 +92,6 @@
   .solar-query-results-component {
     padding:  1rem;
     .results-header {
-      .pt-anchor {
-        top: pxtorem(830px);
-      }
       h1 {
         font-size: pxtorem(30px);
         line-height: pxtorem(40px);
@@ -152,11 +145,6 @@
 }
 @media screen and (max-width: 476px) {
   .solar-query-results-component {
-    .results-header {
-      .pt-anchor {
-        top: pxtorem(880px);
-      }
-    }
     .results-body {
       .system-size, .pay-back, .potential-savings, .system-types, .solar-installer-btn {
         padding: 1rem;
