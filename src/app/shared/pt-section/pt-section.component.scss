@@ -40,4 +40,8 @@
 :host ::ng-deep p {
   font-size: 19px;
   line-height: 31px;
+  color: $sc_secondary;
+  a {
+    color: #0570B1;
+  }
 }

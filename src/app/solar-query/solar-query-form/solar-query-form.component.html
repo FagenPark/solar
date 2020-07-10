@@ -81,8 +81,7 @@
                       appGaClick="Estimate now"
                       [title]="queryForm.valid ? 'Estimate now' : 'Disabled until the form data is valid'"
                       [disabled]="!queryForm.valid">
-                Estimate now <app-inline-spinner class="btn-spinner" *ngIf="isQuerying$ | async"></app-inline-spinner>
-              </button>
+                <app-inline-spinner class="btn-spinner" *ngIf="isQuerying$ | async"></app-inline-spinner>{{(isQuerying$ | async) ? 'Estimating…' : 'Estimate now'}} </button>
 
             </div>
           </div>

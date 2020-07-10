@@ -31,8 +31,9 @@
     cursor: pointer;
     width: pxtorem(30px);
     height: pxtorem(30px);
+    font-family: "Nunito Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
     color: #002e46;
-    background-color: $bc_btn;
+    background-color: $sc_primary;
     z-index: 1;
     span {
       position: absolute;
@@ -48,6 +49,9 @@
       top: 3px;
       width: pxtorem(24px);
       height: pxtorem(24px);
+    }
+    &:focus {
+      outline: none;
     }
   }
   .modal-title {

@@ -1,8 +1,8 @@
 @import "src/variables";
 footer {
   background-color: $sc_secondary;
-  height: $footer_height;
-  padding-top: 5rem;
+  //height: $footer_height;
+  padding: 2rem 0;
   .footer {
     background-color: $sc_secondary;
   }
@@ -45,16 +45,15 @@ text-align: center;
     line-height: pxtorem(45px);
   }
   p, a {
-    font-size: pxtorem(19px);
-    line-height: pxtorem(31px);
+    font-size: pxtorem(16px);
+    line-height: pxtorem(28px);
     color: $fc_reverse_link;
+    margin-block-end: 0;
   }
 }
 
 @media screen and (max-width: 812px) {
   footer {
-    padding-top: 2rem;
-    height: $footer_height_mobile;
     .pt-l-constrained {
       padding: 0 1rem;
     }
@@ -73,12 +72,7 @@ text-align: center;
 
   .pt-footer__info-item__summary {
     h3 {
-      font-size: pxtorem(22px);
       line-height: pxtorem(28px);
-    }
-    p, a {
-      font-size: pxtorem(19px);
-      line-height: pxtorem(31px);
     }
   }
 }
