@@ -1,7 +1,7 @@
 <section role="region" class="pt-expandable-section">
   <div class="pt-expandable-section-header" (click)="toggleAccordion()">
     <h3 class="pt-expandable-section-title">{{sectionContent.sectionHeader}}</h3>
-    <button class="pt-expandable-section-button" type="button"  [ngClass]="sectionContent.isActive ? 'expanded' : 'collapsed'">
+    <button class="pt-expandable-section-button" type="button"  [ngClass]="status ? 'expanded' : 'collapsed'">
     </button>
   </div>
   <div class="pt-expandable-section-content" #sectionBody>

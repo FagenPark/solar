@@ -8,7 +8,7 @@ import {AnchorLinkDirective} from './anchor-link.directive';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { GaClickDirective } from './ga-click.directive';
 import { IniInputQueryParamDirective } from './ini-input-query-param.directive';
-import { PtAccordionComponent } from './pt-accordion/pt-accordion.component';
+import { PtAccordionIndependentComponent } from './pt-accordion-independent/pt-accordion-independent.component';
 import { InlineSpinnerComponent } from './inline-spinner/inline-spinner.component';
 import { PtAccordionsContainerComponent } from './pt-accordions-container/pt-accordions-container.component';
 import { PtSectionComponent } from './pt-section/pt-section.component';
@@ -22,7 +22,7 @@ import { PtSectionComponent } from './pt-section/pt-section.component';
     LoadingSpinnerComponent,
     GaClickDirective,
     IniInputQueryParamDirective,
-    PtAccordionComponent,
+    PtAccordionIndependentComponent,
     InlineSpinnerComponent,
     PtAccordionsContainerComponent,
     PtSectionComponent
@@ -41,7 +41,7 @@ import { PtSectionComponent } from './pt-section/pt-section.component';
     AnchorLinkDirective,
     GaClickDirective,
     IniInputQueryParamDirective,
-    PtAccordionComponent,
+    PtAccordionIndependentComponent,
     PtAccordionsContainerComponent,
     PtSectionComponent,
     InlineSpinnerComponent

@@ -1,13 +1,12 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 
 @Component({
-  selector: 'app-pt-accordion',
-  templateUrl: './pt-accordion.component.html',
-  styleUrls: ['./pt-accordion.component.scss']
+  selector: 'app-pt-accordion-independent',
+  templateUrl: './pt-accordion-independent.component.html',
+  styleUrls: ['./pt-accordion-independent.component.scss']
 })
-export class PtAccordionComponent {
+export class PtAccordionIndependentComponent {
   isCollapsed = true;
-  contentHeight: number;
 
   @Input() sectionHeader: string;
   @ViewChild('sectionBody', {read: ElementRef}) accordionBody: ElementRef;

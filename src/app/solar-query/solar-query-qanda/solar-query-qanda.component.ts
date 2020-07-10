@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { qAndAs} from '../../app.constants';
 
 @Component({
   selector: 'app-solar-query-qanda',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solar-query-qanda.component.scss']
 })
 export class SolarQueryQandaComponent implements OnInit {
+  qAndAs = qAndAs;
 
   constructor() { }
 

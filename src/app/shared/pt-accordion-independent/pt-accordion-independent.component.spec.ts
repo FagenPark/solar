@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PtAccordionComponent } from './pt-accordion.component';
+import { PtAccordionIndependentComponent } from './pt-accordion-independent.component';
 
 describe('PtAccordionComponent', () => {
-  let component: PtAccordionComponent;
-  let fixture: ComponentFixture<PtAccordionComponent>;
+  let component: PtAccordionIndependentComponent;
+  let fixture: ComponentFixture<PtAccordionIndependentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PtAccordionComponent ]
+      declarations: [ PtAccordionIndependentComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PtAccordionComponent);
+    fixture = TestBed.createComponent(PtAccordionIndependentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

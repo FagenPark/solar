@@ -21,12 +21,8 @@ export class PtAccordionsContainerComponent implements OnInit {
 
 
   OnAccordionUpdate($event) {
-    if (this.multipleOpen === true) {
-      return;
-    }
     const index = $event.id;
-    this.accordions[index].isActive = $event.isActive;
-    if ($event.isActive) {
+    if ($event.status) {
       this.flipCounter++;
       this.activeSectionId = index;
     }

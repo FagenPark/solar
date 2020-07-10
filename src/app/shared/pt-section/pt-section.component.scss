@@ -37,3 +37,7 @@
     @include transition(max-height, 300ms, ease-in-out, 0s);
   }
 }
+:host ::ng-deep p {
+  font-size: 19px;
+  line-height: 31px;
+}

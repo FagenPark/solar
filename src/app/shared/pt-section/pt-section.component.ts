@@ -1,9 +1,19 @@
-import {Component, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+  ViewChild
+} from '@angular/core';
 
 export interface Accordion {
   sectionHeader: string;
   sectionBody: string;
-  isActive: boolean;
+  defaultStatus: boolean;
 }
 
 @Component({
@@ -11,46 +21,51 @@ export interface Accordion {
   templateUrl: './pt-section.component.html',
   styleUrls: ['./pt-section.component.scss']
 })
-export class PtSectionComponent implements OnInit, OnChanges {
+export class PtSectionComponent implements AfterViewInit, OnChanges {
   contentHeight: number;
+status: boolean;
   @Input() sectionContent: Accordion;
   @Input() sectionId: number;
-  @Input() isActive: boolean;
+  @Input() defaultStatus: boolean;
+  @Input() multiOpen: boolean;
   @Input() activeSectionId: number;
   @Input() flipCounter: number;
-  @Output() updateAccordion = new EventEmitter<{ id: number; isActive: boolean }>();
+  @Output() updateAccordion = new EventEmitter<{ id: number; status: boolean }>();
   @ViewChild('sectionBody', {read: ElementRef}) accordionBody: ElementRef;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.contentHeight = this.accordionBody.nativeElement.scrollHeight;
+    setTimeout(() => this.status = this.defaultStatus, 0);
+    if (this.defaultStatus) {
+      this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px';
+    } else {
+      this.accordionBody.nativeElement.style.maxHeight = null;
+    }
   }
   toggleAccordion() {
-
     this.contentHeight = this.accordionBody.nativeElement.scrollHeight;
-    this.updateAccordion.emit({id: this.sectionId, isActive: !this.sectionContent.isActive});
-    this.accordionBody.nativeElement.classList.toggle('active');
-
+    this.status = !this.status;
+    if (this.status) {
+      this.updateAccordion.emit({id: this.sectionId, status: true});
+    } else {
+      this.accordionBody.nativeElement.style.maxHeight = null;
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (!this.contentHeight) {
       return;
     }
-    console.log(changes);
-    if (changes.isActive) {
-      if (this.sectionContent.isActive) {
-        this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px';
-      } else {
-        this.accordionBody.nativeElement.style.maxHeight = null;
-      }
+    if (this.activeSectionId === this.sectionId) {
+      this.status ? this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px'
+        : this.accordionBody.nativeElement.style.maxHeight = null;
     } else {
-      if (this.sectionContent.isActive) {
+      if (this.status && !this.multiOpen) {
+        this.status = false;
         this.accordionBody.nativeElement.style.maxHeight = null;
-        setTimeout(() => this.updateAccordion.emit({id: this.sectionId, isActive: false}), 0);
-        // this.updateAccordion.emit({id: this.sectionId, isActive: false});
       }
     }
-
   }
 }
