@@ -22,8 +22,8 @@ export interface Accordion {
   styleUrls: ['./pt-section.component.scss']
 })
 export class PtSectionComponent implements AfterViewInit, OnChanges {
-  contentHeight: number;
-status: boolean;
+  private contentHeight: number;
+  status: boolean;
   @Input() sectionContent: Accordion;
   @Input() sectionId: number;
   @Input() defaultStatus: boolean;
@@ -33,39 +33,31 @@ status: boolean;
   @Output() updateAccordion = new EventEmitter<{ id: number; status: boolean }>();
   @ViewChild('sectionBody', {read: ElementRef}) accordionBody: ElementRef;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngAfterViewInit(): void {
     this.contentHeight = this.accordionBody.nativeElement.scrollHeight;
+    this.accordionBody.nativeElement.style.maxHeight = this.defaultStatus ? this.contentHeight + 'px' : null;
     setTimeout(() => this.status = this.defaultStatus, 0);
-    if (this.defaultStatus) {
-      this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px';
-    } else {
-      this.accordionBody.nativeElement.style.maxHeight = null;
-    }
   }
+
   toggleAccordion() {
     this.contentHeight = this.accordionBody.nativeElement.scrollHeight;
     this.status = !this.status;
     if (this.status) {
       this.updateAccordion.emit({id: this.sectionId, status: true});
+      this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px';
     } else {
       this.accordionBody.nativeElement.style.maxHeight = null;
     }
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (!this.contentHeight) {
+    if (!this.contentHeight || this.activeSectionId === this.sectionId || !this.status || this.multiOpen) {
       return;
     }
-    if (this.activeSectionId === this.sectionId) {
-      this.status ? this.accordionBody.nativeElement.style.maxHeight = this.contentHeight + 'px'
-        : this.accordionBody.nativeElement.style.maxHeight = null;
-    } else {
-      if (this.status && !this.multiOpen) {
-        this.status = false;
-        this.accordionBody.nativeElement.style.maxHeight = null;
-      }
-    }
+    this.status = false;
+    this.accordionBody.nativeElement.style.maxHeight = null;
   }
 }

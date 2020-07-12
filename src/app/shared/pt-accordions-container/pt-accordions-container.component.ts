@@ -21,10 +21,9 @@ export class PtAccordionsContainerComponent implements OnInit {
 
 
   OnAccordionUpdate($event) {
-    const index = $event.id;
     if ($event.status) {
       this.flipCounter++;
-      this.activeSectionId = index;
+      this.activeSectionId = $event.id;
     }
   }
 }
