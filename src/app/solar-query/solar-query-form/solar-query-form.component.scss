@@ -86,9 +86,9 @@
 
         .btn-spinner {
           position: absolute;
-          left: 1rem;
+          left: 50%;
           top: -8px;
-          transform: scale(0.5);
+          transform: translateX(-140px) scale(0.5);
         }
       }
 
@@ -146,10 +146,12 @@
         &[type="number"] {
           -moz-appearance: textfield;
         }
+
         &::placeholder {
           color: #002E46;
           font-size: pxtorem(19px);
         }
+
         &:focus {
           outline: none;
           border-color: #0570B1;
@@ -171,10 +173,11 @@
 
       .pt-invalid-feedback {
         color: $bc_error;
-        width: pxtorem(371px);
+        display: flex;
+        text-align: initial;
+        margin-top: 5px;
 
         .pt-error-message {
-          display: flex;
           margin-left: pxtorem(5px);
         }
       }
@@ -191,6 +194,7 @@
 @media screen and (max-width: 1000px) {
   .query-form {
     padding: 6rem 3rem 2rem;
+
     .pt-hero-section {
       .pt-hero-content {
         ol li {
@@ -213,8 +217,8 @@
 
       .pt-hero-content {
         h1 {
-          font-size: 30px;
-          line-height: 35px;
+          font-size: 40px;
+          line-height: 45px;
         }
 
         h4 {
@@ -273,9 +277,11 @@
 
     .pt-form-section {
       width: 100%;
+
       .pt-form-container {
         .pt-form-control {
           font-size: pxtorem(16px);
+
           &::placeholder {
             font-size: pxtorem(16px);
           }

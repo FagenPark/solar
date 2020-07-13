@@ -24,6 +24,7 @@
         background-repeat: no-repeat;
         height: pxtorem(195px);
         background-position: center;
+        background-size: contain;
         &.item1 {
           background-image: url(https://choice-solar.azureedge.net/assets/images/valueprop1.png);
         }
@@ -56,6 +57,11 @@
       font-size: pxtorem(20px);
       line-height: pxtorem(27px);
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .solar-installer-component {
     .solar-installer-body {
       flex-direction: column;
       order: 2;
@@ -74,3 +80,5 @@
     }
   }
 }
+
+
