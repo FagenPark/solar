@@ -65,17 +65,20 @@
 }
 @media screen and (max-width: 1200px) {
   .pt-header_constrained {
-    justify-content: space-around;
+    max-width: calc(100% - 2rem);
   }
 }
 @media screen and (max-width: 812px) {
+  .pt-header_constrained {
+    max-width: calc(100% - 10.8rem);
+  }
   .pt-header_info-item_choice_logo {
     a {
       width: pxtorem(90px);
     }
   }
   .pt-header_info-item_choice_logo {
-    padding: 2px 0 0 15px;
+    padding: 2px 0 0 0px;
     max-width: 6.875em;
   }
   .pt-sg-header {
@@ -90,5 +93,10 @@
       height: 2.4rem;
       background-position-x: 100%;
     }
+  }
+}
+@media screen and (max-width: 476px) {
+  .pt-header_constrained {
+    max-width: calc(100% - 2rem);
   }
 }

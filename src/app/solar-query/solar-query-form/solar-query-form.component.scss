@@ -213,9 +213,11 @@
 
     .pt-hero-section {
       margin: 25px auto;
-      width: 80%;
+      width: 100%;
+      padding: 0 4.4rem;
 
       .pt-hero-content {
+        max-width: calc(100% - 8.8rem);
         h1 {
           font-size: 40px;
           line-height: 45px;
@@ -273,10 +275,15 @@
   .query-form {
     .pt-hero-section {
       width: 100%;
+      padding: 0;
+      .pt-hero-content {
+        max-width: calc(100% - 2rem);
+      }
     }
 
     .pt-form-section {
       width: 100%;
+
 
       .pt-form-container {
         .pt-form-control {
