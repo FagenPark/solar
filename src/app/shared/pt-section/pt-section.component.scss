@@ -31,7 +31,7 @@
   }
 
   .pt-expandable-section-content {
-    max-height: 10px;
+    max-height: 0;
     overflow: hidden;
     padding-right: 40px;
     @include transition(max-height, 300ms, ease-in-out, 0s);

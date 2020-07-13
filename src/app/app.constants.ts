@@ -15,7 +15,7 @@ export const qAndAs = [
   {
     sectionHeader: 'Why do I need to enter the number of people in my household?',
     // tslint:disable-next-line:max-line-length
-    sectionBody: `<p>The more people who live in your house, the more energy you will use. Our calculations use modelling from the Australian Energy Regulator’s <a href="https://www.aer.gov.au/retail-markets/retail-guidelines-reviews/electricity-and-gas-bill-benchmarks-for-residential-customers-2017">Electricity and gas bill</a> benchmarks for residential customers 2017 to estimate your annual energy use based on the size and location of your household. </p>`,
+    sectionBody: `<a href="sdsd">dasdsa</a><p>The more people who live in your house, the more energy you will use. Our calculations use modelling from the Australian Energy Regulator’s <a href="https://www.aer.gov.au/retail-markets/retail-guidelines-reviews/electricity-and-gas-bill-benchmarks-for-residential-customers-2017">Electricity and gas bill</a> benchmarks for residential customers 2017 to estimate your annual energy use based on the size and location of your household. </p>`,
     defaultStatus: false,
   },
   {
