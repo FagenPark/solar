@@ -57,6 +57,7 @@ app-solar-root {
     &:hover, &:focus {
       background-color: $bc_btn_d;
       color: $sc_white;
+      outline: none;
     }
   }
 }

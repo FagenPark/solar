@@ -162,9 +162,9 @@ export class SolarQueryService {
   }
 
   getPostcodeInformation(postcode: number): Observable<string> {
-    const idString = postcode < 1000 ? postcode.toString()[0] : postcode.toString()[0] + postcode.toString()[1];
+    const endIndex = postcode < 1000 ? 1 : 2;
+    const idString = postcode.toString().substring(0, endIndex);
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    console.log(idString);
     const url = `${this.postcodeUrl}/${idString}`;
     return this.http.get<Postcode>(url, {headers})
       .pipe(
