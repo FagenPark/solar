@@ -339,36 +339,6 @@ const postCodeData: Postcode[] = [
 export class PostcodeData implements InMemoryDbService {
   createDb() {
     const postcodes = postCodeData;
-    // const postcodes: Postcode[] = [
-    //   {
-    //     id: 2,
-    //     state: 'NSW'
-    //   },
-    //   {
-    //     id: 8,
-    //     state: 'NT'
-    //   },
-    //   {
-    //     id: 3,
-    //     state: 'VIC'
-    //   },
-    //   {
-    //     id: 4,
-    //     state: 'QLD'
-    //   },
-    //   {
-    //     id: 7,
-    //     state: 'TAS'
-    //   },
-    //   {
-    //     id: 6,
-    //     state: 'WA'
-    //   },
-    //   {
-    //     id: 5,
-    //     state: 'SA'
-    //   }
-    // ];
     return {postcodes};
   }
 }
