@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {select, Store} from '@ngrx/store';
 
 import * as fromRoot from 'src/app/state/app.state';
 import * as fromSolarQuery from './state/';
 import {expandCollapseAnimation} from '../shared/animation-config';
+import {filter, takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'app-solar-query',
@@ -14,7 +15,8 @@ import {expandCollapseAnimation} from '../shared/animation-config';
     expandCollapseAnimation
   ]
 })
-export class SolarQueryComponent implements OnInit {
+export class SolarQueryComponent implements OnInit, OnDestroy {
+  private isComponentActive = true;
   displayResults$: Observable<boolean>;
   postCode$: Observable<number>;
   numberOfPeople$: Observable<string>;
@@ -32,5 +34,15 @@ export class SolarQueryComponent implements OnInit {
     this.numberOfPeople$ = this.store.pipe(select(fromSolarQuery.getNumberOfPeople));
     this.modalContentId$ = this.store.pipe(select(fromSolarQuery.getModalContentId));
     this.stateName$ = this.store.pipe(select(fromSolarQuery.getStateName));
+    this.errorMessage$.pipe(
+      takeWhile( () => this.isComponentActive),
+      filter(err => err !== '')
+    ).subscribe(
+      err => alert(err)
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.isComponentActive = false;
   }
 }

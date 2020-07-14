@@ -162,11 +162,18 @@ export class SolarQueryService {
   }
 
   getPostcodeInformation(postcode: number): Observable<string> {
+    const idString = postcode < 1000 ? postcode.toString()[0] : postcode.toString()[0] + postcode.toString()[1];
     const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    const url = `${this.postcodeUrl}/${postcode.toString()[0]}`;
+    console.log(idString);
+    const url = `${this.postcodeUrl}/${idString}`;
     return this.http.get<Postcode>(url, {headers})
       .pipe(
-        map(data => data.state),
+        map(data => {
+          if (postcode >= 2600 && postcode <= 2618 || postcode >= 2900 && postcode <= 2920) {
+            return 'ACT';
+          }
+          return data.state;
+        }),
         catchError(this.handleError)
       );
   }
@@ -260,6 +267,7 @@ export class SolarQueryService {
       errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
     }
     console.error(err);
+    console.error('ccccc', errorMessage);
     return throwError(errorMessage);
   }
 }

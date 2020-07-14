@@ -21,7 +21,11 @@ app-user-testimonial {
   background-color: $bc_nav_grey;
 }
 .pt-error-message {
-  color: $sc_white;
+  position: absolute;
+  padding: 3rem;
+  border: solid 1px $sc_secondary;
+  border-radius: 10px;
+  color: $sc_error;
   text-align: center;
 }
 

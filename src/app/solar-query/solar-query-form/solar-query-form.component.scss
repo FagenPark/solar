@@ -226,16 +226,22 @@
         h4 {
           font-size: 22px;
           line-height: 30px;
+          margin-block-end: 1.7rem;
         }
 
         ol {
           margin-left: 0;
+          margin-block-start: 0;
+          margin-block-end: 2rem;
         }
 
         ol li {
           font-size: 19px;
-          line-height: 26px;
-          margin: 0 0 1rem 0;
+          line-height: 33px;
+          margin: 0 0 0.5rem 0;
+          &:nth-of-type(2) {
+            line-height: 33px;
+          }
         }
 
         ol li::before {
@@ -277,7 +283,15 @@
       width: 100%;
       padding: 0;
       .pt-hero-content {
-        max-width: calc(100% - 2rem);
+        max-width: 100%;
+        ol li {
+          font-size: 19px;
+          line-height: 24px;
+          margin: 0 0 1rem 0;
+          &:nth-of-type(2) {
+            line-height: 24px;
+          }
+        }
       }
     }
 
