@@ -1,40 +1,30 @@
 @import "src/variables";
 .solar-ut-component {
   display: flex;
-  background: $sc_white;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem;
+  padding: 4rem 0;
   box-sizing: border-box;
   .solar-ut-image {
-    flex-basis: 500px;
+    flex-basis: 25%;
     .round-image {
       max-width: 100%;
     }
   }
   .solar-user-words {
-    flex-basis: 500px;
-
+    flex-basis: 69%;
   }
 }
 @media screen and(max-width: 812px){
   .solar-ut-component {
-    flex-direction: column;
-    padding: 3.2rem;
-    .solar-ut-image {
-      flex-basis: 210px;
-      .round-image {
-        width: 210px;
-      }
-
-    }
+    padding: 2rem;
     .solar-user-words {
-      flex-basis: 175px;
+      flex-basis: 75%;
     }
   }
 }
 @media screen and(max-width: 476px){
   .solar-ut-component {
-    padding: 3.2rem 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
   }
 }

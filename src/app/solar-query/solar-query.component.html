@@ -8,13 +8,30 @@
                                [stateName]="stateName$ | async"></app-solar-query-results>
     </div>
     <app-solar-query-installer></app-solar-query-installer>
-    <app-user-testimonial userImageUrl="https://choice-solar.azureedge.net/assets/images/john_smith.png">
-      <p>“<span>SolarQuotes</span> is a super helpful site - we used them. They filter out the crap operators and choose
-        a good local company.”</p>
-      <div class="user-print">
-        <span>John Smith</span>, Marrickville, NSW
+    <div class="pt-user-trstimonials-banner">
+      <div class="pt-user-trstimonials-container">
+        <app-user-testimonial userImageUrl="https://choice-solar.azureedge.net/assets/icons/user-icon1.png">
+          <p>“Using <span>CHOICE’s solar estimator</span> I could clearly see that a past solar quote I received was
+            really overpriced. I went on to get 3 competitive quotes through <span>SolarQuotes</span>. Now I have a new
+            solar system installed on my roof.”</p>
+          <div class="user-print">
+            <span>Karen Smith</span>
+            <div>Croydon, VIC</div>
+          </div>
+        </app-user-testimonial>
+        <app-user-testimonial userImageUrl="https://choice-solar.azureedge.net/assets/icons/user-icon2.png">
+          <p>“I was pretty happy with the whole process of getting my solar system beginning with <span>CHOICE</span>.
+            The
+            installer that quoted us through <span>SolarQuotes</span> was really thorough and provided all the
+            information
+            I needed to make a decision.”</p>
+          <div class="user-print">
+            <span>Elaine White</span>
+            <div>Gilmore, ACT</div>
+          </div>
+        </app-user-testimonial>
       </div>
-    </app-user-testimonial>
+    </div>
     <app-solar-query-qanda></app-solar-query-qanda>
   </div>
 </div>

@@ -3,20 +3,27 @@
  @include transition(opacity, 0.3s, ease-in-out);
   background: linear-gradient(79.41deg, #275B95 42.99%, #0083B6 85.55%);
 }
-app-user-testimonial {
-  color: $sc_secondary;
-  p {
-    font-size: 30px;
-    line-height: 41px;
-  }
-  .user-print {
-    font-size: 19px;
-    line-height: 31px;
-  }
-  span {
-    font-weight: bold;
+.pt-user-trstimonials-banner {
+   background: $sc_white;
+  .pt-user-trstimonials-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    app-user-testimonial {
+      color: $sc_secondary;
+      font-size: 19px;
+      line-height: 31px;
+      p {
+        margin-block-start: 0;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
   }
 }
+
+
 .se-body-container {
   background-color: $bc_nav_grey;
 }
@@ -30,10 +37,9 @@ app-user-testimonial {
 }
 
 @media screen and(max-width: 812px){
-  app-user-testimonial {
-    p {
-      font-size: 24px;
-      line-height: 33px;
+  .pt-user-trstimonials-banner {
+    .pt-user-trstimonials-container {
+      flex-direction: column;
     }
   }
 }
