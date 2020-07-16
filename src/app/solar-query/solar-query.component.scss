@@ -1,21 +1,29 @@
 @import "src/variables";
+
 .query-form-container {
- @include transition(opacity, 0.3s, ease-in-out);
+  @include transition(opacity, 0.3s, ease-in-out);
   background: linear-gradient(79.41deg, #275B95 42.99%, #0083B6 85.55%);
 }
+
 .pt-user-trstimonials-banner {
-   background: $sc_white;
+  background: $sc_white;
+
   .pt-user-trstimonials-container {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    justify-content: space-between;
+
     app-user-testimonial {
       color: $sc_secondary;
       font-size: 19px;
       line-height: 31px;
+      flex-basis: 48%;
+
       p {
         margin-block-start: 0;
       }
+
       span {
         font-weight: bold;
       }
@@ -27,6 +35,7 @@
 .se-body-container {
   background-color: $bc_nav_grey;
 }
+
 .pt-error-message {
   position: absolute;
   padding: 3rem;
@@ -36,7 +45,17 @@
   text-align: center;
 }
 
-@media screen and(max-width: 812px){
+@media screen and(max-width: 812px) {
+  .pt-user-trstimonials-banner {
+    .pt-user-trstimonials-container {
+      app-user-testimonial {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 476px) {
   .pt-user-trstimonials-banner {
     .pt-user-trstimonials-container {
       flex-direction: column;

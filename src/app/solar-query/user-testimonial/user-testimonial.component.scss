@@ -15,6 +15,8 @@
 }
 @media screen and(max-width: 812px){
   .solar-ut-component {
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
     .solar-user-words {
       flex-basis: 75%;
@@ -23,8 +25,7 @@
 }
 @media screen and(max-width: 476px){
   .solar-ut-component {
-    flex-direction: column;
-    align-items: center;
+
     padding: 2rem 1rem;
   }
 }
