@@ -41,13 +41,9 @@
         counter-increment: hero-ol-counter;
         font-weight: normal;
         font-size: 23px;
-        line-height: 46px;
+        line-height: 27px;
         margin: 0 0 1.2rem 0;
         position: relative;
-
-        &:nth-of-type(2) {
-          line-height: 27px;
-        }
       }
 
       ol li::before {
@@ -239,9 +235,6 @@
           font-size: 19px;
           line-height: 33px;
           margin: 0 0 0.5rem 0;
-          &:nth-of-type(2) {
-            line-height: 33px;
-          }
         }
 
         ol li::before {
@@ -288,9 +281,6 @@
           font-size: 19px;
           line-height: 24px;
           margin: 0 0 1rem 0;
-          &:nth-of-type(2) {
-            line-height: 24px;
-          }
         }
       }
     }
