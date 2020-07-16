@@ -21,7 +21,7 @@ export const qAndAs = [
   {
     sectionHeader: 'How does SolarQuotes vet solar installers?',
     // tslint:disable-next-line:max-line-length
-    sectionBody: `<p>SolarQuotes works independently from CHOICE, and vets its own network of installers. Their due diligence includes checking the legitimacy of each business, the validity of their electrical contractors licence and that they have no Enforceable Undertakings with the Clean Energy Regulator.</p>`,
+    sectionBody: `<p>SolarQuotes works independently from CHOICE, and vets its own network of installers. Their due diligence includes scrutinising the legitimacy of each business, the validity of their electrical contractor’s licence and checking they have no Enforceable Undertakings with the Clean Energy Regulator.</p>`,
     defaultStatus: false,
   }
 ];
