@@ -183,7 +183,7 @@ export class SolarQueryService {
   }
 
   getSystemSize(numberOfPeople: string): number {
-    switch (numberOfPeople) {
+    switch (numberOfPeople.toString()) {
       case '1': {
         return 4;
       }
@@ -213,7 +213,7 @@ export class SolarQueryService {
   }
 
   getMinPrice(numberOfPeople: string): number {
-    switch (numberOfPeople) {
+    switch (numberOfPeople.toString()) {
       case '1': {
         return 4000;
       }
@@ -235,7 +235,7 @@ export class SolarQueryService {
   }
 
   getMaxPrice(numberOfPeople: string) {
-    switch (numberOfPeople) {
+    switch (numberOfPeople.toString()) {
       case '1': {
         return 6000;
       }
