@@ -15,6 +15,6 @@ export class ButtonBannerComponent implements OnInit {
   }
 
   findSolarInstaller() {
-    return this.solarQueryService.getSolarQuotesBaseUrl() + '?postcode=' + this.postCode + '&referrer=choice';
+    return this.solarQueryService.findSolarInstaller(this.postCode.toString());
   }
 }

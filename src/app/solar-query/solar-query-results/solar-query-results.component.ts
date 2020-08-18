@@ -67,6 +67,6 @@ export class SolarQueryResultsComponent implements OnDestroy, AfterViewInit {
     return 'people';
   }
   findSolarInstaller() {
-    return this.solarQueryService.getSolarQuotesBaseUrl() + '?postcode=' + this.postCode + '&referrer=choice';
+    return this.solarQueryService.findSolarInstaller(this.postCode.toString());
   }
 }

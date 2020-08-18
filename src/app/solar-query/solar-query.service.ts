@@ -255,7 +255,15 @@ export class SolarQueryService {
         return 0;
     }
   }
-
+  findSolarInstaller(postCode: string) {
+    const queryParams = new URLSearchParams(location.search);
+    const paramKey = 'utm_campaign';
+    let campaign = '';
+    if (queryParams.has(paramKey)) {
+      campaign = '&' + paramKey + '=' + queryParams.get(paramKey);
+    }
+    return this.getSolarQuotesBaseUrl() + '?postcode=' + postCode + campaign;
+  }
   private handleError(err) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
